@@ -4,7 +4,7 @@ Creating a Sequence for Droidlink can seem intimidating for new uers.  This arti
 
 This process can be followed for any new sequence you want to make.
 
-The audience for this document is someone who needs extra help and explaination of the process of having DroidLink make your droid do fancy things, beyond what is contained in the initial setup documentation. 
+The audience for this document is someone who needs extra help and explaination of the process of having DroidLink make your droid do fancy things, beyond what is contained in the initial DroidLink setup documentation. 
 
 While it looks like a long, this is because this is a complex sequences with a lot of instructions, and there is an explaniation for each step, as well as testing each part individually, to help you understand inorder provide you with the foundation for creating your own sequences.  
 
