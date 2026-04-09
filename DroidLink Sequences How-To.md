@@ -1,6 +1,8 @@
 # Creating a DroidLink sequence
 
-Creating a Sequence for Droidlink can seem intimidating for new uers.  This article walks you through the process I recently undertook when I created a "bad motivator" sequence for my R2.  This process can be followed for any new sequence you want to make.
+Creating a Sequence for Droidlink can seem intimidating for new uers.  This article walks you through the process I recently undertook when I created a "bad motivator" sequence for my R2.   https://photos.app.goo.gl/ienNywkaaeWPuZmq8
+
+This process can be followed for any new sequence you want to make.
 
 The audience for this document is someone who needs extra help and explaination of the process of having DroidLink make your droid do fancy things, beyond what is contained in the initial setup documentation. 
 
