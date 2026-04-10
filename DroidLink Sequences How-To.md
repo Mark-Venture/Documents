@@ -67,12 +67,16 @@ Lets get to work...
        Why :BS03 and :BS04 ?    :BS denotes a "Body Slave" action, which in my case has my Maestro 12 connected.  03 is the sequence I programmed on the Maestro 12 to Open the arms, and 04 is the sequence I programmed on the Maestro 12 to close the arms
      - On another button, like 18, and assign the command  :DS05 and press Send.  You should see your Pie Panels open.
      - On another button, like 19, assign the command  :DS06 and press Send.  You should see your Pie Panels closed.
-     
+
+<img width="327" height="282" alt="image" src="https://github.com/user-attachments/assets/db4c47b7-24c9-43f0-9af8-5589279c00fe" />
+
+
    Why :DS05 and :DS06 ?   :DS denotes a "Dome Slave" action,  which in my case has my Maestro 24 connected.   05 is the sequence I programmed on the Maestro 24 to open the pie panels, and 06 is the sequence I programmed on the Maestro 24 to close the panels.  
      
      - If those tests work, you're ready to move on.
+
        
-7. Test Playing an audio file
+6. Test Playing an audio file
      - Find the audio files you want to play.  In my case, I selected 0131_screa-3.mp3 for the "bad motivator" sound step,  and 0010_gen-10.mp3 for the "we're back" sound.
      - On another button, either under Dome or Audio,  assign the command :AS0131 and hit send.   R2 should play the sound.
      - On another button,  assign the command :AS010 and hit send.  R2 should play that sound.
@@ -81,7 +85,7 @@ Lets get to work...
       
       - If those tests work, you're ready to move on.
 
-  8.  Test moving the dome
+  7.  Test moving the dome
      - The DroidLink instructions mention using :DC,LEFT  :DC,RIGHT and :DC,STOP  as Dome Movement commands, so lets try those
       - Find a button under Dome, and set the command to  :DC,LEFT
       - Find another button and set the command to   :DC,RIGHT
@@ -92,8 +96,8 @@ Lets get to work...
       - if it doesn't stop on its own, press send for :DC,STOP
       - IF those tests work, your ready to move on.
     
-  9.  The last command you need to know is the Wait command, or   :Wnnnn   where nnnn is time in milliseconds.   So :W500 would be wait for 1/2 second.  :W1000 would be wait 1 Second.
-  10.  Lets put it all together
+  8.  The last command you need to know is the Wait command, or   :Wnnnn   where nnnn is time in milliseconds.   So :W500 would be wait for 1/2 second.  :W1000 would be wait 1 Second.
+  9.  Lets put it all together
       - find a button you want to use,  I used Dome 20.  and my command is:
       :DS05:BS03@APLE20000:W500:AS0131:DC,LEFT:W1000:DC,RIGHT:W1000:DC,STOP:DC,LEFT:W500:DC,RIGHT:W500:DC,STOP:W13000:BS04:DS06:AS011
 
