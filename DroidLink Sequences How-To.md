@@ -56,7 +56,9 @@ Lets get to work...
 
    
    How did I know that was the command for Failure Mode?  I looked at the commands here -> https://github.com/reeltwo/AstroPixelsPlus/tree/main
-5. Test calling your Maestro sequences
+
+   
+6. Test calling your Maestro sequences
      - Again in the DroidLink display configuration
      - Find another Dome buton you haven't programmed, like 16
      - Enter the command   :BS03
@@ -70,7 +72,7 @@ Lets get to work...
      
      - If those tests work, you're ready to move on.
        
-6. Test Playing an audio file
+7. Test Playing an audio file
      - Find the audio files you want to play.  In my case, I selected 0131_screa-3.mp3 for the "bad motivator" sound step,  and 0010_gen-10.mp3 for the "we're back" sound.
      - On another button, either under Dome or Audio,  assign the command :AS0131 and hit send.   R2 should play the sound.
      - On another button,  assign the command :AS010 and hit send.  R2 should play that sound.
@@ -79,7 +81,7 @@ Lets get to work...
       
       - If those tests work, you're ready to move on.
 
-  7.  Test moving the dome
+  8.  Test moving the dome
      - The DroidLink instructions mention using :DC,LEFT  :DC,RIGHT and :DC,STOP  as Dome Movement commands, so lets try those
       - Find a button under Dome, and set the command to  :DC,LEFT
       - Find another button and set the command to   :DC,RIGHT
@@ -90,8 +92,8 @@ Lets get to work...
       - if it doesn't stop on its own, press send for :DC,STOP
       - IF those tests work, your ready to move on.
     
-  8.  The last command you need to know is the Wait command, or   :Wnnnn   where nnnn is time in milliseconds.   So :W500 would be wait for 1/2 second.  :W1000 would be wait 1 Second.
-  9.  Lets put it all together
+  9.  The last command you need to know is the Wait command, or   :Wnnnn   where nnnn is time in milliseconds.   So :W500 would be wait for 1/2 second.  :W1000 would be wait 1 Second.
+  10.  Lets put it all together
       - find a button you want to use,  I used Dome 20.  and my command is:
       :DS05:BS03@APLE20000:W500:AS0131:DC,LEFT:W1000:DC,RIGHT:W1000:DC,STOP:DC,LEFT:W500:DC,RIGHT:W500:DC,STOP:W13000:BS04:DS06:AS011
 
