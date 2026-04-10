@@ -68,7 +68,7 @@ Lets get to work...
      - On another button, like 18, and assign the command  :DS05 and press Send.  You should see your Pie Panels open.
      - On another button, like 19, assign the command  :DS06 and press Send.  You should see your Pie Panels closed.
 
-<img width="327" height="282" alt="image" src="https://github.com/user-attachments/assets/db4c47b7-24c9-43f0-9af8-5589279c00fe" />
+       <img width="327" height="282" alt="image" src="https://github.com/user-attachments/assets/db4c47b7-24c9-43f0-9af8-5589279c00fe" />
 
 
    Why :DS05 and :DS06 ?   :DS denotes a "Dome Slave" action,  which in my case has my Maestro 24 connected.   05 is the sequence I programmed on the Maestro 24 to open the pie panels, and 06 is the sequence I programmed on the Maestro 24 to close the panels.  
