@@ -51,6 +51,9 @@ Lets get to work...
    - Take a button you haven't programmed yet, like 15
    - enter the command @APLE20000
    - Press Send and watch what happens on your R2.   (You should see the logic display lights change from their usual, to an all red, and slowly dim. The Logic Displays should turn off)
+     
+     <img width="339" height="182" alt="image" src="https://github.com/user-attachments/assets/b3be3a0d-26b7-44c8-92f8-83a980852656" />
+
    
    How did I know that was the command for Failure Mode?  I looked at the commands here -> https://github.com/reeltwo/AstroPixelsPlus/tree/main
 5. Test calling your Maestro sequences
