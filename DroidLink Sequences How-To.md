@@ -14,7 +14,7 @@ In my R2, I have a Mini Maestro 12 in the Body connected to DroidLink Slave 2 (c
 
 I am usnig the newer AMOLED 2.06" Display with DroidLink, so while I expect the process is similar using the 1.28" Round display, I can not confirm.  
 
-This process creates the sequence as a button under the DOME section on the watch.  If you want to call it, you use the watch.   If you want to trigger it from a DS650 Remote Control's button, you'd need to enter the final sequence as a MS or Master Sequence on the DroidLink Master, and on the DL Master you can then assign it to a RC Button. 
+This process creates the sequence as a button under the DOME section on the watch.  If you want to call it, you use the watch.   If you want to trigger it from a DS650 Remote Control's button, you'd need to enter the final sequence as a MS or Master Sequence on the DroidLink Master, and on the DL Master you can then assign the :MSnn (where nn is the number you create it under) to a RC Button. 
 
 Here are the steps I took. 
 
