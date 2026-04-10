@@ -1,20 +1,20 @@
 # Creating a DroidLink sequence
 
-Creating a Sequence for Droidlink can seem intimidating for new uers.  This article walks you through the process I recently undertook when I created a "bad motivator" sequence for my R2.   https://photos.app.goo.gl/ienNywkaaeWPuZmq8
+Creating a Sequence for Droidlink can seem intimidating for new uers.  This article walks you through the process I recently undertook when I created a "bad motivator" sequence for my R2. See ->  https://photos.app.goo.gl/ienNywkaaeWPuZmq8
 
-This process can be followed for any new sequence you want to make.
+The template of this process can be followed for any new sequence you want to make.
 
-The audience for this document is someone who needs extra help and explaination of the process of having DroidLink make your droid do fancy things, beyond what is contained in the initial DroidLink setup documentation. 
+The audience for this document is someone who needs extra help and explaination of the process and commands for having DroidLink make your droid do fancy things, beyond what is contained in the initial DroidLink setup documentation. 
 
-While it looks like a long, this is because this is a complex sequences with a lot of instructions, and there is an explaniation for each step, as well as testing each part individually, to help you understand inorder provide you with the foundation for creating your own sequences.  
+While it looks like a long process, that is because this is a complex sequences with a lot of instructions, and there is an explaniation for each step, as well as testing each part individually, to help you understand in order to provide you with the foundation for creating your own sequences.  
 
-As you get started, its helpful to think of DroidLink is a "director" or "manager" so you'll need your servo controllers (Mini Maestro 12/18/24 preferred), dome motor controller (Syren 10 is extremely popular), lights (AstroPixels is very popular),  all installed and ready to go before you install DroidLink, so that DroidLink can send instructions or commands to them.  And this does require you to know how to program your Mini Maestro to move the servos.  There are plenty of videos online to do this, for Example: https://youtu.be/zkbtoDOW7bI?si=--T-4Xh9ye_oaH8l&t=159  
+As you get started, its helpful to think of DroidLink as a "director" or "manager" so you'll need your servo controllers (Mini Maestro 12/18/24 preferred), dome motor controller (Syren 10 is extremely popular), lights (AstroPixels is very popular),  all installed and ready to go before you install DroidLink, so that DroidLink can send instructions or commands to them.  And this does require you to know how to program your Mini Maestro to move the servos and make Maestro Sequences.  There are plenty of videos online showing how to do this, for Example: https://youtu.be/zkbtoDOW7bI?si=--T-4Xh9ye_oaH8l&t=159  
 
-In my R2, I have a Mini Maestro 12 in the Body connected to DroidLink Slave 2 (commands sent to it by DroidLink start with :BS) with the upper and lower utility arm servos connected. I have a Mini Maestro 24 in the Dome connected to DroidLink Slave 3 (DroidLink commands sent to it start with :DS) that has the pie piece servos connected.  I use AstroPixels in my dome, with the AstroPixelPlus firmware installed ( https://reeltwo.github.io/AstroPixels-Installer/ ). 
+In my R2, I have a Mini Maestro 12 in the Body connected to DroidLink Slave 2 (commands sent to it by DroidLink start with :BS) with the upper and lower utility arm servos connected. I have a Mini Maestro 24 in the Dome connected to DroidLink Slave 3 (DroidLink commands sent to it start with :DS) that has the pie panel servos connected.  Also connected to DroidLink Slave 3 is an AstroPixels in my dome, with the AstroPixelPlus firmware installed ( https://reeltwo.github.io/AstroPixels-Installer/ ). 
 
 I am usnig the newer AMOLED 2.06" Display with DroidLink, so while I expect the process is similar using the 1.28" Round display, I can not confirm.  
 
-This process creates the sequence as a button under the DOME section on the watch.  If you want to call it, you use the watch.   If you want to trigger it from a DS650 Remote Control's button, you'd need to make the final sequence as a MS or Master Sequence on the DroidLink Master, and on the DL Master you can then assign it to a RC Button. 
+This process creates the sequence as a button under the DOME section on the watch.  If you want to call it, you use the watch.   If you want to trigger it from a DS650 Remote Control's button, you'd need to enter the final sequence as a MS or Master Sequence on the DroidLink Master, and on the DL Master you can then assign it to a RC Button. 
 
 Here are the steps I took. 
 
