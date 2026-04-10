@@ -80,6 +80,8 @@ Lets get to work...
      - Find the audio files you want to play.  In my case, I selected 0131_screa-3.mp3 for the "bad motivator" sound step,  and 0010_gen-10.mp3 for the "we're back" sound.
      - On another button, either under Dome or Audio,  assign the command :AS0131 and hit send.   R2 should play the sound.
      - On another button,  assign the command :AS010 and hit send.  R2 should play that sound.
+
+       
      
    Why :AS010 and :AS131 ?   :ASnnn (where nnn is 001 to 255) denotes play this audio file whose file name start with that number.
       
@@ -100,6 +102,9 @@ Lets get to work...
   9.  Lets put it all together
       - find a button you want to use,  I used Dome 20.  and my command is:
       :DS05:BS03@APLE20000:W500:AS0131:DC,LEFT:W1000:DC,RIGHT:W1000:DC,STOP:DC,LEFT:W500:DC,RIGHT:W500:DC,STOP:W13000:BS04:DS06:AS011
+      
+      <img width="388" height="168" alt="image" src="https://github.com/user-attachments/assets/397bda80-9a67-435e-80d5-4a1c8d2c3b88" />
+  
 
 Lets break that command string down:
 
