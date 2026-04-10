@@ -14,7 +14,7 @@ In my R2, I have a Mini Maestro 12 in the Body connected to DroidLink Slave 2 (c
 
 I am usnig the newer AMOLED 2.06" Display with DroidLink, so while I expect the process is similar using the 1.28" Round display, I can not confirm.  
 
-This process creates the sequence as a button under the DOME section on the watch.  If you want to call it, you use the watch.   If you want to trigger it from a DS650 Remote Control's button, you'd need to enter the final sequence as a MS or Master Sequence on the DroidLink Master, and on the DL Master you can then assign the :MSnn (where nn is the number you create it under) to a RC Button. 
+This process creates the sequence as a button under the DOME section on the DroidLink Display (aka "watch").  If you want to call it, you use the Display.   If you want to trigger it from a DS650 Remote Control's button, you'd need to enter the final sequence as a MS or Master Sequence on the DroidLink Master, and on the DL Master you can then assign that Master Sequence ( :MSnn  where nn is the number you create it under) to a RC Button. 
 
 Here are the steps I took. 
 
@@ -133,7 +133,7 @@ Lets break that command string down:
 
 Did I need all those waits in there? It helps space things out to the timing of the lights and sounds.    Its also possible I could re-arrange things a little and not need the waits. It would take experimentation.  
 
-Again, to run this DroidLink Sequence,  I have to use the "Watch",  go to Dome, and tapping "Dome 20".   OR connect to the DroidLink Display hotspot, use the browser to go to 192.168.4.1, and navigate to Dome, and use Send under the button.   If you want to assign the sequence to a button on the DS650 Remote Control,  you need to put this as a Master Sequence on the DroidLink Master's configuration. 
+Again, to run this DroidLink Sequence,  I have to use the DroidLink Display (also known as the "Watch"),  go to Dome, and tapping "Dome 20".   OR connect to the DroidLink Display hotspot, use your web browser to go to 192.168.4.1, navigate to Dome, and use Send under the button.   If you want to assign the sequence to a button on the DS650 Remote Control,  you need to put this as a Master Sequence in the DroidLink Master's configuration. 
 
 Well, that is it.  
 
