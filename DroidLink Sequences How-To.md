@@ -133,7 +133,7 @@ Lets break that command string down:
 
 Did I need all those waits in there? It helps space things out to the timing of the lights and sounds.    Its also possible I could re-arrange things a little and not need the waits. It would take experimentation.  
 
-Again, to run this DroidLink Sequence,  I have to use the DroidLink Display (also known as the "Watch"),  go to Dome, and tapping "Dome 20".   OR connect to the DroidLink Display hotspot, use your web browser to go to 192.168.4.1, navigate to Dome, and use Send under the button.   If you want to assign the sequence to a button on the DS650 Remote Control,  you need to put this as a Master Sequence in the DroidLink Master's configuration. 
+Again, to run this DroidLink Sequence,  I have to use the DroidLink Display (also known as the "Watch"),  go to Dome, and tapping "Dome 20".   OR connect to the DroidLink Display hotspot, use your web browser to go to 192.168.4.1, navigate to Dome, and use Send under the button.   If you want to assign the sequence to a button on the DS650 Remote Control,  you need to create this as a Master Sequence in the DroidLink Master's configuration. the. you can call it with MS:nn (where nn is the number it was created as) 
 
 Well, that is it.  
 
