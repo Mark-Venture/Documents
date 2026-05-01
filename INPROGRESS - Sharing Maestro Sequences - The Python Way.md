@@ -4,6 +4,8 @@ When it comes to controlling Servos connected to a Maestro, or any servo control
 
 There are several methods to backup/restore Maestro Scripts which can be used to share, but each has their pros and cons.  NONE of them are perfect. This is just one way, and in my opinion its the best because it allows you to bring in sequences created by someone else, keeps them in order, and allows you to add your own Sequences by "save frame" process in Maestro Control Center in the future.   
 
+When you update then run the Python script,  it will take your supplied Settings_OLD.TXT  with the servo min/max/home/neutral for your servos, and make sure the channels section and all sequences are updated for your servo limits, wirting it to an output file called Settings_NEW.TXT that you can load into your Maestro. It can also compensate for any servos which the original author might physcially reversed in their setup (open/close are opposit from your configuration)
+
 **This process is "destructive" it will overwrite any settings or sequences you have on your Maestro**, including servo end points, sequences, scripts, etc. Because we need the Min/Max/Neutral/Home settings of your servos,  we will perform a settings back up as one of the first steps.  You will be able to restore this backup later should you desire to return to the state your Maestro was in before starting this process. 
 
 ## Requirements
