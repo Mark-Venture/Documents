@@ -1,4 +1,6 @@
-# Sharing your Maestro Settings
+# Sharing your Maestro Sequences and Settings
+
+Working with setting up my R2D2, I didn't have any of the cool sequences for opening and closing panels like I see in the MrBaddeley FB group.  I was investigating how to share some of those fancy sequences with others to make it easier to those just getting started with Droid building.  This is based on one of the several options I tested.   
 
 When it comes to controlling Servos connected to a Maestro, or any servo controller,  each servo has its own end and neutral points.  No matter what way you get someone else's sequences, you'll need to compensate for this. 
 
