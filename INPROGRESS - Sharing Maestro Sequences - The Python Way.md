@@ -26,7 +26,7 @@ When you update then run the Python script,  it will take your supplied Settings
 5. The [MaestroUpdateV2.py](https://github.com/Mark-Venture/Documents/blob/main/Downloads/MaestroUpdateV2.py) Python Script file
 
 ## Short Overview: 
-1.  Rename the Donor Settings file to Settings_OLD.txt
+1.  Rename the Donor Settings file (exported via  Maestro Control Center file -> Save Settings..)  to Settings_OLD.txt
 2.  Update the PY with the servos that are mirrored (see line 8),
 3.  Update the PY to set the new limits for your servos on lines 13-24.
 4.  Run the PY
