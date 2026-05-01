@@ -11,7 +11,7 @@ There are several methods to backup/restore Maestro Scripts which can be used to
 2. Donor Maestro Settings file with the scrips you want to save on your Maestro
 3. Your Servo Settings (min/max) configured Maestro Control Center.
 4.  Python installed and configured on your computer:
-  - To get Python ready for your automation script, follow these four simple steps:
+  - To get Python ready for your automation script, follow these simple steps:
   - 1. Download and Install
     - Go to [python.org/downloads](https://www.python.org/downloads/windows/) and download the latest version for Windows. 
     - Important: When the installer opens, check the box at the bottom that says "**Add Python to PATH**" before clicking Install.
