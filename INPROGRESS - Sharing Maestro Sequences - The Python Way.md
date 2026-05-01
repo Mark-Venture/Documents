@@ -2,7 +2,7 @@
 
 When it comes to controlling Servos connected to a Maestro, or any servo controller,  each servo has its own end and neutral points.  No matter what way you get someone else's sequences, you'll need to compensate for this. 
 
-There are several ways to share Maestro Scripts, but each has their pros and cons.  NONE of them are perfect. This is just one way, in my opinion its the best because it allows you to bring in sequences created by someone else, keeps them in order, and allows you to add your own Sequences by "save frame" process in Maestro Control Center in the future.   
+There are several methods to backup/restore Maestro Scripts which can be used to share, but each has their pros and cons.  NONE of them are perfect. This is just one way, and in my opinion its the best because it allows you to bring in sequences created by someone else, keeps them in order, and allows you to add your own Sequences by "save frame" process in Maestro Control Center in the future.   
 
 **This process is "destructive" it will overwrite any settings or sequences you have on your Maestro**, including servo end points, sequences, scripts, etc. Because we need the Min/Max/Neutral/Home settings of your servos,  we will perform a settings back up as one of the first steps.  You will be able to restore this backup later should you desire to return to the state your Maestro was in before starting this process. 
 
@@ -38,4 +38,5 @@ There are several ways to share Maestro Scripts, but each has their pros and con
 7.  Run the PY file:   From a CMD prompt, change to the folder holding your  Settings_OLD.txt, and updated Python script, and type  `PY Maestroupdate.py` then press **Enter**
 8.  In the Maestro Control Center app,  import the new settings file  by going File -> Open Settings File ->  select the  Settings_New.txt that was just created
 9.  If you receive a prompt that the settings file was from a different Maestro,  select OK.  It will import.
-10.  Once its imported, you should be able to run the sequences. 
+10.  Confirm the Sequence order:  In Maestro Control Center,  
+11.  Once its imported, you should be able to run the sequences. 
