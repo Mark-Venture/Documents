@@ -23,6 +23,7 @@ When you update then run the Python script,  it will take your supplied Settings
     - Open your Start Menu, type cmd, and press **Enter** to open the Command Prompt.
     - Type `python --version` and press Enter. I
     - If it shows "Python 3.x.x," you are ready to go.
+5. The [MaestroUpdateV2.py](https://github.com/Mark-Venture/Documents/blob/main/Downloads/MaestroUpdateV2.py)
 
 ## Short Overview: 
 1.  Rename the Donor Settings file to Settings_OLD.txt
