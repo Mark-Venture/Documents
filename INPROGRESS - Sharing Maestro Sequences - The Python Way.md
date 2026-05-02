@@ -1,3 +1,5 @@
+Note: this is the initial draft, and its under review.  It may be updated. 
+
 # Sharing your Maestro Sequences and Settings
 
 Working with setting up my R2D2, I didn't have any of the cool sequences for opening and closing panels like I see in the MrBaddeley FB group.  I was investigating how to share some of those fancy sequences with others to make it easier to those just getting started with Droid building.  This is based on one of the several options I tested.   
@@ -44,4 +46,6 @@ When you update then run the Python script,  it will take your supplied Settings
 8.  In the Maestro Control Center app,  import the new settings file  by going File -> Open Settings File ->  select the  Settings_New.txt that was just created
 9.  If you receive a prompt that the settings file was from a different Maestro,  select OK.  It will import.
 10.  Confirm the Sequence order:  In Maestro Control Center,  
-11.  Once its imported, you should be able to run the sequences. 
+11.  Once its imported, you should be able to run the sequences.
+
+Tip:  If you try to run the sequences from your DroidLink display or other, by calling the sequence number and things don't look right,  you may need to go back into the Maestro Control Center,  to the Script tab,  delete everything there,  go to the Sequence tab,  select Copy All to Script,  then edit the script to replace the returns with quit as needed. 
