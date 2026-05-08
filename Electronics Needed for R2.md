@@ -39,7 +39,7 @@ HotRC DS-650 is currently the only one supported.   These are needed if you want
 NOTE: Pay attention when you order.  Some packages include the F-06A PWM receivers, the receivers cannot be used with DroidLink. SBUSA receivers which are required must be purchased separately.
 
 * [HotRC DS-650 Remote Controller](https://a.co/d/082LogKp) (order 2):   This does come with the F-06A and is the only way to order from Amazon.  
-* [HotRC S-BUS-A Receivers](https://tinyurl.com/5n8zxvvd) (order 2): Note, this is not available from Amazon.  AliExpress is the only source.   NOTE: there are various listings on AliExpress at different prices, please make sure you order HotRC **SBUS-A** receivers. 
+* [HotRC S-BUS-A Receivers](https://tinyurl.com/5n8zxvvd) (order 2): Note, this is not available from Amazon.  AliExpress is the only source, and you might find on Ebay.   NOTE: there are various listings on AliExpress at different prices, please make sure you order HotRC **SBUS-A** receivers. 
 
 ## **DFPlayer Mini MP3 Player**:   
 The DFPlayer board is used to play back the droid sounds. 
