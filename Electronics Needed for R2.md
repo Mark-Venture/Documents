@@ -83,6 +83,9 @@ NOTE: it is NOT recommended to get a Micro Maestro (6) due to its limited intern
 
 Typically, you make them by ordering the individual parts and assembling them.  For example, I purchased ball joints, push rods, springs and linkage stoppers off Amazon, and put mine together.  And I got a cutter to cut the push rods shorter. There are many posts on the Mr Baddeley Facebook page on what to order and how to make them.
 
+**Servo Extension wires**:  If your servo wires, or PWM wires are not long enough,  these are a great way to extend them.
+* [30 Pcs 3-Pin Extension Cable Cord Male to Female Lead Wire](https://a.co/d/0f83B7xD)  Multiple lengths of wires that can extend the 3pin wires to the ESP32 breakout boards. 
+
 ## **Power**: 
 
 When it comes to powering your system there are many options and configurations which are all outside of DroidLink. This section doesn’t provide links to parts, only highlights some options. 
