@@ -79,25 +79,31 @@ NOTE: it is recommended to use at least two Mini Maestro 24 as your servo contro
 
 NOTE: it is NOT recommended to get a Micro Maestro (6) due to its limited internal memory/script size, and ability to control only 6 servos.   The low script size will prevent you from doing more servo sequences, as well as complex sequences. 
 
-**Servo Savers**:   When it comes to opening and closing the panels, there is a solid bar or linkage between the end of the arm of the servo (also known as the horn) and the hinge for the panel.  If the panel gets stuck while the servo is trying to turn, the servo keeps trying to turn and could get burned out, or break teeth inside.  Instead of that fixed length bar, servo savers use springs and tension to allow some extra play and movement. The servo can continue to turn a little bit, while the panel is stuck, thus preventing the servo from burning out.
+## **Servo Savers**:   
+
+When it comes to opening and closing the panels, there is a solid bar or linkage between the end of the arm of the servo (also known as the horn) and the hinge for the panel.  If the panel gets stuck while the servo is trying to turn, the servo keeps trying to turn and could get burned out, or break teeth inside.  Instead of that fixed length bar, servo savers use springs and tension to allow some extra play and movement. The servo can continue to turn a little bit, while the panel is stuck, thus preventing the servo from burning out.
 
 Typically, you make them by ordering the individual parts and assembling them.  For example, I purchased ball joints, push rods, springs and linkage stoppers off Amazon, and put mine together.  And I got a cutter to cut the push rods shorter. There are many posts on the Mr Baddeley Facebook page on what to order and how to make them.
 
-**Servo Extension wires**:  If your servo wires, or PWM wires are not long enough,  these are a great way to extend them.
+## **Servo Extension wires**:  
+(aka 3 wire extenders)
+If your servo wires, or PWM wires are not long enough,  these are a great way to extend them.
 * [30 Pcs 3-Pin Extension Cable Cord Male to Female Lead Wire](https://a.co/d/0f83B7xD)  Multiple lengths of wires that can extend the 3pin wires to the ESP32 breakout boards. 
 
-## **Power**: 
+# **Power**: 
 
 When it comes to powering your system there are many options and configurations which are all outside of DroidLink. This section doesn’t provide links to parts, only highlights some options. 
 
-**Power Source**: Many use tool batteries of various voltages and Ah ratings.  Please ensure it has onboard Battery Management System for optimum performance. 
+## **Power Source**: 
+Many use tool batteries of various voltages and Ah ratings.  Please ensure it has onboard Battery Management System for optimum performance. 
 
 * [Ryobi 18V Lithium HighPerformance](https://www.homedepot.com/p/RYOBI-ONE-18V-Lithium-Ion-4-0-Ah-Battery-2-Pack-PBP2005/316767033)  are a popular option. They are available as 4AH (minimum for an R2 unit),  6Ah, 8Ah or 12Ah. Higher Ah rating provides longer run time.  Often two-packs go on sale.  
 * Clones [are available on Amazon](https://a.co/d/02RyX91n)     
     
   NOTE: There are various battery boxes and mountings available on Makerworld and the MrBaddeley Facekbook page. 
 
-**Voltage Converters (aka Buck Converters)**:   Here too there are many options. These are needed to step down voltage from 18, 20 or 24volt batteries to 12v and 5V the electronics use.  Some choose to go with adjustable or variable output BUCKs, others with fixed output BUCKs. Do Not connect anything to the Output of an adjustable converter until AFTER you have configured it for the proper output voltage.  Failure to do so could harm your components\!
+## **Voltage Converters (aka Buck Converters)**: 
+Here too there are many options. These are needed to step down voltage from 18, 20 or 24volt batteries to 12v and 5V the electronics use.  Some choose to go with adjustable or variable output BUCKs, others with fixed output BUCKs. Do Not connect anything to the Output of an adjustable converter until AFTER you have configured it for the proper output voltage.  Failure to do so could harm your components\!
 
 When shopping for a converter Pay attention to the Voltage(V) and Current (Amp or A) output to ensure you have a BUCK that can handle what it will be feeding power to.   For example, there are some smaller adjustable Buck’s that only can output 2Amps.  While this might be enough if you are running just Astropixels or such, it will not be enough if you want to run a large number of servos, your dome motor, or such. 
 
@@ -108,12 +114,14 @@ When shopping for a converter Pay attention to the Voltage(V) and Current (Amp o
   [DC-DC 36V 48V to 12V 20A 240W Golf cart, Buck Converter](https://a.co/d/0jbcqF9p)  another that outputs a non-adjustable 12V up to 20A output.    
 * [HOMELYLIFE Voltage Converter DC 12V 24V Step Down to 5V 20A 100W](https://a.co/d/0gjXog5l)  It take the input voltage and steps it down to a constant 5V up to 20A.  
 
-**Fuses**: Fuses add protection for your circuits and subsystems.  The intent is, if there is something wrong in your system, the fuse blows before your other components.  Some run with a single fuse off their main battery into a bus bar to distribute power, others run power from the battery into a Fuse Block which distributes power and provides fuse protection for each subsystem (drive motor, dome motor, DroidLink Master, Power to Dome, etc).  The advantage to a fuse block and individual fuses per subsystem is that if you experience an issue with one subsystem, it won’t take out your other subsystems. 
+## **Fuses**: 
+Fuses add protection for your circuits and subsystems.  The intent is, if there is something wrong in your system, the fuse blows before your other components.  Some run with a single fuse off their main battery into a bus bar to distribute power, others run power from the battery into a Fuse Block which distributes power and provides fuse protection for each subsystem (drive motor, dome motor, DroidLink Master, Power to Dome, etc).  The advantage to a fuse block and individual fuses per subsystem is that if you experience an issue with one subsystem, it won’t take out your other subsystems. 
 
 * [6 Way Fuse Block Box 12V/24V DC, ATC/ATO Fuse Panel with LED Display](https://a.co/d/0h1Q94VS) suitable for 6 circuits, of 12v up to 32v with real time voltage display.  It should also work with 5V.   
 * [Nilight \- 50029R 120 Pcs Standard Blade Fuse Assorted Set with 10 Pack 14 AWG Inline Fuse holders](https://a.co/d/0b8S5fsr).   Comes with an assortment of 5A/7.5A/10A/15A/20A/25A/30A AMP blade fuses wth 10 Inline Fuse Holders.  Splice the inline fuse holder into the positive side of your circuit’s power lead, insert a fuse, and that circuit is protected. 
 
-**Lever Wire Connectors or Wago Connectors**: for those who can’t or don’t like to solder, these connectors allow relatively secure connections to various wire sizes.  I make use of these extensively in my R2. 
+## **Lever Wire Connectors or Wago Connectors**: 
+for those who can’t or don’t like to solder, these connectors allow relatively secure connections to various wire sizes.  I make use of these extensively in my R2. 
 
 * [Wago Lever Nuts 90pc assortment with case](https://a.co/d/09LqwN3n)  
 * [65 Pcs Lever Wire Connector assortment with storage box](https://a.co/d/0fl65G21)   nice assortment to connect and split wires  
@@ -122,7 +130,8 @@ When shopping for a converter Pay attention to the Voltage(V) and Current (Amp o
 
   NOTE: some 12gauge wires may not properly fit into these connectors. 
 
-**Wires**:   Typically, your wire gauge (or AWG) should be sized for the current you expect to run across it \+ 25% as  a margin for error.  Many use the following as a general guide: 
+## **Wires**:   
+Typically, your wire gauge (or AWG) should be sized for the current (amp) or power (watts) you expect to run across it \+ 25% as a margin for error.  Tgat being said, many use the following as a general guide: 
 
 * 12 AWG to carry up to 36 volts.    
 * 14 AWG to carry up to 24 volts.   
