@@ -1,4 +1,4 @@
-The following is a list of the electronics you’ll need when making an R2 D2 from the Mr. Baddeley files. The Optional components listed are suggestions, feel free to purchase from your preferred retailer.  
+The following is a list of the electronics you’ll need when making an R2 D2 from the Mr. Baddeley files. This list contains DroidLink and Non-DroidLink related parts.  Feel free to purchase from your preferred retailer as needed.  
 
 # **Parts for DroidLink**:
 
