@@ -55,7 +55,7 @@ Optional but highly suggested as it makes connecting the DFPlayer easier and nea
 
 * Contact  [Droidlink77@gmail.com](mailto:Droidlink77@gmail.com) for availability and price.
 
-# **Optional Parts**:  
+# **Non-DroidLink R2 Parts**:  
 
 ## **Amplifier**:  
 * [ZK-1002T 100W+100W Bluetooth Amplifier Board](https://a.co/d/04iiWMWC)  \- Recommended to enjoy louder and cleaner sound, with easy adjustability form your droid.  You’ll also need a cable to connect to the DFPlayer.   NOTE: if you are attending Con’s or using your droid in loud places, the amplifier is highly recommended.   If you are just “at home” then an amplifier may not be necessary.
@@ -65,6 +65,22 @@ Optional but highly suggested as it makes connecting the DFPlayer easier and nea
 
 * If not using an amplifier:  [Visaton FRS8-4 3.3" Full-Range Speaker](https://a.co/d/02sfUU9x)  A single speaker can be directly connected to the DFPlayer board.  While sold as a pair, a single speaker from  [Pyle PL32BL (Pair)](https://a.co/d/0fPfsmun)  can be used, just connect/mount 1 speaker to DFPlayer.   
 * If using the ZK-1002T amplifier:  [Pyle PL32BL (Pair)](https://a.co/d/0fPfsmun)  These connect to the Amp and handle the power nicely. 
+
+## **Dome Motor**:
+If you want your Dome to spin, you'll need a motor to move it
+* [Greartisan DC 12V 300RPM Gear Motor High Torque motor wtih 37mm shaft](https://a.co/d/0aT2ZXKj)
+  If out of stock an alternatives are (encoder currently not used, but it doesn't hurt to have it):
+  * [Pololu 37d motor 30:1 330rpm WITH Encoder Item #4752](https://www.pololu.com/product/4752)
+  * [Pololu 37d motor 30:1 330rpm WITHOUT Encoder Item #2742](https://www.pololu.com/product/4742))
+ 
+    NOTE: The Dome Motors are available as 12v or 24v.  Which you should pick depends on your power system, and how much voltage you can supply the Motor in your droid.  
+ 
+## **Dome Motor Controller**:
+To interface the motor with your chosen system, you need a dome motor speed controller. the Syren10 is the most popular. 
+
+* [SyRen 10A regenerative Motor Driver](https://www.dimensionengineering.com/products/syren10)
+
+  NOTE: Availability and Shipping times will vary. While not available from Amazon or AliExpress, you should be able to find it from several vendors. 
 
 ## **Servos**:  
 If you want the blue panels in your dome to open/close, or you printed the Complex body and want the doors to open/close, or the holo projectors and utility arms to move, you’ll need servos.    The PDFs in the EarlyBird \-\> MK4 AstroMech folders will call out what servos to use in these positions. 
