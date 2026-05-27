@@ -28,20 +28,20 @@ When you update then run the Python script,  it will take your supplied Settings
 5. The [MaestroUpdateV2.py](https://github.com/Mark-Venture/Documents/blob/main/Downloads/MaestroUpdateV2.py) Python Script file
 
 ## Short Overview: 
-1.  Rename the Donor Settings file (exported via  Maestro Control Center file -> Save Settings..)  to Settings_OLD.txt
+1.  Rename the Donor Settings file (exported via  Maestro Control Center file -> Save Settings..)  to *My_Original_Settings.txt*
 2.  Update the PY with the servos that are mirrored (see line 8),
-3.  Update the PY to set the new limits for your servos on lines 13-24.
+3.  Update the PY to set the new limits for your servos on lines 13-24.  (take them from  your *My_Original_Settings.txt* )
 4.  Run the PY
-5.  Import the Settings_NEW.txt it created into the maestro  (File -> Open Settings)
+5.  Import the Settings_NEW.txt it created into the maestro using Maestro Control Center  (File -> Open Settings ->   select your Settings_New.txt)
 
 ## Here are the detailed steps:
 
 1.  On the Channel Settings tab in Maestro Control Center,  ensure each of your servos are configured for Min and Max. This is crucial for future steps. 
-2.  Backup your current settings: In Maestro Control Center, select File -> Save Settings File... When prompted, select the folder you want to save to,  and set the name to something like *My Original Settings.txt* or the like.   You will need this file in future steps!!
+2.  Backup your current settings: In Maestro Control Center, select File -> Save Settings File... When prompted, select the folder you want to save to,  and set the name to something like *My_Original_Settings.txt* or the like.   You will need this file in future steps!!
 3.  Take the Donor Settings file with the sequences you want to use, and rename it to  Settings_OLD.txt
-4.  Open the PY file in an editor like Notepad or NotePad++
-5.  Open your *My Original Settings.TXT*  , near the top will be the Channels section.  It will contain the Min, Max, Home and Neutral settings for each of your servos.
-6.  Update the Servo Limits in the PY file (lines 13-24) with the values you'll see in the Channels section of your *My Original Settings.TXT*  and save the PY file
+4.  Open the PY file in an editor like Notepad or [NotePad++](https://notepad-plus-plus.org/)
+5.  Open your *My_Original_Settings.txt*  , near the top will be the Channels section.  It will contain the Min, Max, Home and Neutral settings for each of your servos.
+6.  Update the Servo Limits in the PY file (lines 13-24) with the values you'll see in the Channels section of your *My_Original_Settings.txt*  and save the PY file
 7.  Run the PY file:   From a CMD prompt, change to the folder holding your  Settings_OLD.txt, and updated Python script, and type  `PY Maestroupdate.py` then press **Enter**
 8.  In the Maestro Control Center app,  import the new settings file  by going File -> Open Settings File ->  select the  Settings_New.txt that was just created
 9.  If you receive a prompt that the settings file was from a different Maestro,  select OK.  It will import.
