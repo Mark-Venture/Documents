@@ -69,9 +69,9 @@ Optional but highly suggested as it makes connecting the DFPlayer easier and nea
 ## **Dome Motor**:
 If you want your Dome to spin, you'll need a motor to move it
 * [Greartisan DC 12V 300RPM Gear Motor High Torque motor wtih 37mm shaft](https://a.co/d/0aT2ZXKj)
-  If out of stock an alternatives are (encoder currently not used, but it doesn't hurt to have it):
-  * [Pololu 37d motor 30:1 330rpm WITH Encoder Item #4752](https://www.pololu.com/product/4752)
-  * [Pololu 37d motor 30:1 330rpm WITHOUT Encoder Item #2742](https://www.pololu.com/product/4742))
+  
+  * Alternative [Pololu 37d motor 30:1 330rpm WITH Encoder Item #4752](https://www.pololu.com/product/4752) Note: Encoder isn't currently used by DroidLink, but it wont hurt to have it.
+  * Alternative [Pololu 37d motor 30:1 330rpm WITHOUT Encoder Item #2742](https://www.pololu.com/product/4742)
  
     NOTE: The Dome Motors are available as 12v or 24v.  Which you should pick depends on your power system, and how much voltage you can supply the Motor in your droid.  
  
