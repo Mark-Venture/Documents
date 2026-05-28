@@ -1,1 +1,1067 @@
 
+# maestroCombine-v7.py
+# ------------------------------------------------------------
+# FULLY PATCHED VERSION WITH:
+# - Sequence Preview Player (horizontal bars, real timing)
+# - Recursion-safe slider (prevents infinite callback loops)
+# - Channel-order-by-first-appearance preview logic
+# - Calibration editor
+# - Sequence importer with scaling + reversal
+# - Subroutine importer with conflict resolution
+# - Full comments for readability
+# ------------------------------------------------------------
+# PART 1/5
+# ------------------------------------------------------------
+# This section contains:
+# - Imports
+# - File loading helpers
+# - Channel parsing
+# - Sequence extraction
+# - Subroutine extraction
+# - Scaling helpers
+# ------------------------------------------------------------
+
+import re
+import tkinter as tk
+from tkinter import filedialog, messagebox, ttk, simpledialog
+
+# ------------------------------------------------------------
+# FILE LOADING
+# ------------------------------------------------------------
+
+def load_file(path):
+    """
+    Loads a text file and normalizes line endings.
+    """
+    with open(path, "r", encoding="utf-8") as f:
+        text = f.read()
+    # Normalize CRLF / CR to LF
+    text = text.replace("\r\n", "\n").replace("\r", "\n")
+    return text
+
+# ------------------------------------------------------------
+# CHANNEL PARSING
+# ------------------------------------------------------------
+
+def extract_channels(text):
+    """
+    Extracts all <Channel ...> tags from a Maestro settings file.
+    """
+    return re.findall(r'<Channel [^>]*>', text)
+
+def parse_channel_values(tag):
+    """
+    Extracts min/max/home/neutral from a <Channel> tag.
+    Returns a dict with integer values.
+    """
+    return {
+        "min": int(re.search(r'min="(\d+)"', tag).group(1)),
+        "max": int(re.search(r'max="(\d+)"', tag).group(1)),
+        "home": int(re.search(r'home="(\d+)"', tag).group(1)),
+        "neutral": int(re.search(r'neutral="(\d+)"', tag).group(1)),
+    }
+
+# ------------------------------------------------------------
+# SEQUENCE EXTRACTION
+# ------------------------------------------------------------
+
+def extract_sequences(text):
+    """
+    Extracts all <Sequence>...</Sequence> blocks.
+    """
+    return re.findall(r'<Sequence.*?</Sequence>', text, re.DOTALL)
+
+# ------------------------------------------------------------
+# SCRIPT + SUBROUTINE EXTRACTION
+# ------------------------------------------------------------
+
+def extract_script(text):
+    """
+    Extracts the <Script>...</Script> block.
+    If none exists, returns the entire text as script.
+    """
+    m = re.search(r"<Script[^>]*>(.*?)</Script>", text, re.DOTALL)
+    if m:
+        return m.group(1).strip()
+    else:
+        return text.strip()
+
+def extract_subroutines(script_text):
+    """
+    Extracts all subroutines of the form:
+        sub name
+            ...
+    Returns a list of dicts: { "name": ..., "text": ... }
+    """
+    subs = []
+    pattern = r'(?s)\bsub\s+([A-Za-z_][A-Za-z0-9_]*)\b(.*?)(?=\bsub\b|\Z)'
+    for m in re.finditer(pattern, script_text):
+        name = m.group(1)
+        body = m.group(2)
+        full = f"sub {name}{body}"
+        subs.append({"name": name, "text": full.strip()})
+    return subs
+
+def remove_sub_by_name(script_text, name):
+    """
+    Removes a subroutine by name from the script text.
+    """
+    pattern = r'(?s)\bsub\s+' + re.escape(name) + r'\b.*?(?=\bsub\b|\Z)'
+    return re.sub(pattern, "", script_text).strip()
+
+# ------------------------------------------------------------
+# VALUE SCALING HELPERS
+# ------------------------------------------------------------
+
+def scale_value(val, old_min, old_max, new_min, new_max, reversed=False):
+    """
+    Scales a servo value from old range to new range.
+    Applies reversal if needed.
+    """
+    if val == 0:
+        return 0
+    percent = (val - old_min) / (old_max - old_min) if old_max != old_min else 0
+    percent = max(0, min(1, percent))
+    if reversed:
+        return int(new_max - percent * (new_max - new_min))
+    return int(new_min + percent * (new_max - new_min))
+
+def scale_sequence(seq_text, old_limits, new_limits, reversed_channels):
+    """
+    Scales all <Frame> values inside a <Sequence> block.
+    """
+    def repl(match):
+        tag = match.group(1)
+        vals = match.group(2).split()
+        new_vals = []
+        for i, v in enumerate(vals):
+            try:
+                v_int = int(v)
+                if i in old_limits and i in new_limits:
+                    o_min, o_max = old_limits[i]
+                    n_min, n_max, _, _ = new_limits[i]
+                    new_vals.append(str(scale_value(
+                        v_int, o_min, o_max, n_min, n_max, i in reversed_channels
+                    )))
+                else:
+                    new_vals.append(v)
+            except:
+                new_vals.append(v)
+        return f"{tag}{' '.join(new_vals)}"
+
+    return re.sub(r'(<Frame[^>]*>)([^<]+)', repl, seq_text)
+
+# ------------------------------------------------------------
+# END OF PART 1/5
+# ------------------------------------------------------------
+
+# ------------------------------------------------------------
+# PART 2/5
+# ------------------------------------------------------------
+# This section contains:
+# - Sequence frame parsing for preview
+# - SequencePreviewWindow class
+#   - Horizontal bars
+#   - Per-channel Min/Max scaling
+#   - Reversed channel handling
+#   - Real-time playback using frame delays
+#   - Play / Pause / Stop / Step
+#   - Timeline slider (with recursion-safe guard)
+# ------------------------------------------------------------
+
+# ------------------------------------------------------------
+# SEQUENCE FRAME PARSING FOR PREVIEW
+# ------------------------------------------------------------
+
+def parse_sequence_frames(seq_text):
+    """
+    Parses a <Sequence> block into:
+      - frames: list of dicts {channel: value}
+      - delays: list of delay_ms per frame (int)
+      - channel_order: list of channels in order of first appearance
+
+    Assumes each <Frame> contains a list of integers interpreted as:
+      value0 channel0 value1 channel1 value2 channel2 ...
+    """
+    frames = []
+    delays = []
+    channel_order = []
+
+    # Match <Frame ...>values</Frame>
+    pattern = r'(<Frame[^>]*>)([^<]+)</Frame>'
+    for m in re.finditer(pattern, seq_text, re.DOTALL):
+        tag = m.group(1)
+        vals_str = m.group(2).strip()
+        parts = vals_str.split()
+        nums = []
+        for p in parts:
+            try:
+                nums.append(int(p))
+            except:
+                # Ignore non-integer tokens
+                pass
+
+        frame_channels = {}
+        # Interpret as value, channel, value, channel, ...
+        for i in range(0, len(nums) - 1, 2):
+            value = nums[i]
+            ch = nums[i + 1]
+            frame_channels[ch] = value
+            if ch not in channel_order:
+                channel_order.append(ch)
+
+        frames.append(frame_channels)
+
+        # Try to get duration/time from tag, else default
+        delay = 200  # default ms
+        dm = re.search(r'duration="(\d+)"', tag)
+        if not dm:
+            dm = re.search(r'time="(\d+)"', tag, re.IGNORECASE)
+        if dm:
+            try:
+                delay = int(dm.group(1))
+            except:
+                pass
+        delays.append(delay)
+
+    if not frames:
+        return [], [], []
+
+    return frames, delays, channel_order
+
+# ------------------------------------------------------------
+# SEQUENCE PREVIEW WINDOW
+# ------------------------------------------------------------
+
+class SequencePreviewWindow:
+    """
+    A Toplevel window that previews a single sequence:
+
+    - Shows only channels used in the sequence
+    - Channels ordered by first appearance
+    - Horizontal bars scaled using each channel's Min/Max
+    - Reversed channels flip bar direction
+    - Real-time playback using per-frame delays
+    - Play / Pause / Stop / Step
+    - Timeline slider (scrub to any frame)
+    """
+
+    def __init__(self, parent, seq_name, frames, delays,
+                 channel_order, new_limits, reversed_channels):
+        self.parent = parent
+        self.seq_name = seq_name
+        self.frames = frames
+        self.delays = delays
+        self.channel_order = channel_order
+        self.new_limits = new_limits
+        self.reversed_channels = set(reversed_channels)
+
+        self.num_frames = len(frames)
+        self.current_frame = 0
+        self.playing = False
+        self.after_id = None
+
+        # Guard flag to prevent slider recursion
+        self.slider_updating = False
+
+        # Create window
+        self.win = tk.Toplevel(parent)
+        self.win.title(f"Preview Sequence: {seq_name}")
+        self.win.protocol("WM_DELETE_WINDOW", self.on_close)
+
+        # Title
+        top = ttk.Frame(self.win)
+        top.pack(fill="x", padx=10, pady=5)
+        ttk.Label(top, text=f"Sequence: {seq_name}",
+                  font=("Arial", 11, "bold")).pack(anchor="w")
+
+        # Channel bars container
+        self.bar_frame = ttk.Frame(self.win)
+        self.bar_frame.pack(fill="both", expand=True, padx=10, pady=5)
+
+        self.channel_rows = {}  # ch -> (value_label, canvas)
+        self.bar_width = 250
+        self.bar_height = 16
+
+        # Header row
+        header = ttk.Frame(self.bar_frame)
+        header.pack(fill="x")
+        ttk.Label(header, text="Ch", width=4).grid(row=0, column=0, padx=2)
+        ttk.Label(header, text="Value", width=8).grid(row=0, column=1, padx=2)
+        ttk.Label(header, text="Position", width=20).grid(row=0, column=2, padx=2)
+
+        # Rows container
+        self.rows_container = ttk.Frame(self.bar_frame)
+        self.rows_container.pack(fill="both", expand=True)
+
+        # One row per channel in channel_order
+        for r, ch in enumerate(self.channel_order):
+            row = ttk.Frame(self.rows_container)
+            row.grid(row=r, column=0, sticky="w", pady=2)
+
+            ttk.Label(row, text=str(ch), width=4).pack(side="left", padx=2)
+
+            val_label = ttk.Label(row, text="0", width=8)
+            val_label.pack(side="left", padx=2)
+
+            canvas = tk.Canvas(
+                row,
+                width=self.bar_width,
+                height=self.bar_height,
+                bg="white",
+                highlightthickness=1,
+                relief="sunken"
+            )
+            canvas.pack(side="left", padx=4)
+
+            self.channel_rows[ch] = (val_label, canvas)
+
+        # Playback controls
+        ctrl = ttk.Frame(self.win)
+        ctrl.pack(fill="x", padx=10, pady=5)
+
+        self.btn_step_back = ttk.Button(ctrl, text="◀", width=3,
+                                        command=self.step_back)
+        self.btn_play = ttk.Button(ctrl, text="▶", width=3,
+                                   command=self.play)
+        self.btn_pause = ttk.Button(ctrl, text="❚❚", width=3,
+                                    command=self.pause)
+        self.btn_stop = ttk.Button(ctrl, text="■", width=3,
+                                   command=self.stop)
+        self.btn_step_fwd = ttk.Button(ctrl, text="▶", width=3,
+                                       command=self.step_forward)
+
+        self.btn_step_back.pack(side="left", padx=2)
+        self.btn_play.pack(side="left", padx=2)
+        self.btn_pause.pack(side="left", padx=2)
+        self.btn_stop.pack(side="left", padx=2)
+        self.btn_step_fwd.pack(side="left", padx=2)
+
+        self.lbl_status = ttk.Label(
+            ctrl,
+            text=f"Frame: 1 / {self.num_frames}"
+        )
+        self.lbl_status.pack(side="right", padx=5)
+
+        # Timeline slider
+        slider_frame = ttk.Frame(self.win)
+        slider_frame.pack(fill="x", padx=10, pady=5)
+
+        self.slider = ttk.Scale(
+            slider_frame,
+            from_=0,
+            to=max(self.num_frames - 1, 0),
+            orient="horizontal",
+            command=self.on_slider
+        )
+        self.slider.pack(fill="x")
+
+        # Initial draw
+        self.update_display()
+
+    # --------------------------------------------------------
+    # WINDOW LIFECYCLE
+    # --------------------------------------------------------
+
+    def on_close(self):
+        """
+        Stop playback and destroy the window.
+        """
+        self.stop()
+        self.win.destroy()
+
+    # --------------------------------------------------------
+    # SCALING HELPERS
+    # --------------------------------------------------------
+
+    def get_scaled_percent(self, ch, value):
+        """
+        Returns a 0.0–1.0 position for the given channel/value,
+        using the new_limits and reversed channel list.
+        """
+        if ch not in self.new_limits:
+            return 0.0
+        n_min, n_max, _, _ = self.new_limits[ch]
+        if n_max == n_min:
+            return 0.0
+        percent = (value - n_min) / (n_max - n_min)
+        percent = max(0.0, min(1.0, percent))
+        if ch in self.reversed_channels:
+            percent = 1.0 - percent
+        return percent
+
+    # --------------------------------------------------------
+    # DISPLAY UPDATE
+    # --------------------------------------------------------
+
+    def update_display(self):
+        """
+        Redraws all channel bars and updates labels for the current frame.
+        Also updates the status label and slider position.
+        """
+        if not self.frames:
+            return
+
+        frame = self.frames[self.current_frame]
+
+        for ch in self.channel_order:
+            val_label, canvas = self.channel_rows[ch]
+            value = frame.get(ch, 0)
+            val_label.config(text=str(value))
+
+            # Clear canvas
+            canvas.delete("all")
+            canvas.create_rectangle(
+                0, 0, self.bar_width, self.bar_height,
+                fill="white", outline="black"
+            )
+
+            if value != 0:
+                p = self.get_scaled_percent(ch, value)
+                bar_len = int(self.bar_width * p)
+                canvas.create_rectangle(
+                    0, 0, bar_len, self.bar_height,
+                    fill="#4a90e2", outline=""
+                )
+
+        self.lbl_status.config(
+            text=f"Frame: {self.current_frame + 1} / {self.num_frames}"
+        )
+
+        # Recursion-safe slider update
+        self.slider_updating = True
+        self.slider.set(self.current_frame)
+        self.slider_updating = False
+
+    # --------------------------------------------------------
+    # PLAYBACK CONTROL
+    # --------------------------------------------------------
+
+    def play(self):
+        """
+        Starts playback from the current frame.
+        """
+        if not self.frames:
+            return
+        self.playing = True
+        self.schedule_next_frame()
+
+    def pause(self):
+        """
+        Pauses playback (does not reset frame index).
+        """
+        self.playing = False
+        if self.after_id is not None:
+            self.win.after_cancel(self.after_id)
+            self.after_id = None
+
+    def stop(self):
+        """
+        Stops playback and resets to frame 0.
+        """
+        self.pause()
+        self.current_frame = 0
+        self.update_display()
+
+    def step_forward(self):
+        """
+        Steps forward by one frame (wraps around).
+        """
+        self.pause()
+        if not self.frames:
+            return
+        self.current_frame = (self.current_frame + 1) % self.num_frames
+        self.update_display()
+
+    def step_back(self):
+        """
+        Steps backward by one frame (wraps around).
+        """
+        self.pause()
+        if not self.frames:
+            return
+        self.current_frame = (self.current_frame - 1) % self.num_frames
+        self.update_display()
+
+    def schedule_next_frame(self):
+        """
+        Schedules the next frame during playback using the frame's delay.
+        """
+        if not self.playing or not self.frames:
+            return
+
+        self.update_display()
+        delay = self.delays[self.current_frame] if self.delays else 200
+        self.current_frame = (self.current_frame + 1) % self.num_frames
+        self.after_id = self.win.after(delay, self.schedule_next_frame)
+
+    # --------------------------------------------------------
+    # SLIDER CALLBACK (RECURSION-SAFE)
+    # --------------------------------------------------------
+
+    def on_slider(self, val):
+        """
+        Called when the user drags the timeline slider.
+        Uses a guard flag to avoid recursion when we update
+        the slider programmatically from update_display().
+        """
+        if self.slider_updating:
+            # Ignore programmatic updates
+            return
+
+        self.pause()
+        try:
+            idx = int(float(val))
+        except:
+            idx = 0
+        idx = max(0, min(self.num_frames - 1, idx))
+        self.current_frame = idx
+        self.update_display()
+
+# ------------------------------------------------------------
+# END OF PART 2/5
+# ------------------------------------------------------------
+
+# ------------------------------------------------------------
+# PART 3/5
+# ------------------------------------------------------------
+# This section contains:
+# - MaestroMergeGUI class
+#   - Calibration table UI
+#   - Sequence list UI (with Preview buttons)
+#   - Subroutine list UI
+#   - File loading
+#   - Preview integration
+#   - Utility helpers
+# ------------------------------------------------------------
+
+class MaestroMergeGUI:
+    """
+    Main GUI application class.
+    Handles:
+      - Loading "My" settings file
+      - Loading "Friend" settings file
+      - Displaying calibration table
+      - Displaying sequences with Preview buttons
+      - Displaying subroutines
+      - Merging selected sequences and subroutines
+      - Launching the SequencePreviewWindow
+    """
+
+    def __init__(self, root):
+        self.root = root
+        self.root.title("Maestro Settings Merge Tool")
+
+        # Paths to files
+        self.my_file = None
+        self.friend_file = None
+
+        # Parsed friend data
+        self.friend_sequences = []
+        self.friend_subs = []
+
+        # UI state
+        self.seq_vars = []
+        self.seq_preview_buttons = []
+        self.sub_vars = []
+
+        # Calibration state
+        self.channel_values = {}
+        self.reversed_vars = {}
+
+        # Notebook tabs
+        self.notebook = ttk.Notebook(root)
+        self.notebook.pack(fill="both", expand=True)
+
+        # Tabs
+        self.tab_cal = ttk.Frame(self.notebook)
+        self.tab_seq = ttk.Frame(self.notebook)
+        self.tab_sub = ttk.Frame(self.notebook)
+
+        self.notebook.add(self.tab_cal, text="Servo Calibration")
+        self.notebook.add(self.tab_seq, text="Sequences")
+        self.notebook.add(self.tab_sub, text="Subroutines")
+
+        # Top buttons
+        top_frame = ttk.Frame(root)
+        top_frame.pack(pady=5)
+
+        ttk.Button(top_frame, text="Select My Settings File",
+                   command=self.load_my_file).pack(side="left", padx=5)
+        ttk.Button(top_frame, text="Select Friend Settings File",
+                   command=self.load_friend_file).pack(side="left", padx=5)
+
+        ttk.Button(root, text="Merge Selected Items",
+                   command=self.merge_files).pack(pady=10)
+
+        # Build calibration table container
+        self.build_calibration_table()
+
+        # Build sequence and subroutine areas
+        self.seq_frame = ttk.Frame(self.tab_seq)
+        self.seq_frame.pack(fill="both", expand=True, padx=10, pady=10)
+
+        self.sub_frame = ttk.Frame(self.tab_sub)
+        self.sub_frame.pack(fill="both", expand=True, padx=10, pady=10)
+
+    # --------------------------------------------------------
+    # CALIBRATION TABLE
+    # --------------------------------------------------------
+
+    def build_calibration_table(self):
+        """
+        Creates the scrollable calibration table container.
+        """
+        container = ttk.Frame(self.tab_cal)
+        container.pack(fill="both", expand=True)
+
+        canvas = tk.Canvas(container)
+        canvas.pack(side="left", fill="both", expand=True)
+
+        scrollbar = ttk.Scrollbar(container, orient="vertical",
+                                  command=canvas.yview)
+        scrollbar.pack(side="right", fill="y")
+
+        canvas.configure(yscrollcommand=scrollbar.set)
+        canvas.bind("<Configure>",
+                    lambda e: canvas.configure(scrollregion=canvas.bbox("all")))
+
+        self.cal_table = ttk.Frame(canvas)
+        canvas.create_window((0, 0), window=self.cal_table, anchor="nw")
+
+        # Header row
+        headers = ["Channel", "Min", "Max", "Home", "Neutral", "Reversed"]
+        for col, text in enumerate(headers):
+            ttk.Label(self.cal_table, text=text,
+                      font=("Arial", 10, "bold")).grid(
+                row=0, column=col, padx=5, pady=5
+            )
+
+    def populate_calibration_table(self, channels):
+        """
+        Populates the calibration table with channel values.
+        """
+        # Clear old rows
+        for widget in self.cal_table.winfo_children():
+            if int(widget.grid_info()["row"]) > 0:
+                widget.destroy()
+
+        self.channel_values = {}
+        self.reversed_vars = {}
+
+        for i, tag in enumerate(channels):
+            vals = parse_channel_values(tag)
+
+            self.channel_values[i] = {
+                "min": tk.StringVar(value=str(vals["min"])),
+                "max": tk.StringVar(value=str(vals["max"])),
+                "home": tk.StringVar(value=str(vals["home"])),
+                "neutral": tk.StringVar(value=str(vals["neutral"])),
+            }
+
+            self.reversed_vars[i] = tk.BooleanVar(value=False)
+
+            ttk.Label(self.cal_table, text=str(i)).grid(
+                row=i+1, column=0, padx=5, pady=2
+            )
+
+            ttk.Entry(self.cal_table, textvariable=self.channel_values[i]["min"],
+                      width=8).grid(row=i+1, column=1)
+            ttk.Entry(self.cal_table, textvariable=self.channel_values[i]["max"],
+                      width=8).grid(row=i+1, column=2)
+            ttk.Entry(self.cal_table, textvariable=self.channel_values[i]["home"],
+                      width=8).grid(row=i+1, column=3)
+            ttk.Entry(self.cal_table, textvariable=self.channel_values[i]["neutral"],
+                      width=8).grid(row=i+1, column=4)
+
+            ttk.Checkbutton(self.cal_table,
+                            variable=self.reversed_vars[i]).grid(
+                row=i+1, column=5
+            )
+
+    # --------------------------------------------------------
+    # FILE LOADING
+    # --------------------------------------------------------
+
+    def load_my_file(self):
+        """
+        Loads the user's own Maestro settings file.
+        """
+        path = filedialog.askopenfilename(title="Select My Settings File")
+        if not path:
+            return
+
+        self.my_file = path
+        text = load_file(path)
+
+        channels = extract_channels(text)
+        if not channels:
+            messagebox.showerror("Error",
+                                 "No <Channel> tags found in your settings file.")
+            return
+
+        self.populate_calibration_table(channels)
+
+        messagebox.showinfo("Loaded", f"My settings loaded:\n{path}")
+
+    def load_friend_file(self):
+        """
+        Loads the friend's Maestro settings file and populates:
+          - Sequence list
+          - Subroutine list
+        """
+        path = filedialog.askopenfilename(title="Select Friend Settings File")
+        if not path:
+            return
+
+        self.friend_file = path
+        text = load_file(path)
+
+        # Channel count warning
+        my_channels = extract_channels(load_file(self.my_file)) if self.my_file else []
+        friend_channels = extract_channels(text)
+
+        if my_channels and friend_channels:
+            if len(friend_channels) != len(my_channels):
+                messagebox.showwarning(
+                    "Channel Count Mismatch",
+                    f"Friend file has {len(friend_channels)} channels, "
+                    f"but your file has {len(my_channels)}.\n\n"
+                    f"Extra or missing channels will be ignored."
+                )
+
+        # ---------------- Sequences ----------------
+        self.friend_sequences = extract_sequences(text)
+
+        # Clear old sequence UI
+        for w in self.seq_frame.winfo_children():
+            w.destroy()
+        self.seq_vars = []
+        self.seq_preview_buttons = []
+
+        if not self.friend_sequences:
+            ttk.Label(self.seq_frame, text="No sequences found.").pack(anchor="w")
+        else:
+            for i, _ in enumerate(self.friend_sequences):
+                row = ttk.Frame(self.seq_frame)
+                row.pack(fill="x", anchor="w", pady=2)
+
+                var = tk.BooleanVar()
+                self.seq_vars.append(var)
+                chk = ttk.Checkbutton(row, text=f"Sequence {i}", variable=var)
+                chk.pack(side="left")
+
+                # PREVIEW BUTTON
+                btn = ttk.Button(row, text="Preview",
+                                 command=lambda idx=i: self.open_sequence_preview(idx))
+                btn.pack(side="left", padx=5)
+                self.seq_preview_buttons.append(btn)
+
+        # ---------------- Subroutines ----------------
+        friend_script = extract_script(text)
+        self.friend_subs = extract_subroutines(friend_script)
+
+        # Clear old subroutine UI
+        for w in self.sub_frame.winfo_children():
+            w.destroy()
+        self.sub_vars = []
+
+        if not self.friend_subs:
+            ttk.Label(self.sub_frame, text="No subroutines found.").pack(anchor="w")
+        else:
+            for sub in self.friend_subs:
+                var = tk.BooleanVar()
+                self.sub_vars.append(var)
+                ttk.Checkbutton(self.sub_frame, text=sub["name"],
+                                variable=var).pack(anchor="w")
+
+        messagebox.showinfo("Loaded", f"Friend settings loaded:\n{path}")
+
+    # --------------------------------------------------------
+    # PREVIEW LAUNCHER
+    # --------------------------------------------------------
+
+    def build_new_limits_and_reversed(self):
+        """
+        Builds new_limits dict and reversed_channels list
+        from the calibration table.
+        """
+        new_limits = {}
+        reversed_channels = []
+        for ch, vals in self.channel_values.items():
+            try:
+                new_limits[ch] = (
+                    int(vals["min"].get()),
+                    int(vals["max"].get()),
+                    int(vals["home"].get()),
+                    int(vals["neutral"].get()),
+                )
+            except:
+                raise ValueError(f"Invalid numeric value in channel {ch}.")
+            if self.reversed_vars[ch].get():
+                reversed_channels.append(ch)
+        return new_limits, reversed_channels
+
+    def open_sequence_preview(self, index):
+        """
+        Opens the preview window for the selected sequence.
+        """
+        if not self.friend_sequences:
+            return
+
+        seq_text = self.friend_sequences[index]
+        frames, delays, channel_order = parse_sequence_frames(seq_text)
+        if not frames:
+            messagebox.showwarning("Preview", "No frames found in this sequence.")
+            return
+
+        try:
+            new_limits, reversed_channels = self.build_new_limits_and_reversed()
+        except ValueError as e:
+            messagebox.showerror("Error", str(e))
+            return
+
+        # Filter channel_order to only channels that exist in new_limits
+        channel_order = [ch for ch in channel_order if ch in new_limits]
+        if not channel_order:
+            messagebox.showwarning("Preview", "No valid channels for preview.")
+            return
+
+        SequencePreviewWindow(
+            self.root,
+            seq_name=f"Sequence {index}",
+            frames=frames,
+            delays=delays,
+            channel_order=channel_order,
+            new_limits=new_limits,
+            reversed_channels=reversed_channels
+        )
+
+    # --------------------------------------------------------
+    # SUBROUTINE CONFLICT DIALOG
+    # --------------------------------------------------------
+
+    def ask_sub_conflict(self, name):
+        """
+        Asks the user how to resolve a subroutine name conflict.
+        Returns (action, new_name).
+        """
+        dlg = tk.Toplevel(self.root)
+        dlg.title("Subroutine Conflict")
+        dlg.grab_set()
+
+        ttk.Label(
+            dlg,
+            text=f"Subroutine '{name}' already exists.\nWhat would you like to do?"
+        ).pack(padx=10, pady=10)
+
+        result = {"action": "skip", "name": None}
+
+        def do_skip():
+            result["action"] = "skip"
+            dlg.destroy()
+
+        def do_overwrite():
+            result["action"] = "overwrite"
+            dlg.destroy()
+
+        def do_rename():
+            new_name = simpledialog.askstring(
+                "Rename Subroutine",
+                f"Enter new name for '{name}':",
+                parent=self.root
+            )
+            if new_name and new_name.strip():
+                result["action"] = "rename"
+                result["name"] = new_name.strip()
+            dlg.destroy()
+
+        btn_frame = ttk.Frame(dlg)
+        btn_frame.pack(pady=10)
+
+        ttk.Button(btn_frame, text="Skip", command=do_skip).pack(side="left", padx=5)
+        ttk.Button(btn_frame, text="Overwrite", command=do_overwrite).pack(side="left", padx=5)
+        ttk.Button(btn_frame, text="Rename…", command=do_rename).pack(side="left", padx=5)
+
+        dlg.wait_window()
+        return result["action"], result["name"]
+
+# ------------------------------------------------------------
+# END OF PART 3/5
+# ------------------------------------------------------------
+
+# ------------------------------------------------------------
+# PART 4/5
+# ------------------------------------------------------------
+# This section contains:
+# - Merge logic for sequences
+# - Merge logic for subroutines
+# - Channel tag rewriting
+# - File output
+# ------------------------------------------------------------
+
+    # --------------------------------------------------------
+    # MERGE LOGIC
+    # --------------------------------------------------------
+
+    def merge_files(self):
+        """
+        Merges:
+          - Selected sequences (scaled + reversed)
+          - Selected subroutines (with conflict resolution)
+          - Updated channel calibration values
+        Writes the result to a new file chosen by the user.
+        """
+        if not self.my_file:
+            messagebox.showerror("Error", "Please select your settings file.")
+            return
+        if not self.friend_file:
+            messagebox.showerror("Error", "Please select a friend settings file.")
+            return
+
+        save_path = filedialog.asksaveasfilename(
+            title="Save Merged Settings As",
+            defaultextension=".txt",
+            filetypes=[("Text Files", "*.txt"), ("All Files", "*.*")]
+        )
+        if not save_path:
+            return
+
+        # Load both files
+        my_text = load_file(self.my_file)
+        friend_text = load_file(self.friend_file)
+
+        # Build new limits from GUI
+        try:
+            new_limits, reversed_channels = self.build_new_limits_and_reversed()
+        except ValueError as e:
+            messagebox.showerror("Error", str(e))
+            return
+
+        # Old limits from "my" file
+        my_channels = extract_channels(my_text)
+        old_limits = {}
+        for i, tag in enumerate(my_channels):
+            v = parse_channel_values(tag)
+            old_limits[i] = (v["min"], v["max"])
+
+        # ----------------------------------------------------
+        # MERGE SEQUENCES
+        # ----------------------------------------------------
+        selected_sequences = []
+        for var, seq in zip(self.seq_vars, self.friend_sequences):
+            if var.get():
+                scaled = scale_sequence(seq, old_limits, new_limits, reversed_channels)
+                selected_sequences.append(scaled)
+
+        if selected_sequences and "</Sequences>" in my_text:
+            combined = "\n".join(selected_sequences)
+            my_text = my_text.replace("</Sequences>", f"{combined}\n</Sequences>")
+
+        # ----------------------------------------------------
+        # MERGE SUBROUTINES
+        # ----------------------------------------------------
+        my_has_script_tag = re.search(r"<Script[^>]*>", my_text) is not None
+        my_script = extract_script(my_text) if my_has_script_tag else my_text
+        my_subs = extract_subroutines(my_script)
+        existing_names = {s["name"] for s in my_subs}
+
+        imported_blocks = []
+
+        for var, sub in zip(self.sub_vars, self.friend_subs):
+            if not var.get():
+                continue
+
+            name = sub["name"]
+            text = sub["text"]
+
+            if name in existing_names:
+                action, new_name = self.ask_sub_conflict(name)
+                if action == "skip":
+                    continue
+                elif action == "overwrite":
+                    my_script = remove_sub_by_name(my_script, name)
+                    existing_names.discard(name)
+                elif action == "rename":
+                    if not new_name:
+                        continue
+                    text = re.sub(
+                        r'\bsub\s+' + re.escape(name) + r'\b',
+                        f"sub {new_name}",
+                        text,
+                        count=1
+                    )
+                    name = new_name
+
+            imported_blocks.append(text.strip())
+            existing_names.add(name)
+
+        if imported_blocks:
+            my_script = my_script.strip()
+            my_script = (
+                my_script
+                + "\n\n# --- Imported Friend Subroutines ---\n"
+                + "\n\n".join(imported_blocks)
+                + "\n"
+            )
+
+            if my_has_script_tag:
+                my_text = re.sub(
+                    r"<Script[^>]*>.*?</Script>",
+                    f"<Script>\n{my_script}\n</Script>",
+                    my_text,
+                    flags=re.DOTALL
+                )
+            else:
+                my_text = my_script
+
+        # ----------------------------------------------------
+        # UPDATE CHANNEL TAGS
+        # ----------------------------------------------------
+        def update_channel(match):
+            idx = update_channel.counter
+            update_channel.counter += 1
+            tag = match.group(0)
+
+            if idx in new_limits:
+                n_min, n_max, n_home, n_neut = new_limits[idx]
+                tag = re.sub(r'min="\d+"', f'min="{n_min}"', tag)
+                tag = re.sub(r'max="\d+"', f'max="{n_max}"', tag)
+                tag = re.sub(r'home="\d+"', f'home="{n_home}"', tag)
+                tag = re.sub(r'neutral="\d+"', f'neutral="{n_neut}"', tag)
+
+            return tag
+
+        update_channel.counter = 0
+        my_text = re.sub(r'<Channel [^>]*>', update_channel, my_text)
+
+        # ----------------------------------------------------
+        # WRITE OUTPUT FILE
+        # ----------------------------------------------------
+        with open(save_path, "w", encoding="utf-8") as f:
+            f.write(my_text)
+
+        messagebox.showinfo("Success", f"Merged file saved:\n{save_path}")
+
+# ------------------------------------------------------------
+# END OF PART 4/5
+# ------------------------------------------------------------
+
+# ------------------------------------------------------------
+# PART 5/5
+# ------------------------------------------------------------
+# This section contains:
+# - Main entry point
+# - Tkinter event loop
+# ------------------------------------------------------------
+
+if __name__ == "__main__":
+    root = tk.Tk()
+    MaestroMergeGUI(root)
+    root.mainloop()
+
+# ------------------------------------------------------------
+# END OF maestroCombine-v7.py
+# ------------------------------------------------------------
+
+
