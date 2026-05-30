@@ -154,7 +154,7 @@ for those who can’t or don’t like to solder, these connectors allow relative
   NOTE: some 12gauge wires may not properly fit into these connectors. 
 
 ## **Wires**:   
-Typically, your wire gauge (or AWG) should be sized for the current (amp) or power (watts) you expect to run across it \+ 25% as a margin for error.  Tgat being said, many use the following as a general guide: 
+Typically, your wire gauge (or AWG) should be sized for the current (amp) or power (watts) you expect to run across it \+ 25% as a margin for error.  That being said, many use the following as a general guide: 
 
 * 12 AWG to carry up to 36 volts.    
 * 14 AWG to carry up to 24 volts.   
