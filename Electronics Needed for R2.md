@@ -142,8 +142,9 @@ for those who can’t or don’t like to solder, these connectors allow relative
 * [Wago Lever Nuts 90pc assortment with case](https://a.co/d/09LqwN3n)  
 * [65 Pcs Lever Wire Connector assortment with storage box](https://a.co/d/0fl65G21)   nice assortment to connect and split wires  
 *  [60 pcs XHF Colourful Conductor Compact Connectors](https://a.co/d/08A3VhUc)  great to color code your wires as you connect/extend them.   
-* [DIN Rail Terminal Blocks](https://a.co/d/01A853dZ)  these are a great alternative to bus bars for power distribution.  Multiple options like 2 in 10 out (make 1 \+/- combo into 5), 2 in 8 out, etc.  
-
+* [DIN Rail Terminal Blocks](https://a.co/d/01A853dZ)  these are a great alternative to bus bars for power distribution.  Multiple options like 2 in 10 out (make 1 \+/- combo into 5), 2 in 8 out, etc.
+* [Plugable Lever Wire Connectors](https://a.co/d/08TIA8Ty)  Lever connectors for the wires, but a plug in the middle.  Allows you to plug/unplug your connections while using solderless Lever Wire Connectors for the wires. 2, 3 and 4 wire versions are available. 
+  
   NOTE: some 12gauge wires may not properly fit into these connectors. 
 
 ## **Wires**:   
