@@ -82,6 +82,12 @@ To interface the motor with your chosen system, you need a dome motor speed cont
 
   NOTE: Availability and Shipping times will vary. While not available from Amazon or AliExpress, you should be able to find it from several vendors. 
 
+## **Drive Motors**:  
+To make R2 drive, you'll need motors in the left and right feet. There are two ways to handle this.   A Hub Motor with Electronic Speed Controller,  or Brushed Motor with Sabertooth.  The main Early Bird R2 files have information on Brushless/FlipSky ESCs.   There is a community folder with information and files you need if you select Brushed/Sabertooth  Because I had a donor hoverboard I could take the brushless motors from (in stead of having to buy any) and FlipSky ESCs.  
+
+* [FLIPSKY Mini V6 MK5 with Power Button Base on VESC6.6](https://a.co/d/060emWTk)   You need 2.
+* [4" Hub Motor](https://a.co/d/00zv9lx9)  You need 2.  L-Faster is the preferred brand. This fits the MK4 feet.  
+
 ## **Servos**:  
 If you want the blue panels in your dome to open/close, or you printed the Complex body and want the doors to open/close, or the holo projectors and utility arms to move, you’ll need servos.    The PDFs in the EarlyBird \-\> MK4 AstroMech folders will call out what servos to use in these positions. 
 
