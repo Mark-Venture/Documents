@@ -39,7 +39,7 @@ _NOTE: For Version 1 you'll need **two** ESP32 and expansion boards.  (one ESP32
 * [3Pin servo wires](https://a.co/d/0e7YYnSx) You need at least 14 wires, so this 20 pack will be sufficent. 
 
 ## Power: 
-There are two options. Either barrel connector supplying  12V or USB-C connector supplying 5v.   You only need one of these, not both.
+There are two options. Either barrel connector supplying  12V or USB-C connector supplying 5v to the Expansion Boards's USB-C port.   You only need one of these, not both.
 
 12v barrel is preferred!
 
