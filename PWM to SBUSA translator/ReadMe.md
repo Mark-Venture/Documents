@@ -13,7 +13,8 @@ OPtion 3:  https://tinyurl.com/4ehh6hrm
 If you are unable to get one, or shipping is delayed, you can proceed. 
 
 ##  WARING:   The steps on this page are ment to be a temporary work around if there is a delay in obtaining HotRC SBUS-A Receivers.   DO NOT USE THIS AS A PERMINANT SOLUTION!!!!
-# THIS IS NOT SUPPORTED BY DROIDLINK!!  
+# THIS IS NOT AFFILATED nor SUPPORTED BY DROIDLINK!!  
+
 ## USE AT YOUR OWN RISK!!
 
 This process requires parts, as well as using the Arduion IDE to send the code to your ESP32.  If you are not comfortable doing this, DO NOT DO IT.
