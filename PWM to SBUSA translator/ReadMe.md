@@ -41,6 +41,8 @@ _NOTE: For Version 1 you'll need **two** ESP32 and expansion boards.  (one ESP32
 ## Power: 
 There are two options. Either barrel connector supplying  12V or USB-C connector supplying 5v.   You only need one of these, not both.
 
+12v barrel is preferred!
+
 * Barrel for 12v [DC Power Pigtail Cable, 2-Pack 5.5mm x 2.1mm 90 Degree Right Angle DC Barrel Male](https://a.co/d/0cBU9CgQ) 
 * USB-C for 5v [Type C Male Plug Bare Wire Pigtail](https://a.co/d/02wyy1HZ)
 
