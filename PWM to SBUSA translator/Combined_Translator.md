@@ -13,7 +13,7 @@ OPtion 3:  https://tinyurl.com/4ehh6hrm
 
 If you are unable to get one, or shipping is delayed, you can proceed. 
 
-##  WARING:   The steps on this page are ment to be a temporary work around if there is a delay in obtaining HotRC SBUS-A Receivers.   DO NOT USE THIS AS A PERMINANT SOLUTION!!!!
+##  WARING:   The steps on this page are meant to be a temporary work around if there is a delay in obtaining HotRC SBUS-A Receivers.   DO NOT USE THIS AS A PERMINANT SOLUTION!!!!
 # THIS IS NOT AFFILATED nor SUPPORTED BY DROIDLINK!!  
 
 ## USE AT YOUR OWN RISK!!
