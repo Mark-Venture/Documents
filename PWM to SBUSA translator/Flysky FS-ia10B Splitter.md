@@ -51,7 +51,9 @@ Hardware Wiring (10-Channel Input, Dual Split Output)
 
 
 
+Code:
 
+```
 
 #include <Arduino.h>
 
@@ -217,3 +219,6 @@ void loop() {
 
   delay(14); 
 }
+
+
+```
