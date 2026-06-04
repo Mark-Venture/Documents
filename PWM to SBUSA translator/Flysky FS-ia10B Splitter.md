@@ -34,16 +34,16 @@ The stick/button associations are based on the mappings of your FlySky FS-i6X.
 
 |FS-ia10b|ESP32 Input Pin| Output Channel|Notes|
 |:---:|:---:|:--:|:--:|
-|RX1 CH1|GPIO 13|TX1 ch 1| Remote 1 Stick Left/right|
-|RX1 CH2|GPIO 12|TX1 Ch 2| Remote 1 Stick Up/Down|
-|RX1 CH3|GPIO 14|TX2 Ch 2| Remote 2 Stick Up/Down|
-|RX1 CH4|GPIO 27|TX2 Ch 1| Remote 2 Stick Left/right|
-|RX1 CH5|GPIO 26|TX1 Ch 3| Remote 1 Button 3/A|
-|RX1 CH6|GPIO 25|TX1 Ch 4| Remote 1 Button 4/B|
-|RX1 CH7 (3-Pos Switch)|GPIO 23|TX2 Ch 3| Remote 2 Button 3/A|
-|RX1 CH8|GPIO 19|Tx2 Ch 4| Remote 2 Button 4/B|
-|RX1 CH9|GPIO 18|TX1 ch 5| Remote 1 Button 5/C|
-|RX1 CH10|GPIO 5|TX2 Ch 5| Remote 2 Button 5/C|
+|RX1 CH1 (right stick)|GPIO 13|TX1 ch 1| Remote 1 Stick Left/right|
+|RX1 CH2 (right stick)|GPIO 12|TX1 Ch 2| Remote 1 Stick Up/Down|
+|RX1 CH3 (left stick)|GPIO 14|TX2 Ch 2| Remote 2 Stick Up/Down|
+|RX1 CH4 (left stick)|GPIO 27|TX2 Ch 1| Remote 2 Stick Left/right|
+|RX1 CH5 (SwA)|GPIO 26|TX1 Ch 3| Remote 1 Button 3/A|
+|RX1 CH6 (SwB)|GPIO 25|TX1 Ch 4| Remote 1 Button 4/B|
+|RX1 CH7 (SwC)(3-Pos Switch)|GPIO 23|TX2 Ch 3| Remote 2 Button 3/A|
+|RX1 CH8 (SwD)|GPIO 19|Tx2 Ch 4| Remote 2 Button 4/B|
+|RX1 CH9 (VrA)|GPIO 18|TX1 ch 5| Remote 1 Button 5/C|
+|RX1 CH10(VrB)|GPIO 5|TX2 Ch 5| Remote 2 Button 5/C|
 
 
 |ESP32 Output Pins|Destination Device| Notes|
