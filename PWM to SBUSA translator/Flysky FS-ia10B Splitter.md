@@ -1,6 +1,9 @@
 
 Flysky in PWM mode.  Output as SBUS-A #1 and SUBS-A #2
 
+This allows me to use the Left Stick, SWA, SWB, VRR  as one "DS650", and Right Stick, SWC, SWD, VRB as the "other DS650"   
+Note: SWC is 3 position (on/mid/off),  in translator software I have it limited to two positions(on/off) because the buttons on DS650 are only two positions(on/off).
+
 Mapping:
 
 |Input Channel|Output Channel|
