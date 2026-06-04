@@ -8,4 +8,4 @@ Warning: Because this is a translator, and it converts signals, there may be the
 
 [Option 1:](https://github.com/Mark-Venture/Documents/blob/main/PWM%20to%20SBUSA%20translator/Individual_Translators.md)   Create One translator that takes input from One F-06A PWM Receiver and outputs it in an SBUS-A format. This is suitable for a single remote.  If you have two remotes, you'll need to make two translators (two ESP32's with two expansion boards).  
 
-[Option 2:](https://github.com/Mark-Venture/Documents/blob/main/PWM%20to%20SBUSA%20translator/Combined_Translator.md) Create One Translator that will take input from Two F-06A receivers and output as Two SBUS-A.    This option requires only a single ESP32 w/breakout board. 
+[Option 2:](https://github.com/Mark-Venture/Documents/blob/main/PWM%20to%20SBUSA%20translator/Combined_Translator.md) Create One Translator that will take input from Two F-06A receivers and output as Two SBUS-A.    This option requires only a single ESP32 w/breakout board for the two remotes/receivers for DroidLink.
