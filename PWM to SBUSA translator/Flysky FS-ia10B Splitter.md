@@ -1,60 +1,61 @@
 
-Flysky in PWM mode.  Output as SBUS-A #1 and SUBS-A #2
+# Flysky in PWM mode.  Output as SBUS-A #1 and SUBS-A #2
 
-This allows me to use the Left Stick, SWA, SWB, VRR  as one "DS650", and Right Stick, SWC, SWD, VRB as the "other DS650"   
+This allows me to use the Left Stick, SWA, SWB, VRR  as one "DS650", and Right Stick, SWC, SWD, VRB as the "other DS650" 
+
+Because this emulates a Stick and 3 Buttons, and the DS650 has a Stick and 4 buttons you lose 1 button "per remote".   
+
 Note: SWC is 3 position (on/mid/off),  in translator software I have it limited to two positions(on/off) because the buttons on DS650 are only two positions(on/off).
 
-Mapping:
+The stick/button associations are based on the mappings of your FlySky FS-i6X.    
 
-|Input Channel|Output Channel|
-|:--:|:--:|
-|RX1 Ch1| TX1 ch 1| 
-|RX1 Ch2| TX1 Ch 2|
-|RX1 Ch3| TX2 Ch 2|
-|RX1 CH4| TX2 Ch 1|
-|RX1 CH5| TX1 Ch 3|
-|RX1 CH6| TX1 Ch 4|
-|RX1 Ch7| TX2 Ch 3|
-|RX1 Ch8| Tx2 Ch 4|
-|RX1 Ch9| TX1 ch 5|
-|RX1 Ch10| TX2 Ch 5|
+## FlySky settings:  
 
-Note: Rx1 Ch7 is 3 position. I want high to be on, neutral and negative to be off.
+|Input Channel|Value|Notes|
+|:--:|:--:|:--:|
+|Sticks Mode| Mode 2| Left stick up=ch3, Left Stick left= Ch4, right stick up=ch2, right stick left=ch1|
+|Aux Switches| SwA, SwB, SwC, SwD, VrA, VrB = On| enable all extra switches/knobs|
+|Aux Switches| Ch = 10|This aloows for 10 channels rather than the default of 6|
+|Aux Channels Ch5| Source SwA | sets SWA=ch5|
+|Aux Channels Ch6| Source SwB | sets SWB=ch6|
+|Aux Channels Ch7| Source SwC | sets SWC=ch7|
+|Aux Channels Ch8| Source SwD | sets SWD=ch8|
+|Aux Channels Ch9| Source VrA | sets VrA=ch9|
+|Aux Channels Ch10| Source VrB | sets VrB=ch10|
+
+* Note: Rx1 Ch7 is 3 position. I want high to be on, neutral and negative to be off.
+* Note: by default,  swtich A/B/C/D in the UP position = OFF, down = On.  You can reverse this in the remote menus if you wish. 
+* Note: by default VRA and VRB Fully Counter Clockwise is OFF,  fully clockwise is ON.  to simulate "button press" for VrA/VrB, just rotate fully clickwise, then back counter clockwise.
 
 
 
-Hardware Wiring (10-Channel Input, Dual Split Output)
 
-|FS-ia10b|ESP32 Input Pin|
-|:---:|:---:|
-|RX1 CH1|GPIO 13|
-|RX1 CH2|GPIO 12|
-|RX1 CH3|GPIO 14|
-|RX1 CH4|GPIO 27|
-|RX1 CH5|GPIO 26|
-|RX1 CH6|GPIO 25|
-|RX1 CH7 (3-Pos Switch)|GPIO 23|
-|RX1 CH8|GPIO 19|
-|RX1 CH9|GPIO 18|
-|RX1 CH10|GPIO 5|
+## Hardware Wiring (10-Channel Input, Dual Split Output)
+
+|FS-ia10b|ESP32 Input Pin| Output Channel|Notes|
+|:---:|:---:|:--:|:--:|
+|RX1 CH1|GPIO 13|TX1 ch 1| Remote 1 Stick Left/right|
+|RX1 CH2|GPIO 12|TX1 Ch 2| Remote 1 Stick Up/Down|
+|RX1 CH3|GPIO 14|TX2 Ch 2| Remote 2 Stick Up/Down|
+|RX1 CH4|GPIO 27|TX2 Ch 1| Remote 2 Stick Left/right|
+|RX1 CH5|GPIO 26|TX1 Ch 3| Remote 1 Button 3/A|
+|RX1 CH6|GPIO 25|TX1 Ch 4| Remote 1 Button 4/B|
+|RX1 CH7 (3-Pos Switch)|GPIO 23|TX2 Ch 3| Remote 2 Button 3/A|
+|RX1 CH8|GPIO 19|Tx2 Ch 4| Remote 2 Button 4/B|
+|RX1 CH9|GPIO 18|TX1 ch 5| Remote 1 Button 5/C|
+|RX1 CH10|GPIO 5|TX2 Ch 5| Remote 2 Button 5/C|
 
 
 |ESP32 Output Pins|Destination Device| Notes|
 |:---:|:---:|:--:|
-|TX2 (GPIO 17)|Device 1 SBUS RX|Natively Inverted Split Stream 1|
-|TX1 (GPIO 4)|Device 2 SBUS RX|Natively Inverted Split Stream 2|
+|TX2 (GPIO 17)|Remote 1 SBUS RX|Natively Inverted Split Stream 1|
+|TX1 (GPIO 4)|Remote 2 SBUS RX|Natively Inverted Split Stream 2|
 
 
 
 
 
-
-
-
-
-
-
-Code:
+## Code:
 
 ```
 
