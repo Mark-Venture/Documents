@@ -1,3 +1,6 @@
+Note: I am still updating and adding to this list.  it has most of the main parts, but not all.  
+
+
 The following is a list of the electronics you’ll need when making an R2 D2 from the Mr. Baddeley files. This list contains DroidLink and Non-DroidLink related parts.  Feel free to purchase from your preferred retailer as needed.  
 
 # **Parts for DroidLink**:
@@ -12,10 +15,8 @@ It is an ESP32-S3 N16R8 Development board and Breakout Board.  The parts are as 
 * [Meshnology ESP32-S3](https://a.co/d/0iwS0lk4)    
   * If out of stock an alternative is:  [https://a.co/d/0f3qa6Uq](https://a.co/d/0f3qa6Uq)  
 * [Meshnology N40 \- ESP32 Expansion Board](https://a.co/d/0heCsPTG)  
-  * If out of stock an alternate source is: [Direct form manufacturer](https://meshnology.com/products/n40-esp32-expansion-board-for-esp32-esp32-s3-core-modules)   
-  * If the N40 is out of stock, alternate Option is [Freenove Breakout Board for ESP32 / ESP32-S3 WROVER WROOM](https://a.co/d/0g1QBTRy)  Please note, The ESP-S3 N16R8 will “hang over” the socket on this breakout board.  You should have one set of exposed pins at the top, and one set at the bottom.  
-
-NOTE: if you have to purchase a different variant of the ESP32-S3 N16R8, please ensure it includes an Antenna for the Wi-Fi.  We have seen some 3rd party ESP32-S3 N16R8 have just an “Antenna base” connector on board for an external antenna, but do not include the external antenna\!
+  * If it is out of stock an alternate source is: [Direct form manufacturer](https://meshnology.com/products/n40-esp32-expansion-board-for-esp32-esp32-s3-core-modules)   
+  * If the Meshnology N40 is out of stock, alternate Option is [Freenove Breakout Board for ESP32 / ESP32-S3 WROVER WROOM](https://a.co/d/0g1QBTRy)  Please note, The ESP-S3 N16R8 will “hang over” the socket on this breakout board.  You should have one set of exposed pins at the top, and one set at the bottom.  
 
 
 ## **DroidLink Display**:  
@@ -132,7 +133,7 @@ When shopping for a converter Pay attention to the Voltage(V) and Current (Amp o
 * Some Examples:   
   [DROK DC Buck Converter, 5.3V-32V to 1.2V-32V 12A Adjustable Power Supply](https://a.co/d/02iev547)  this takes up to 32V in, and steps it down as low as 1V.  Without added cooling it’s rated to support up to 8Amps (12v if you add a fan to cool it), so it’s good all-around one. It can be used in both the Body and Dome.  
 * [DROK DC Buck Converter Adjustable Voltage Regulator 12V 6V-32V to 1.5-32V 5A](https://a.co/d/0dVWCDhi)  this is very similar to the other, except it only does a maximum of 5Amps so it can’t power as much simultaneously.   
-* [DC HOUSE 20A 240W 12V Golf Cart 48V 36V to 12V](https://a.co/d/0gNxa7J9)  It takes voltage in, and outputs a non-adjustable 12V up to 20A output. I deal if you have many options installed in your Droid.     
+* [DC HOUSE 20A 240W 12V Golf Cart 48V 36V to 12V](https://a.co/d/0gNxa7J9)  It takes voltage in, and outputs a non-adjustable 12V up to 20A output. Ideal if you have many options installed in your Droid.     
   [DC-DC 36V 48V to 12V 20A 240W Golf cart, Buck Converter](https://a.co/d/0jbcqF9p)  another that outputs a non-adjustable 12V up to 20A output.    
 * [HOMELYLIFE Voltage Converter DC 12V 24V Step Down to 5V 20A 100W](https://a.co/d/0gjXog5l)  It take the input voltage and steps it down to a constant 5V up to 20A.  
 
