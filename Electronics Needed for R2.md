@@ -137,20 +137,35 @@ When shopping for a converter Pay attention to the Voltage(V) and Current (Amp o
   [DC-DC 36V 48V to 12V 20A 240W Golf cart, Buck Converter](https://a.co/d/0jbcqF9p)  another that outputs a non-adjustable 12V up to 20A output.    
 * [HOMELYLIFE Voltage Converter DC 12V 24V Step Down to 5V 20A 100W](https://a.co/d/0gjXog5l)  It take the input voltage and steps it down to a constant 5V up to 20A.  
 
+
+## **Barrel Conenctor**:
+
+The breakout boards can take 6v-12v input via barrel connector.  These are the connectors size needed. Most use the 90 degrees, however some decided to use straight, it just depends on your MCU layouts and physical constraints. 
+
+* [DC Power Pigtail Cable, 2-Pack 5.5mm x 2.1mm 90 Degree Right Angle DC Barrel Male](https://a.co/d/07zXo86P)
+
+Or
+
+* [10 Pairs 12V 5A DC Power Pigtail Barrel Plug Connector Cable, 2.1mm x 5.5mm Male Female DC Pigtail](https://a.co/d/0hzsk7Tl)  
+
+
+
 ## **Slip Ring**:
 
 The Slip Ring is essental as it takes the wires from the body make it up to the dome without getting twisted as R2's head rotates. You need one that is a 22mm body
 
-* Some Examples:
-  [Taidacent 6-30A Slip Ring Collector Ring Rotary Electrical Contact Connector (12 Wires 5A)](https://a.co/d/0hdQ0N0z)
+An Example:
+  
+ * [Taidacent 6-30A Slip Ring Collector Ring Rotary Electrical Contact Connector (12 Wires 5A)](https://a.co/d/0hdQ0N0z)
   
 
 ## **Pogo Pins**:
 
 Pogo pins are magnetic wire connectors.  They will allow you to remove/replace the dome without having to disconnect/reconnect wires each time. 
 
-* Some Examples:
-   [20Pairs 3Pin Spring Loaded Magnetic Pogo Pin Connector 3 Positions Magnets Pitch 2.3MM Through Holes Male Female Probe Accessories, Black, 500455715](https://a.co/d/00EvOre5)  These do work with the Mr. Baddeley files  See the 3PinMagTag DomeA.stl and the like in the EarlyBird\MK4 Astromech\Body\Basic Body\Dome Gear Motor Slipring  folder. 
+An Example:
+
+* [20Pairs 3Pin Spring Loaded Magnetic Pogo Pin Connector 3 Positions Magnets Pitch 2.3MM Through Holes Male Female Probe Accessories, Black, 500455715](https://a.co/d/00EvOre5)  These do work with the Mr. Baddeley files  See the 3PinMagTag DomeA.stl and the like in the EarlyBird\MK4 Astromech\Body\Basic Body\Dome Gear Motor Slipring  folder. 
 
 
 
