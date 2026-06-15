@@ -128,7 +128,7 @@ Many use tool batteries of various voltages and Ah ratings.  Please ensure it ha
 ## **Voltage Converters (aka Buck Converters)**: 
 Here too there are many options. These are needed to step down voltage from 18, 20 or 24volt batteries to 12v and 5V the electronics use.  Some choose to go with adjustable or variable output BUCKs, others with fixed output BUCKs. Do Not connect anything to the Output of an adjustable converter until AFTER you have configured it for the proper output voltage.  Failure to do so could harm your components\!
 
-When shopping for a converter Pay attention to the Voltage(V) and Current (Amp or A) output to ensure you have a BUCK that can handle what it will be feeding power to.   For example, there are some smaller adjustable Buck’s that only can output 2Amps.  While this might be enough if you are running just Astropixels or such, it will not be enough if you want to run a large number of servos, your dome motor, or such. 
+When shopping for a converter Pay attention to the Voltage(V) and Current (Amp or A) output to ensure you have a BUCK that can handle the components it will be supplying power to.   For example, there are some smaller adjustable Buck’s that only can output 2Amps.  While this might be enough if you are running just Astropixels or such, it will not be enough if you want to run a large number of servos, your dome motor, or such. 
 
 * Some Examples:   
   [DROK DC Buck Converter, 5.3V-32V to 1.2V-32V 12A Adjustable Power Supply](https://a.co/d/02iev547)  this takes up to 32V in, and steps it down as low as 1V.  Without added cooling it’s rated to support up to 8Amps (12v if you add a fan to cool it), so it’s good all-around one. It can be used in both the Body and Dome.  
