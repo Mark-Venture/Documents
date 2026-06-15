@@ -49,7 +49,7 @@ The DFPlayer board is used to play back the droid sounds.
   * If out of stock, alternate source is [5PC Mini MP3 Module](https://a.co/d/0akwmUBJ)  This often is the same price as a single, but includes 5\.     
 * MicroSD card.   Up to 32gig card can be used, but must be formatted as FAT32  
     
-NOTE: For speakers, see “Optional Parts” section below for info. 
+NOTE: For speakers, see “Optional Parts” section below for info.   If using the DFPlayer Carrier board and an amplifier, you will also likely need a 3.5mm male to 3.5mm male cable.  (aka 1/4" male to 1/4" male) 
 
 ## **DFPlayer Mini Carrier**:   
 Optional but highly suggested as it makes connecting the DFPlayer easier and neater with the DroidLink Master. 
@@ -87,7 +87,7 @@ To interface the motor with your chosen system, you need a dome motor speed cont
 To make R2 drive, you'll need motors in the left and right feet. There are two ways to handle this.   A Hub Motor with Electronic Speed Controller,  or Brushed Motor with Sabertooth.  The main Early Bird R2 files have information on Brushless/FlipSky ESCs.   There is a community folder with information and files you need if you select Brushed/Sabertooth  Because I had a donor hoverboard I could take the brushless motors from (in stead of having to buy any) and FlipSky ESCs.  
 
 * [FLIPSKY Mini V6 MK5 with Power Button Base on VESC6.6](https://a.co/d/060emWTk)  This is the speed controller. You need 2.
-* [4" Hub Motor](https://a.co/d/00zv9lx9)  This is the brushless motor. You need 2.  L-Faster is the preferred brand. This fits the MK4 feet.  
+* [4" Hub Motor](https://a.co/d/00zv9lx9)  This is the brushless motor. You need 2.  L-Faster is the preferred brand. This fits the standard MK4 feet files.  
 
 ## **Servos**:  
 If you want the blue panels in your dome to open/close, or you printed the Complex body and want the doors to open/close, or the holo projectors and utility arms to move, you’ll need servos.    The PDFs in the EarlyBird \-\> MK4 AstroMech folders will call out what servos to use in these positions. 
@@ -108,7 +108,7 @@ When it comes to opening and closing the panels, there is a solid bar or linkage
 
 Typically, you make them by ordering the individual parts and assembling them.  For example, I purchased ball joints, push rods, springs and linkage stoppers off Amazon, and put mine together.  And I got a cutter to cut the push rods shorter. There are many posts on the Mr Baddeley Facebook page on what to order and how to make them.
 
-## **Servo Extension wires**:  
+## **Servo Wire Extensions**:  
 (aka 3 wire extenders)
 If your servo wires, or PWM wires are not long enough,  these are a great way to extend them.
 * [30 Pcs 3-Pin Extension Cable Cord Male to Female Lead Wire](https://a.co/d/0f83B7xD)  Multiple lengths of wires that can extend the 3pin wires to the ESP32 breakout boards. 
@@ -136,6 +136,23 @@ When shopping for a converter Pay attention to the Voltage(V) and Current (Amp o
 * [DC HOUSE 20A 240W 12V Golf Cart 48V 36V to 12V](https://a.co/d/0gNxa7J9)  It takes voltage in, and outputs a non-adjustable 12V up to 20A output. Ideal if you have many options installed in your Droid.     
   [DC-DC 36V 48V to 12V 20A 240W Golf cart, Buck Converter](https://a.co/d/0jbcqF9p)  another that outputs a non-adjustable 12V up to 20A output.    
 * [HOMELYLIFE Voltage Converter DC 12V 24V Step Down to 5V 20A 100W](https://a.co/d/0gjXog5l)  It take the input voltage and steps it down to a constant 5V up to 20A.  
+
+## **Slip Ring**:
+
+The Slip Ring is essental as it takes the wires from the body make it up to the dome without getting twisted as R2's head rotates. You need one that is a 22mm body
+
+* Some Examples:
+  [Taidacent 6-30A Slip Ring Collector Ring Rotary Electrical Contact Connector (12 Wires 5A)](https://a.co/d/0hdQ0N0z)
+  
+
+## **Pogo Pins**:
+
+Pogo pins are magnetic wire connectors.  They will allow you to remove/replace the dome without having to disconnect/reconnect wires each time. 
+
+* Some Examples:
+   [20Pairs 3Pin Spring Loaded Magnetic Pogo Pin Connector 3 Positions Magnets Pitch 2.3MM Through Holes Male Female Probe Accessories, Black, 500455715](https://a.co/d/00EvOre5)  These do work with the Mr. Baddeley files  See the 3PinMagTag DomeA.stl and the like in the EarlyBird\MK4 Astromech\Body\Basic Body\Dome Gear Motor Slipring  folder. 
+
+
 
 ## **Fuses**: 
 Fuses add protection for your circuits and subsystems.  The intent is, if there is something wrong in your system, the fuse blows before your other components.  Some run with a single fuse off their main battery into a bus bar to distribute power, others run power from the battery into a Fuse Block which distributes power and provides fuse protection for each subsystem (drive motor, dome motor, DroidLink Master, Power to Dome, etc).  The advantage to a fuse block and individual fuses per subsystem is that if you experience an issue with one subsystem, it won’t take out your other subsystems. 
