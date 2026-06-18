@@ -92,7 +92,7 @@ To make R2 drive, you'll need motors in the left and right feet. There are two w
 ## **Servos**:  
 If you want the blue panels in your dome to open/close, or you printed the Complex body and want the doors to open/close, or the holo projectors and utility arms to move, you’ll need servos.    The PDFs in the EarlyBird \-\> MK4 AstroMech folders will call out what servos to use in these positions. 
 
-**Servo Controller**:  If you plan to have opening panels, or other accessories that are driven by servos, the Pololu Mini Maestro is recommended due to its ease of programming and configuration. 
+## **Servo Controller**:  If you plan to have opening panels, or other accessories that are driven by servos, the Pololu Mini Maestro is recommended due to its ease of programming and configuration. 
 
 * [Mini Maestro 24](https://www.pololu.com/product/1356)  Can control up to 24 servos.   
 * [Mini Maestro 18](https://www.pololu.com/product/1354)  Can control up to 18 servos  
