@@ -18,7 +18,7 @@ It is an ESP32-S3 N16R8 Development board and Breakout Board.  The parts are as 
   * If it is out of stock an alternate source is: [Direct form manufacturer](https://meshnology.com/products/n40-esp32-expansion-board-for-esp32-esp32-s3-core-modules)   
   * If the Meshnology N40 is out of stock, alternate Option is [Freenove Breakout Board for ESP32 / ESP32-S3 WROVER WROOM](https://a.co/d/0g1QBTRy)  Please note, The ESP-S3 N16R8 will “hang over” the socket on this breakout board.  You should have one set of exposed pins at the top, and one set at the bottom.  
 
-NOTE: its always a good idea to order more than 1 ESP32 and 1 Expansion baord, to have spares just in case... 
+NOTE: its always a good idea to order more than 1 ESP32 and 1 Expansion board, to have spares just in case... 
 
 ## **DroidLink Display**:  
 It is a [Waveshare ESP32-S3 2.06inch AMOLED w/400mAh Battery](https://a.co/d/01TigaiF)   Please check the listing you order from, as this is also available without battery from some sellers\!  You must have a battery.  
