@@ -18,6 +18,7 @@ It is an ESP32-S3 N16R8 Development board and Breakout Board.  The parts are as 
   * If it is out of stock an alternate source is: [Direct form manufacturer](https://meshnology.com/products/n40-esp32-expansion-board-for-esp32-esp32-s3-core-modules)   
   * If the Meshnology N40 is out of stock, alternate Option is [Freenove Breakout Board for ESP32 / ESP32-S3 WROVER WROOM](https://a.co/d/0g1QBTRy)  Please note, The ESP-S3 N16R8 will “hang over” the socket on this breakout board.  You should have one set of exposed pins at the top, and one set at the bottom.  
 
+NOTE: its always a good idea to order more than 1 ESP32 and 1 Expansion baord, to have spares just in case... 
 
 ## **DroidLink Display**:  
 It is a [Waveshare ESP32-S3 2.06inch AMOLED w/400mAh Battery](https://a.co/d/01TigaiF)   Please check the listing you order from, as this is also available without battery from some sellers\!  You must have a battery.  
@@ -34,25 +35,27 @@ It is an ESP32-DevKitC-32 w/Expansion board
 
   NOTE: These are available as multi packs which is the preferred way to order, as for a full DroidLink Implementation you’ll need more than 1 slave.  Example: Dome Slave (connect lights like AstroPixel, and servo controller like Maestro), Body Slave (connect a servo controller like Maestro), if you plan on doing a Lifter assembly in the dome, you’ll need a Slave for that (it also needs a servo controller).
 
+  NOTE: its always a good idea to order more than you need to have spares just in case... 
+
 ## **RC Remote**:  
 HotRC DS-650 is currently the only one supported.   These are needed if you want to drive or pilot your droid around.  **You’ll need two**, one to control the Drive motors and the other to control the Dome and give you more buttons to trigger actions. 
 
-NOTE: Pay attention when you order.  Some packages include the F-06A PWM receivers, the receivers cannot be used with DroidLink. SBUSA receivers which are required must be purchased separately.
+NOTE: Pay attention when you order.  Many packages include the HotRC F-06A PWM receivers, the receivers cannot be used with DroidLink. *HotRC SBUS-A receivers which are required must be purchased separately.*
 
 * [HotRC DS-650 Remote Controller](https://a.co/d/082LogKp) (order 2):   This does come with the F-06A and is the only way to order from Amazon. Unfortunately the F-06A doesn't work for DroidLink.
-* [HotRC S-BUS-A Receivers](https://tinyurl.com/5n8zxvvd) (order 2): this is the required receiver for DroidLink.  Note, this is not available from Amazon.  AliExpress is the only source, and you might find on Ebay.   NOTE: there are various listings on AliExpress at different prices, please make sure you order HotRC **SBUS-A** receivers. 
+* [HotRC S-BUS-A Receivers](https://tinyurl.com/5n8zxvvd) (order 2): this is the required receiver for DroidLink.  Note, this is not available from Amazon.  AliExpress is the only source we found so far, and you might try on Ebay.   NOTE: there are various listings on AliExpress at different prices, please make sure you order HotRC **SBUS-A** receivers. 
 
 ## **DFPlayer Mini MP3 Player**:   
 The DFPlayer board is used to play back the droid sounds. 
 
 * [DFPlayer Mini MP3 Player for Arduino/ESP32](https://a.co/d/03fNwlU8)  (Single)  
-  * If out of stock, alternate source is [5PC Mini MP3 Module](https://a.co/d/0akwmUBJ)  This often is the same price as a single, but includes 5\.     
+  * If out of stock, alternate source is [5PC Mini MP3 Module](https://a.co/d/0akwmUBJ)  This often is the same price as a single, but includes 5.  Having extras is not a bad thing.     
 * MicroSD card.   Up to 32gig card can be used, but must be formatted as FAT32  
     
 NOTE: For speakers, see “Optional Parts” section below for info.   If using the DFPlayer Carrier board and an amplifier, you will also likely need a 3.5mm male to 3.5mm male cable.  (aka 1/4" male to 1/4" male) 
 
 ## **DFPlayer Mini Carrier**:   
-Optional but highly suggested as it makes connecting the DFPlayer easier and neater with the DroidLink Master. 
+Optional but highly recomended as it makes connecting the DFPlayer easier and neater with the DroidLink Master. 
 
 * Contact  [Droidlink77@gmail.com](mailto:Droidlink77@gmail.com) for availability and price.
 
