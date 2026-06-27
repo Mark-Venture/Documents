@@ -1,4 +1,4 @@
-
+ 
 # Flysky in PWM mode.  Output as SBUS-A #1 and SUBS-A #2
 
 This allows me to use the Left Stick, SWA, SWB, VRR  as one "DS650", and Right Stick, SWC, SWD, VRB as the "other DS650" 
