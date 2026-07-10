@@ -55,7 +55,9 @@ Lets get to work...
      <img width="339" height="182" alt="image" src="https://github.com/user-attachments/assets/b3be3a0d-26b7-44c8-92f8-83a980852656" />
 
    
-   How did I know that was the command for Failure Mode?  I looked at the commands here -> https://github.com/reeltwo/AstroPixelsPlus/tree/main
+   How did I know that was the command for Failure Mode?  I looked at the commands here -> https://github.com/reeltwo/AstroPixelsPlus/tree/main   and https://r2djp.gitbook.io/astropixels/advanced/interfacing
+
+   NOTE: AstroPixel commands in Droidlink need to start with :AP  rather than LE if you were using an Astropixel without DroidLink, hence the command is :APLE20000
 
    
 6. Test calling your Maestro sequences
