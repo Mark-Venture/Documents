@@ -65,6 +65,7 @@ Optional but highly recomended as it makes connecting the DFPlayer easier and ne
 
 ## **Amplifier**:  
 * [ZK-1002T 100W+100W Bluetooth Amplifier Board](https://a.co/d/04iiWMWC)  \- Recommended to enjoy louder and cleaner sound, with easy adjustability form your droid.  You’ll also need a cable to connect to the DFPlayer.   NOTE: if you are attending Con’s or using your droid in loud places, the amplifier is highly recommended.   If you are just “at home” then an amplifier may not be necessary.
+* [Ground Loop Isolator](https://a.co/d/0iq2j0jt)  Suggested when you are using an amp, to eliminiate some hum or noise. 
 
 ## **Speakers**:
 (depending on the size of your speaker, you may require custom mounts)
