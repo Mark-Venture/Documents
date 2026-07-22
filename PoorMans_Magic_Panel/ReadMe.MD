@@ -1,6 +1,6 @@
 # Poor Man's Magic Panel
 
-The original Magic Panel can be purchased from Printed-Droid.com.  It is an 8x8 LED Panel controlled by an ESP32 Mini to do shapes, patterns, text and such.
+The original Magic Panel can be purchased from Printed-Droid.com.  It is an 8x8 LED Panel controlled by an ESP32 Mini to do shapes, patterns, text and such. https://www.printed-droid.com/kb/magic-panel-32-wireless/
 
 Marc Frank has also devised a simple Magic Panel by joining two W2812 4x4 LED panels,  to make a 4x8 matrix, and created a mounting system available on Maker World https://makerworld.com/en/models/2799417-r2d2-magic-panel-mk3-4#profileId-3114056
 
