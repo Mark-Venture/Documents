@@ -19,6 +19,8 @@ Inside Droidlink Slave, configure the serial port for Marcduino,  9600.  Connect
 | **`DEMO`** or **`T200`** | Runs the curated Smart Demo animation loop | `DEMO` |
 
 See below for complete Pattern List
+
+
 ---
 
 ## 2. Display Control
