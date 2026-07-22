@@ -10,8 +10,11 @@ This project takes the ESP32 Mini code from the original Magic Panel, and adopts
 
 The Command Cheat Sheet shows what commands are available.  
 
-Parts Required:
+## Parts Required:
 
 [ESP32-C3 Mini  w/Breakout board](https://a.co/d/0cywsGyt)
-Two W2812 4x4 LED Panels
+
+[W2812 4x4 LED Panels](https://www.aliexpress.us/item/3256807317418742.html?spm=a2g0o.order_list.order_list_main.35.45d71802ouVGM3&gatewayAdapt=glo2usa) QTY 2.
+
+NOTE: BE SURE TO SELECT THE 4x4 16Bit panel before adding to cart!  You need 2.  
 
