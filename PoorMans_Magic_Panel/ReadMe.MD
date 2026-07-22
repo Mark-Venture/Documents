@@ -6,7 +6,7 @@ Marc Frank has also devised a simple Magic Panel by joining two W2812 4x4 LED pa
 
 While Marc's panel can be enabled as an LED strand on a DroidLink Slave, specifying 32 as the LED count, you could only send the regular LED commands
 
-This project takes the ESP32 Mini code from the original Magic Panel, and adopts it to a 4x8 Panel. While some of the Pattern Shapes or Advanced Animation Patters can not be properly sized for 4x8 matrix and still look presentable,  most of the commands still work.   
+This project takes the ESP32 Mini code from the original Magic Panel, and adopts it to a 4x8 Panel. While some of the Pattern Shapes or Advanced Animation Patters can not be properly sized for 4x8 matrix and still look presentable (they are marked DISABLED on the command cheat sheet),  most of the commands still work.   
 
 The Command Cheat Sheet shows what commands are available.  
 
