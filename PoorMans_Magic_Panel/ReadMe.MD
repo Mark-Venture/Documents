@@ -12,6 +12,6 @@ The Command Cheat Sheet shows what commands are available.
 
 Parts Required:
 
-ESP32-C3 Mini  w/Breakout board
+ESP32-C3 Mini  w/Breakout board   https://a.co/d/0cywsGyt
 Two W2812 4x4 LED Panels
 
