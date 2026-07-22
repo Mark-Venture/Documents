@@ -18,3 +18,8 @@ The Command Cheat Sheet shows what commands are available.
 
 NOTE: BE SURE TO SELECT THE 4x4 16Bit panel before adding to cart!  You need 2.  
 
+## CODE
+
+In the Files sub folder, you will find a ZIP of the files needed.   Open the included  .INO and load into your Arduino IDE,  then write to your ESP32 C3 Mini.  
+
+If you have a different model ESP32,  it might work, but you may or may not need additional modifications to the code. 
