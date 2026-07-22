@@ -18,6 +18,7 @@ Inside Droidlink Slave, configure the serial port for Marcduino,  9600.  Connect
 | **`T<id>:<seconds>:C<color>`** | Runs a pattern with custom duration and preset color index | `T57:30:C1` (Rainbow Cycle for 30s using Green) |
 | **`DEMO`** or **`T200`** | Runs the curated Smart Demo animation loop | `DEMO` |
 
+See below for complete Pattern List
 ---
 
 ## 2. Display Control
