@@ -35,12 +35,12 @@ It is an ESP32-DevKitC-32 w/Expansion board
 
   NOTE: These are available as multi packs which is the preferred way to order, as for a full DroidLink Implementation you’ll need more than 1 slave.  Example: Dome Slave (connect lights like AstroPixel, and servo controller like Maestro), Body Slave (connect a servo controller like Maestro), if you plan on doing a Lifter assembly in the dome, you’ll need a Slave for that (it also needs a servo controller).
 
-  NOTE: its always a good idea to order more than you need to have spares just in case... 
+  NOTE: While a two pack is a good start, its always a good idea to order more than you need to have spares just in case... 
 
 ## **RC Remote**:  
 HotRC DS-650 is currently the only one supported.   These are needed if you want to drive or pilot your droid around.  **You’ll need two**, one to control the Drive motors and the other to control the Dome and give you more buttons to trigger actions. 
 
-NOTE: Pay attention when you order.  Many packages include the HotRC F-06A PWM receivers, the receivers cannot be used with DroidLink. *HotRC SBUS-A receivers which are required must be purchased separately.*
+NOTE: Pay attention when you order.  Many packages include the HotRC F-06A PWM receivers, those receivers cannot be used with DroidLink. *HotRC SBUS-A receivers which are required must be purchased separately.*
 
 * [HotRC DS-650 Remote Controller](https://a.co/d/082LogKp) (order 2):   This does come with the F-06A and is the only way to order from Amazon. Unfortunately the F-06A doesn't work for DroidLink.
 * [HotRC S-BUS-A Receivers](https://tinyurl.com/5n8zxvvd) (order 2): this is the required receiver for DroidLink.  Note, this is not available from Amazon.  AliExpress is the only source we found so far, and you might try on Ebay.   NOTE: there are various listings on AliExpress at different prices, please make sure you order HotRC **SBUS-A** receivers.
@@ -52,12 +52,12 @@ The DFPlayer board is used to play back the droid sounds.
 
 * [DFPlayer Mini MP3 Player for Arduino/ESP32](https://a.co/d/03fNwlU8)  (Single)  
   * If out of stock, alternate source is [5PC Mini MP3 Module](https://a.co/d/0akwmUBJ)  This often is the same price as a single, but includes 5.  Having extras is not a bad thing.     
-* MicroSD card.   Up to 32gig card can be used, but must be formatted as FAT32  
+* MicroSD card.   Up to 32gig card can be used, but must be formatted as FAT32, not ExtFat or NTFS.  
     
 NOTE: For speakers, see “Optional Parts” section below for info.   If using the DFPlayer Carrier board and an amplifier, you will also likely need a 3.5mm male to 3.5mm male cable.  (aka 1/4" male to 1/4" male) 
 
 ## **DFPlayer Mini Carrier**:   
-Optional but highly recomended as it makes connecting the DFPlayer easier and neater with the DroidLink Master. 
+Optional but highly recomended as it makes connecting the DFPlayer easier and neater with the DroidLink Master.   The DFPlayer Mini Carrier allows you to run a single 3Pin wire from the DroidLink Master to the DFPlayer carrier.  No need to mess with individual wires and connections.  Plus it mounts nicely to the MCU. 
 
 * Contact  [Droidlink77@gmail.com](mailto:Droidlink77@gmail.com) for availability and price.
 
@@ -65,7 +65,9 @@ Optional but highly recomended as it makes connecting the DFPlayer easier and ne
 
 ## **Amplifier**:  
 * [ZK-1002T 100W+100W Bluetooth Amplifier Board](https://a.co/d/04iiWMWC)  \- Recommended to enjoy louder and cleaner sound, with easy adjustability form your droid.  You’ll also need a cable to connect to the DFPlayer.   NOTE: if you are attending Con’s or using your droid in loud places, the amplifier is highly recommended.   If you are just “at home” then an amplifier may not be necessary.
-* [Ground Loop Isolator](https://a.co/d/0iq2j0jt)  Suggested when you are using an amp, to eliminiate some hum or noise. 
+* [Ground Loop Isolator](https://a.co/d/0iq2j0jt)  Suggested when you are using an amp, to eliminiate some hum or noise.
+
+  NOTE: the DFPlayer does have a 3watt Amplifier built in, while its ok for in your house,  its not loud when you take your Astromech outside or a crowded convention. 
 
 ## **Speakers**:
 (depending on the size of your speaker, you may require custom mounts)
