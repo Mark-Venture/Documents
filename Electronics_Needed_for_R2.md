@@ -16,7 +16,7 @@ It is an ESP32-S3 N16R8 Development board and Breakout Board.  The parts are as 
   * If out of stock an alternative is:  [https://a.co/d/0f3qa6Uq](https://a.co/d/0f3qa6Uq)  
 * [Meshnology N40 \- ESP32 Expansion Board](https://a.co/d/0heCsPTG)  
   * If it is out of stock an alternate source is: [Direct form manufacturer](https://meshnology.com/products/n40-esp32-expansion-board-for-esp32-esp32-s3-core-modules)   
-  * If the Meshnology N40 is out of stock, alternate Option is [Freenove Breakout Board for ESP32 / ESP32-S3 WROVER WROOM](https://a.co/d/0g1QBTRy)  Please note, The ESP-S3 N16R8 will “hang over” the socket on this breakout board.  You should have one set of exposed pins at the top, and one set at the bottom.  
+  * If the Meshnology N40 is out of stock, alternate Option is [Freenove Breakout Board for ESP32 / ESP32-S3 WROVER WROOM](https://a.co/d/0g1QBTRy)  Please note, The ESP-S3 N16R8 will “hang over” the socket on this breakout board.  Center the ESP32 on the socket so that you have one set of exposed pins at the top, and one set at the bottom.  
 
 NOTE: its always a good idea to order more than 1 ESP32 and 1 Expansion board, to have spares just in case... 
 
