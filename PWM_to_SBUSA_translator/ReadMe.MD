@@ -4,7 +4,7 @@ DroidLink requires two SBUS-A receivers, one for Drive and one for Dome.
 
 The HotRC DS-650 comes with the F-06A PWM receiver which only works in PWM mode.   The instructions in this folder give you two options to get up and running temporarily.
 
-**Warning:** Because this is a translator, and it converts signals, you may experience intermittent "ghost button presses" or movements.  For example, you might hear a sound play, or your utility arms may open, etc. as if you hit those buttons, therefore **it is not recomended for regular use.**  You really need to buy real SBUS-A receivers.
+**Warning:** Because this is a translator, and it converts signals from one format to another, you may experience intermittent "ghost button presses" or movements.  For example, you might hear a sound play, or your utility arms may open, etc. as if you hit those buttons, therefore **it is not recomended for regular use.**  You really need to buy real SBUS-A receivers.
 
 [Option 1:](https://github.com/Mark-Venture/Documents/blob/main/PWM%20to%20SBUSA%20translator/Individual_Translators.md)   Create One translator that takes input from One F-06A PWM Receiver and outputs it in an SBUS-A format. This is suitable for a single remote.  If you have more than one remote, you'll need to make more than one translator (one ESP32 with expansion board per remote/receiver combo).  
 
