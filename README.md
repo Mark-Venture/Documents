@@ -1,5 +1,8 @@
 # How-to documents for DroidLink
 
+My [Youtube videos](https://youtube.com/playlist?list=PLwAqmqR0pHhdbFvmWNJg4zcdA0ebzSFpO&si=YSBlItCzzZEpdNff)
+
+
 * [How to create sequences in DroidLink](https://github.com/Mark-Venture/Documents/blob/main/DroidLink_Sequences_How-To.md) - This walks you through creating a sequence of lights, sounds and servo movements in DroidLink
 * [Electronics_Needed_for_R2.md](https://github.com/Mark-Venture/Documents/blob/main/Electronics_Needed_for_R2.md) - A list of the electronics needed for R2D2 and Droidlink - It includes parts, links, and details
 * [Sharing Maestro Sequences](https://github.com/Mark-Venture/Documents/blob/main/INPROGRESS_-_Sharing_Maestro_Sequences_-_The_Python_Way.md) - Still "in progress",  A way of exporting and sharing your settings.txt with other users, or adjusting their exported settings for your droid.  This is also helpful if you have to change a servo.
