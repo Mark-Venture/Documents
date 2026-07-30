@@ -1,6 +1,6 @@
 # How-to documents for DroidLink
 
-My [Youtube videos](https://youtube.com/playlist?list=PLwAqmqR0pHhdbFvmWNJg4zcdA0ebzSFpO&si=YSBlItCzzZEpdNff)
+In addition to the instructions below, I have created various  [Youtube videos](https://youtube.com/playlist?list=PLwAqmqR0pHhdbFvmWNJg4zcdA0ebzSFpO&si=YSBlItCzzZEpdNff) about DroidLink, its components, connections, wiring, etc. 
 
 
 * [How to create sequences in DroidLink](https://github.com/Mark-Venture/Documents/blob/main/DroidLink_Sequences_How-To.md) - This walks you through creating a sequence of lights, sounds and servo movements in DroidLink
