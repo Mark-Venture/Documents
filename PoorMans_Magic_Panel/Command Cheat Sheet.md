@@ -1,6 +1,6 @@
 # Magic Panel Command Cheat Sheet
 
-This cheat sheet summarizes all serial commands, settings options, and pattern lists supported by the Magic Panel ESP32-C3 firmware. Commands can be sent via USB Serial (PC Monitor) or Hardware UART (GPIO 5 RX / GPIO 6 TX) at **9600 baud**.  Connect your LED Panel to GPIO 4.  
+This cheat sheet summarizes all serial commands, settings options, and pattern lists supported by the Magic Panel ESP32-C3 firmware. Commands can be sent via USB Serial (PC Monitor) or Hardware UART (GPIO 5 RX ) at **9600 baud**.  Connect your LED Panel to GPIO 4.  
 
 Inside Droidlink Slave, configure the serial port for Marcduino,  9600.  Connect GPIO 25 (Serial1) or GPIO 17 (Serial2) to GPIO 5 on the ESP32 Mini.
 
