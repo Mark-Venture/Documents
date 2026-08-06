@@ -7,7 +7,7 @@ This cheat sheet summarizes all serial commands, settings options, and pattern l
 Inside Droidlink Slave, configure the serial port for Marcduino,  9600.  Connect GPIO 25 (Serial1) or GPIO 17 (Serial2) from the DroidLink Slave to GPIO 5 on the ESP32 Mini.
 
 > [!NOTE]
-> For DroidLink, commands are case-sensitive and must be upper case. A leading colon (`:`) is required (e.g. `T01` needs to be sent as `:T01` ).  Equal sign ('=') should be used as a separator instead of a colon (':').  Example:    :T23=15=C1   Runs the Eye Scan pattern for 15 seconds in the color Green.
+> For DroidLink, commands are case-sensitive and must be upper case. A leading colon (`:`) is required (e.g. `T01` needs to be sent as `:T01` ).  Equal sign ('=') should be used as a separator instead of a colon (':').  Example....    :T23=15=C1   Runs the Eye Scan pattern for 15 seconds in the color Green.
    
 ---
 
