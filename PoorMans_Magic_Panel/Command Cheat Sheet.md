@@ -56,7 +56,7 @@ Set a direct RGB value using the format **`C<r>,<g>,<b>`** (values 0-255):
 ## 3. Scrolling Text Commands
 
 > [!IMPORTANT]
-> If your host controller (such as a MarcDuino board) splits commands on colons, **do not use colons in your text strings**. Use space (` `) or equals (`=`) as separators instead.
+> If your host controller (such as a MarcDuino board, or DroidLink Slave configured for MarcDuino) splits commands on colons, **do not use colons in your text strings**. Use space (` `) or equals (`=`) as separators instead.
 
 | Delimiter | Standard Scroll | Bouncing Scroll | Saved Text Load |
 | :--- | :--- | :--- | :--- |
