@@ -1,7 +1,14 @@
-# Magic Panel Unified Command Cheat Sheet (v2.6)
+# BETA Magic Panel Unified Command Cheat Sheet (v2.6)
 
 This document provides a single reference sheet for controlling both **4x8** and **8x15** matrices. 
 
+This cheat sheet summarizes all serial commands, settings options, and pattern lists supported by the Magic Panel ESP32-C3 firmware. Commands can be sent via USB Serial (PC Monitor) or Hardware UART (GPIO 5 RX ) at **9600 baud**.  Connect your LED Panel to GPIO 4.  
+
+Inside Droidlink Slave, configure the serial port for Marcduino,  9600.  Connect GPIO 25 (Serial1) or GPIO 17 (Serial2) from the DroidLink Slave to GPIO 5 on the ESP32 Mini.
+
+> [!NOTE]
+> For DroidLink, commands are case-sensitive and must be upper case. A leading colon (`:`) is required (e.g. `T01` needs to be sent as `:T01` ).  Equal sign ('=') should be used as a separator instead of a colon (':').  Example:    :T23=15=C1   Runs the Eye Scan pattern for 15 seconds in the color Green.
+  
 ---
 
 ## 1. Parameters & System Commands
