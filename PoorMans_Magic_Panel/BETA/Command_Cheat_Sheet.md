@@ -8,7 +8,7 @@ Inside Droidlink Slave, configure the serial port for Marcduino,  9600.  Connect
 
 > [!NOTE]
 > For DroidLink, commands are case-sensitive and must be upper case. A leading colon (`:`) is required (e.g. `T01` needs to be sent as `:T01` ).  Equal sign ('=') should be used as a separator instead of a colon (':').  Example:    :T23=15=C1   Runs the Eye Scan pattern for 15 seconds in the color Green.
-  
+   
 ---
 
 ## 1. Parameters & System Commands
