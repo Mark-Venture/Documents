@@ -13,8 +13,8 @@ We will compile for either the 4x8 or 8x15 matrix using compilation directives i
 #### [MODIFY] [config.h](file:///D:/MIKEM/Arduino/PoorMansMagicPanel/config.h)
 - Introduce compile-time options `MATRIX_TYPE_4X8` and `MATRIX_TYPE_8X15` to dynamically adjust `MATRIX_WIDTH`, `MATRIX_HEIGHT`, and `NUM_LEDS`.
 - Enable `MATRIX_SERPENTINE` for `MATRIX_TYPE_4X8`.
-- Change `LED_PIN` to `4`.
-- Set `SERIAL1_BAUD` to `9600` and specify pin configurations for Serial1: `RX1_PIN 5` and `TX1_PIN -1`.
+- Change `LED_PIN` to `6`.
+- Set `SERIAL1_BAUD` to `9600` and specify pin configurations for Serial1: `RX1_PIN 20` and `TX1_PIN -1`.
 - Declare `isPatternSupported` check for the 4x8 matrix.
 
 ---
@@ -72,7 +72,7 @@ We will compile for either the 4x8 or 8x15 matrix using compilation directives i
 ### [Component: Main Sketch]
 
 #### [MODIFY] [Magic_Panel_ESP32_C3_Mini_v2.6.ino](file:///D:/MIKEM/Arduino/PoorMansMagicPanel/Magic_Panel_ESP32_C3_Mini_v2.6.ino)
-- Configure `Serial1` initialization to use `SERIAL1_BAUD` (9600) and `RX1_PIN` (5).
+- Configure `Serial1` initialization to use `SERIAL1_BAUD` (9600) and `RX1_PIN` (20).
 - Remove USB serial blocking `while (!Serial)` to avoid hanging in standalone mode when USB is disconnected.
 - Block execution of unsupported patterns at the beginning of `runPattern()` when `MATRIX_TYPE_4X8` is defined.
 - Update serial terminal helper messages to output both `=` and `:` options in documentation.
