@@ -63,106 +63,105 @@ Trigger animations using either `:` or `=` as delimiters. Chained arguments are 
 
 ---
 
-## 4. Complete Pattern Registry (0 - 200)
 
-The table below lists all patterns. **If a pattern is disabled on the 4x8 panel, it is noted in red.** All patterns are fully enabled on the 8x15 matrix.
-
-| Pattern ID | Pattern Name | 4x8 Panel Status |
-| :---: | :--- | :--- |
-| **0** | Off | ✅ Supported |
-| **1** | On Indefinite | ✅ Supported |
-| **2** | On 2s | ✅ Supported |
-| **3** | On 5s | ✅ Supported |
-| **4** | On 10s | ✅ Supported |
-| **5** | Toggle | ✅ Supported |
-| **6** | Alert 4s | ✅ Supported |
-| **7** | Alert 10s | ✅ Supported |
-| **8** | Trace Up Fill | ✅ Supported |
-| **9** | Trace Up Line | ✅ Supported |
-| **10** | Trace Down Fill | ✅ Supported |
-| **11** | Trace Down Line | ✅ Supported |
-| **12** | Trace Right Fill | ✅ Supported |
-| **13** | Trace Right Line | ✅ Supported |
-| **14** | Trace Left Fill | ✅ Supported |
-| **15** | Trace Left Line | ✅ Supported |
-| **16** | Expand Fill | ✅ Supported *(Center expands dynamically)* |
-| **17** | Expand Ring | ✅ Supported |
-| **18** | Compress Fill | ✅ Supported *(Center compresses dynamically)* |
-| **19** | Compress Ring | ✅ Supported |
-| **20** | Cross | ❌ **Disabled** *(Needs 8 columns)* |
-| **21** | Cylon Column | ✅ Supported |
-| **22** | Cylon Row | ✅ Supported |
-| **23** | Eye Scan | ✅ Supported *(Bidirectional back-and-forth)* |
-| **24** | Fade Out/In | ✅ Supported |
-| **25** | Fade Out | ✅ Supported |
-| **26** | Flash All | ✅ Supported |
-| **27** | Flash Vertical | ✅ Supported *(Scales col divisions)* |
-| **28** | Flash Quadrants | ✅ Supported *(Scales quadrant divisions)* |
-| **29** | Two Loop | ✅ Supported *(Scales to perimeter)* |
-| **30** | One Loop | ✅ Supported *(Scales to perimeter)* |
-| **31** | Test Fill | ✅ Supported |
-| **32** | Test Pixel | ✅ Supported |
-| **33** | AI Logo | ❌ **Disabled** *(Hardcoded 8x8 bitmap)* |
-| **34** | 2GWD Logo | ❌ **Disabled** *(Hardcoded 8x8 bitmap)* |
-| **35** | Quadrant TL->TR->BR->BL | ✅ Supported *(Scales quadrant boundaries)* |
-| **36** | Quadrant TR->TL->BL->BR | ✅ Supported *(Scales quadrant boundaries)* |
-| **37** | Quadrant TR->BR->BL->TL | ✅ Supported *(Scales quadrant boundaries)* |
-| **38** | Quadrant TL->BL->BR->TR | ✅ Supported *(Scales quadrant boundaries)* |
-| **39** | Random Pixel | ✅ Supported |
-| **40** | Countdown 9-0 | ✅ Supported *(Centered)* |
-| **41** | Countdown 3-0 | ✅ Supported *(Centered)* |
-| **42** | Alert Random 4s | ✅ Supported |
-| **43** | Alert Random 8s | ✅ Supported |
-| **44** | Smiley Face | ❌ **Disabled** *(Hardcoded 8x8 bitmap)* |
-| **45** | Sad Face | ❌ **Disabled** *(Hardcoded 8x8 bitmap)* |
-| **46** | Heart | ❌ **Disabled** *(Hardcoded 8x8 bitmap)* |
-| **47** | Checkerboard | ✅ Supported *(Uses 2D coordinates)* |
-| **48** | Compress In Fill | ✅ Supported |
-| **49** | Compress In Clear | ✅ Supported |
-| **50** | Explode Out Fill | ✅ Supported |
-| **51** | Explode Out Clear | ✅ Supported |
-| **52** | VU Meter Columns Up | ✅ Supported *(Starts bottom, grows up)* |
-| **53** | VU Meter Rows Left | ✅ Supported *(Starts right, grows left)* |
-| **54** | VU Meter Columns Down | ✅ Supported *(Starts top, grows down)* |
-| **55** | VU Meter Rows Right | ✅ Supported *(Starts left, grows right)* |
-| **56** | Animated Heart | ❌ **Disabled** *(Hardcoded 8x8 bitmaps)* |
-| **57** | Rainbow Cycle | ✅ Supported |
-| **58** | Fire Effect | ✅ Supported |
-| **59** | Twinkle | ✅ Supported |
-| **60** | Plasma | ✅ Supported |
-| **61** | Game of Life | ❌ **Disabled** *(Needs minimum 8x8 grid)* |
-| **62** | Matrix Rain | ✅ Supported *(Default color: Green)* |
-| **63** | 3D Cube | ❌ **Disabled** *(Needs minimum 8x8 grid)* |
-| **64** | Kaleidoscope | ✅ Supported *(Mirrors coordinates dynamically)* |
-| **65** | Raindrops | ✅ Supported *(Default color: Aqua)* |
-| **66** | Drip Effect | ✅ Supported *(Default color: Aqua)* |
-| **67** | Pac-Man | ❌ **Disabled** *(Hardcoded 8x8 bitmaps)* |
-| **68** | Space Invaders | ❌ **Disabled** *(Hardcoded 8x8 bitmaps)* |
-| *69 - 79* | *Unassigned* | — |
-| **80** | Bouncing Text | ✅ Supported *(Centered)* |
-| *81 - 96* | *Unassigned* | — |
-| **97** | Scroll Text (EN) | ✅ Supported *(Centered)* |
-| **98** | Scroll Text (AU) | ✅ Supported *(Centered)* |
-| **99** | Test All Patterns | ✅ Supported |
-| **100** | PSI Solid Red | ✅ Supported *(Astromech)* |
-| **101** | PSI Solid Blue | ✅ Supported *(Astromech)* |
-| **102** | PSI Solid Green | ✅ Supported *(Astromech)* |
-| **103** | PSI Solid Yellow | ✅ Supported *(Astromech)* |
-| **104** | PSI Solid Cyan | ✅ Supported *(Astromech)* |
-| **105** | PSI Solid Magenta | ✅ Supported *(Astromech)* |
-| **106** | PSI Solid White | ✅ Supported *(Astromech)* |
-| **107** | PSI Color Wipe Down | ✅ Supported *(Astromech)* |
-| **108** | PSI Color Wipe Up | ✅ Supported *(Astromech)* |
-| **109** | PSI Random Flicker | ✅ Supported *(Astromech)* |
-| **110** | PSI Pulse | ✅ Supported *(Astromech)* |
-| **111** | PSI Rainbow | ✅ Supported *(Astromech)* |
-| **112** | PSI March Horizontal | ✅ Supported *(Astromech)* |
-| **113** | PSI March Vertical | ✅ Supported *(Astromech)* |
-| **114** | PSI March Diagonal | ✅ Supported *(Astromech)* |
-| **115** | PSI March Checkerboard | ✅ Supported *(Astromech)* |
-| **116** | PSI March Spiral | ✅ Supported *(Astromech)* |
-| **117** | R2-D2 Communication | ✅ Supported *(Astromech)* |
-| **118** | R2-D2 Thinking | ✅ Supported *(Astromech - Swirl centers dynamically)* |
-| **119** | R2-D2 Alert | ✅ Supported *(Astromech - Flashes quadrants dynamically)* |
-| *120 - 199* | *Unassigned* | — |
-| **200** | Smart Demo | ✅ Supported |
+4. Complete Pattern Registry (0 - 200)
+8x8 and 8x15 Configurations: All patterns below are 100% supported.
+4x8 Configuration: Patterns marked with ❌ Disabled are excluded to prevent distorted or broken rendering.
+Pattern ID	Pattern Name	8x8 & 8x15 Status	4x8 Panel Status	Notes / Reasons for 4x8 Exclusions
+0	Off	✅ Supported	✅ Supported	
+1	On Indefinite	✅ Supported	✅ Supported	
+2	On 2s	✅ Supported	✅ Supported	
+3	On 5s	✅ Supported	✅ Supported	
+4	On 10s	✅ Supported	✅ Supported	
+5	Toggle	✅ Supported	✅ Supported	
+6	Alert 4s	✅ Supported	✅ Supported	
+7	Alert 10s	✅ Supported	✅ Supported	
+8	Trace Up Fill	✅ Supported	✅ Supported	
+9	Trace Up Line	✅ Supported	✅ Supported	
+10	Trace Down Fill	✅ Supported	✅ Supported	
+11	Trace Down Line	✅ Supported	✅ Supported	
+12	Trace Right Fill	✅ Supported	✅ Supported	
+13	Trace Right Line	✅ Supported	✅ Supported	
+14	Trace Left Fill	✅ Supported	✅ Supported	
+15	Trace Left Line	✅ Supported	✅ Supported	
+16	Expand Fill	✅ Supported	✅ Supported	Center expands dynamically on 4x8
+17	Expand Ring	✅ Supported	✅ Supported	
+18	Compress Fill	✅ Supported	✅ Supported	Center compresses dynamically on 4x8
+19	Compress Ring	✅ Supported	✅ Supported	
+20	Cross	✅ Supported	❌ Disabled	Graphics require a minimum of 8 columns to draw
+21	Cylon Column	✅ Supported	✅ Supported	Loops scaled to custom duration
+22	Cylon Row	✅ Supported	✅ Supported	Loops scaled to custom duration
+23	Eye Scan	✅ Supported	✅ Supported	Simultaneous bidirectional sweep
+24	Fade Out/In	✅ Supported	✅ Supported	
+25	Fade Out	✅ Supported	✅ Supported	
+26	Flash All	✅ Supported	✅ Supported	
+27	Flash Vertical	✅ Supported	✅ Supported	Scales column divisions dynamically
+28	Flash Quadrants	✅ Supported	✅ Supported	Scales quadrant divisions dynamically
+29	Two Loop	✅ Supported	✅ Supported	Scales perimeter path dynamically
+30	One Loop	✅ Supported	✅ Supported	Scales perimeter path dynamically
+31	Test Fill	✅ Supported	✅ Supported	
+32	Test Pixel	✅ Supported	✅ Supported	
+33	AI Logo	✅ Supported	❌ Disabled	Hardcoded 8x8 bitmap; cannot render on 4-wide screen
+34	2GWD Logo	✅ Supported	❌ Disabled	Hardcoded 8x8 bitmap; cannot render on 4-wide screen
+35	Quadrant TL->TR->BR->BL	✅ Supported	✅ Supported	Scales quadrant boundaries dynamically
+36	Quadrant TR->TL->BL->BR	✅ Supported	✅ Supported	Scales quadrant boundaries dynamically
+37	Quadrant TR->BR->BL->TL	✅ Supported	✅ Supported	Scales quadrant boundaries dynamically
+38	Quadrant TL->BL->BR->TR	✅ Supported	✅ Supported	Scales quadrant boundaries dynamically
+39	Random Pixel	✅ Supported	✅ Supported	
+40	Countdown 9-0	✅ Supported	✅ Supported	Vertically and horizontally centered
+41	Countdown 3-0	✅ Supported	✅ Supported	Vertically and horizontally centered
+42	Alert Random 4s	✅ Supported	✅ Supported	
+43	Alert Random 8s	✅ Supported	✅ Supported	
+44	Smiley Face	✅ Supported	❌ Disabled	Hardcoded 8x8 graphic
+45	Sad Face	✅ Supported	❌ Disabled	Hardcoded 8x8 graphic
+46	Heart	✅ Supported	❌ Disabled	Hardcoded 8x8 graphic
+47	Checkerboard	✅ Supported	✅ Supported	Scales tiles dynamically using 2D coordinates
+48	Compress In Fill	✅ Supported	✅ Supported	
+49	Compress In Clear	✅ Supported	✅ Supported	
+50	Explode Out Fill	✅ Supported	✅ Supported	
+51	Explode Out Clear	✅ Supported	✅ Supported	
+52	VU Meter Columns Up	✅ Supported	✅ Supported	Grows from bottom to top
+53	VU Meter Rows Left	✅ Supported	✅ Supported	Grows from right to left
+54	VU Meter Columns Down	✅ Supported	✅ Supported	Grows from top to bottom
+55	VU Meter Rows Right	✅ Supported	✅ Supported	Grows from left to right
+56	Animated Heart	✅ Supported	❌ Disabled	Hardcoded 8x8 animated graphics sequence
+57	Rainbow Cycle	✅ Supported	✅ Supported	
+58	Fire Effect	✅ Supported	✅ Supported	
+59	Twinkle	✅ Supported	✅ Supported	
+60	Plasma	✅ Supported	✅ Supported	
+61	Game of Life	✅ Supported	❌ Disabled	Conway's rules require a minimum 8x8 simulation grid
+62	Matrix Rain	✅ Supported	✅ Supported	Default color: Green
+63	3D Cube	✅ Supported	❌ Disabled	3D projection algorithms require minimum 8x8 resolution
+64	Kaleidoscope	✅ Supported	✅ Supported	Mirrors coordinates dynamically based on panel bounds
+65	Raindrops	✅ Supported	✅ Supported	Default color: Aqua
+66	Drip Effect	✅ Supported	✅ Supported	Default color: Aqua
+67	Pac-Man	✅ Supported	❌ Disabled	Hardcoded 8x8 animated graphics sequence
+68	Space Invaders	✅ Supported	❌ Disabled	Hardcoded 8x8 animated graphics sequence
+69 - 79	Unassigned	—	—	
+80	Bouncing Text	✅ Supported	✅ Supported	Centered dynamically
+81 - 96	Unassigned	—	—	
+97	Scroll Text (EN)	✅ Supported	✅ Supported	Centered dynamically
+98	Scroll Text (AU)	✅ Supported	✅ Supported	Centered dynamically
+99	Test All Patterns	✅ Supported	✅ Supported	Loops through enabled patterns
+100	PSI Solid Red	✅ Supported	✅ Supported	Astromech
+101	PSI Solid Blue	✅ Supported	✅ Supported	Astromech
+102	PSI Solid Green	✅ Supported	✅ Supported	Astromech
+103	PSI Solid Yellow	✅ Supported	✅ Supported	Astromech
+104	PSI Solid Cyan	✅ Supported	✅ Supported	Astromech
+105	PSI Solid Magenta	✅ Supported	✅ Supported	Astromech
+106	PSI Solid White	✅ Supported	✅ Supported	Astromech
+107	PSI Color Wipe Down	✅ Supported	✅ Supported	Astromech
+108	PSI Color Wipe Up	✅ Supported	✅ Supported	Astromech
+109	PSI Random Flicker	✅ Supported	✅ Supported	Astromech
+110	PSI Pulse	✅ Supported	✅ Supported	Astromech
+111	PSI Rainbow	✅ Supported	✅ Supported	Astromech
+112	PSI March Horizontal	✅ Supported	✅ Supported	Astromech
+113	PSI March Vertical	✅ Supported	✅ Supported	Astromech
+114	PSI March Diagonal	✅ Supported	✅ Supported	Astromech
+115	PSI March Checkerboard	✅ Supported	✅ Supported	Astromech
+116	PSI March Spiral	✅ Supported	✅ Supported	Astromech
+117	R2-D2 Communication	✅ Supported	✅ Supported	Astromech
+118	R2-D2 Thinking	✅ Supported	✅ Supported	Astromech (swirls scale dynamically)
+119	R2-D2 Alert	✅ Supported	✅ Supported	Astromech (flashes scale dynamically)
+120 - 199	Unassigned	—	—	
+200	Smart Demo	✅ Supported	✅ Supported	Curated demo show
