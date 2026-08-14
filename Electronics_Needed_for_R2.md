@@ -188,7 +188,7 @@ Or
 
 ## **Slip Ring**:
 
-The Slip Ring is essental as it takes the wires from the body make it up to the dome without getting twisted as R2's head rotates. You need one that is a 22mm body
+The Slip Ring is essental as it takes the wires from the body up to the dome without them getting twisted as R2's head rotates. You need one that is a 22mm body.  Because DroidLink utilizes ESPNow wireless protocol, only power is needed for the dome. While you could use a two wire slip ring,  if the pogo pins disconnect, the dome loses power. Consider driving over a bumpy road, there might be enough vibration for the pogos to make intermittent connections.  Therefore having extra wires in the slip ring,  allows for having redundant power lines all the way up, so get at least a 6 wire slip ring which would allow for 3 pairs of positive and negative into the dome. 
 
 An Example:
   
@@ -197,7 +197,7 @@ An Example:
 
 ## **Pogo Pins**:
 
-Pogo pins are magnetic wire connectors.  They will allow you to remove/replace the dome without having to disconnect/reconnect wires each time. 
+Pogo pins are magnetic wire connectors.  They will allow you to remove/replace the dome without having to plug/unplug wires each time. 
 
 An Example:
 
