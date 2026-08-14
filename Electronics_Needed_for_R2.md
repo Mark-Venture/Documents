@@ -103,6 +103,7 @@ If you want the blue panels in your dome to open/close, or you printed the Compl
 Some examples, you can order any brand you want, you may find others are more reliable, or last longer.  But these work, and are what I ordered. 
 
 * Dome Panel Servos -  [MG90S 9G Micro Servo Motor Metal Gear](https://a.co/d/0hK7VvNN)
+* Dome Panel Servo (HIGH Quality -> [Vorpal Brand MG90 Micro Servo](https://vorpal-robotics-store.myshopify.com/products/vorpal-brand-mg90-micro-servos)
 * Utility Arm Servos -  [Deegoo-FPV MG996R Full Copper Gear Digital Servos](https://a.co/d/07wSAzTW)
 
 ## **Servo Controller**:  If you plan to have opening panels, or other accessories that are driven by servos, the Pololu Mini Maestro is recommended due to its ease of programming and configuration. 
