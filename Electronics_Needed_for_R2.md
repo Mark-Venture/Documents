@@ -123,6 +123,7 @@ When it comes to opening and closing the panels, there is a solid bar or linkage
 Typically, you make them by ordering the individual parts and assembling them.  For example, I purchased ball joints, push rods, springs and linkage stoppers off Amazon, and put mine together.  And I got a cutter to cut the push rods shorter. There are many posts on the Mr Baddeley Facebook page on what to order and how to make them.
 
 Parts list for what I used to make mine: 
+
 * [Ball Rod End](https://a.co/d/0ic40TC6)
 * [uxcell M2x250mm Pushrod](https://a.co/d/068ZLsOn)
 * [Linkage Stoppers Connecting Servo Arm](https://a.co/d/0ejom2aS)
