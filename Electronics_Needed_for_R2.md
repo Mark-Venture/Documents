@@ -127,7 +127,7 @@ Parts list for what I used to make mine:
 * [Linkage Stoppers Connecting Servo Arm](https://a.co/d/0ejom2aS)
 * [12pcs Set-Screw Collars 2.1mm Bore](https://a.co/d/08673fvj)
 * [10Pcs Compression Spring, 3mm OD, 0.3mm Wire Size, 10mm Free Length](https://a.co/d/07ot5Ybm)
-* 
+  
 
 ## **Servo Wire Extensions**:  
 (aka 3 wire extenders)
