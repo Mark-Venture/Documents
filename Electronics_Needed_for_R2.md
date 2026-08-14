@@ -36,7 +36,7 @@ It is an ESP32-DevKitC-32 w/Expansion board
   NOTE: These are available as multi packs which is the preferred way to order so that you have enough for your setup, and an extra or two. 
 
 ## **RC Remote**:  
-HotRC DS-650 is currently the only one supported.   These are needed if you want to drive or pilot your droid around.  **You’ll need two**, one to control the Drive motors and the other to control the Dome and give you more buttons to trigger actions. 
+HotRC DS-650 is currently the only one supported.   These are needed if you want to drive or pilot your droid around.  **You’ll need two**, one to control the Drive motors and the other to control the Dome as well as give you more buttons to trigger actions. 
 
 NOTE: Pay attention when you order.  Many packages include the HotRC F-06A PWM receivers, those receivers cannot be used with DroidLink. *HotRC SBUS-A receivers which are required must be purchased separately.*
 
