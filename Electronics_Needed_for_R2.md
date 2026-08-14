@@ -127,7 +127,17 @@ Parts list for what I used to make mine:
 * [Linkage Stoppers Connecting Servo Arm](https://a.co/d/0ejom2aS)
 * [12pcs Set-Screw Collars 2.1mm Bore](https://a.co/d/08673fvj)
 * [10Pcs Compression Spring, 3mm OD, 0.3mm Wire Size, 10mm Free Length](https://a.co/d/07ot5Ybm)
-  
+
+  Assembled view of the Servo Saver: 
+  <img width="1374" height="1088" alt="image" src="https://github.com/user-attachments/assets/f7ee337f-16c6-4114-92e8-5f169cdeb123" />
+
+
+NOTE: To trim off the excess length of the Pushrod, you'll need a Cable Cutter like one of these:
+* [Workpro Cable Cutter](https://a.co/d/03sPPida)
+* [8 Inch Cable Cutters](https://a.co/d/03tiTCQi)
+* [PITTSBURGH 10 in. Cable Cutters](https://www.harborfreight.com/10-inch-cable-cutter-40507.html)
+* [Klein Tools High-Leverage Compact Cable Cutter](https://www.homedepot.com/p/Klein-Tools-High-Leverage-Compact-Cable-Cutter-63215/312213228)
+* [WORKPRO Mini Bolt Cutter 8-inch](https://a.co/d/04WLX16o]
 
 ## **Servo Wire Extensions**:  
 (aka 3 wire extenders)
