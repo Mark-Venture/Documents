@@ -33,9 +33,7 @@ It is an ESP32-DevKitC-32 w/Expansion board
   * Alternate board: [AITRIP ESP-WROOM-32 \*WITHOUT\*  Expansion Board](https://a.co/d/03f9A5iy)  
   * Alternate expansion board:  [AITRIP  ESP-WROOM-32 Expansion Board only](https://a.co/d/0dhr2P1q)
 
-  NOTE: These are available as multi packs which is the preferred way to order, as for a full DroidLink Implementation you’ll need more than 1 slave.  Example: Dome Slave (connect lights like AstroPixel, and servo controller like Maestro), Body Slave (connect a servo controller like Maestro), if you plan on doing a Lifter assembly in the dome, you’ll need a Slave for that (it also needs a servo controller).
-
-  NOTE: While a two pack is a good start, its always a good idea to order more than you need to have spares just in case... 
+  NOTE: These are available as multi packs which is the preferred way to order so that you have enough for your setup, and an extra or two. 
 
 ## **RC Remote**:  
 HotRC DS-650 is currently the only one supported.   These are needed if you want to drive or pilot your droid around.  **You’ll need two**, one to control the Drive motors and the other to control the Dome and give you more buttons to trigger actions. 
