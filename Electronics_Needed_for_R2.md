@@ -98,7 +98,12 @@ To make R2 drive, you'll need motors in the left and right feet. There are two w
 * [4" Hub Motor](https://a.co/d/00zv9lx9)  This is the brushless motor. You need 2.  L-Faster is the preferred brand. This fits the standard MK4 feet files.  
 
 ## **Servos**:  
-If you want the blue panels in your dome to open/close, or you printed the Complex body and want the doors to open/close, or the holo projectors and utility arms to move, you’ll need servos.    The PDFs in the EarlyBird \-\> MK4 AstroMech folders will call out what servos to use in these positions. 
+If you want the blue panels in your dome to open/close, or you printed the Complex body and want the doors to open/close, or the holo projectors and utility arms to move, you’ll need servos.    The PDFs in the EarlyBird \-\> MK4 AstroMech folders will call out what servo models to use in the different positions.
+
+Some examples, you can order any brand you want, you may find others are more reliable, or last longer.  But these work, and are what I ordered. 
+
+* Dome Panel Servos -  [MG90S 9G Micro Servo Motor Metal Gear](https://a.co/d/0hK7VvNN)
+* Utility Arm Servos -  [Deegoo-FPV MG996R Full Copper Gear Digital Servos](https://a.co/d/07wSAzTW)
 
 ## **Servo Controller**:  If you plan to have opening panels, or other accessories that are driven by servos, the Pololu Mini Maestro is recommended due to its ease of programming and configuration. 
 
