@@ -129,8 +129,9 @@ Parts list for what I used to make mine:
 * [12pcs Set-Screw Collars 2.1mm Bore](https://a.co/d/08673fvj)
 * [10Pcs Compression Spring, 3mm OD, 0.3mm Wire Size, 10mm Free Length](https://a.co/d/07ot5Ybm)
 
-  Assembled view of the Servo Saver: 
-  <img width="1374" height="1088" alt="image" src="https://github.com/user-attachments/assets/f7ee337f-16c6-4114-92e8-5f169cdeb123" />
+  Assembled view of the Servo Saver (click image for larger view):
+  
+  <img width="344" height="272" alt="image" src="https://github.com/user-attachments/assets/f7ee337f-16c6-4114-92e8-5f169cdeb123" />
 
 
 NOTE: To trim off the excess length of the Pushrod, you'll need a Cable Cutter like one of these:
