@@ -167,7 +167,8 @@ When shopping for a converter Pay attention to the Voltage(V) and Current (Amp o
 * [DROK DC Buck Converter Adjustable Voltage Regulator 12V 6V-32V to 1.5-32V 5A](https://a.co/d/0dVWCDhi)  this is very similar to the other, except it only does a maximum of 5Amps so it can’t power as much simultaneously.   
 * [DC HOUSE 20A 240W 12V Golf Cart 48V 36V to 12V](https://a.co/d/0gNxa7J9)  It takes voltage in, and outputs a non-adjustable 12V up to 20A output. Ideal if you have many options installed in your Droid.     
   [DC-DC 36V 48V to 12V 20A 240W Golf cart, Buck Converter](https://a.co/d/0jbcqF9p)  another that outputs a non-adjustable 12V up to 20A output.    
-* [HOMELYLIFE Voltage Converter DC 12V 24V Step Down to 5V 20A 100W](https://a.co/d/0gjXog5l)  It take the input voltage and steps it down to a constant 5V up to 20A.  
+* [HOMELYLIFE Voltage Converter DC 12V 24V Step Down to 5V 20A 100W](https://a.co/d/0gjXog5l)  It take the 24V or less input voltage and steps it down to a constant 5V up to 20A.
+* [TOBSUN Step Down Regulator 12V/24V to 5V 15A 75W](https://a.co/d/0awfgCMC)
 
 
 ## **Barrel Conenctor**:
