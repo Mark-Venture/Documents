@@ -109,6 +109,7 @@ Some examples, you can order any brand you want, you may find others are more re
 * [Mini Maestro 24](https://www.pololu.com/product/1356)  Can control up to 24 servos.   
 * [Mini Maestro 18](https://www.pololu.com/product/1354)  Can control up to 18 servos  
 * [Mini Maestro 12](https://www.pololu.com/product/1352)  Can control up to 12 servos
+* ALTERNATE OPTION ->   [PCA9685 16 Channel 12-Bit PWM Servo Motor Driver ](https://a.co/d/002JodWX)  These are not completely supported by DroidLink yet, work is being done to create a UI, and make it easier to set them up,   HOWEVER until then because support for these is built into the AstroPixel Plus, which DroidLink does support, you can use the AstroPixel commands to control servos connected to these boards.  You must manually perform the initial calibration of your servos via command line which does take some time.  
 
 NOTE: it is recommended to use at least two Mini Maestro 24 as your servo controllers. One for the Dome, and One for the Body.  This allows for the best future expansion, and pricing usually is reasonably close to the Mini Maestro 18\. 
 
