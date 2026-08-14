@@ -80,7 +80,7 @@ If you want your Dome to spin, you'll need a motor to move it
   * Alternative [Pololu 37d motor 30:1 330rpm WITH Encoder Item #4752](https://www.pololu.com/product/4752) Note: Encoder isn't currently used by DroidLink, but it wont hurt to have it as it might be used in the future.  
   * Alternative [Pololu 37d motor 30:1 330rpm WITHOUT Encoder Item #2742](https://www.pololu.com/product/4742)
  
-NOTE: The Dome Motors are available as 12v or 24v.  Which you should pick depends on your power system, and how much voltage you can supply the Motor in your droid.  
+_NOTE: The Dome Motors are available as 12v or 24v.  Which you should pick depends on your power system, and how much voltage you can supply the Motor in your droid. _ 
  
 ## **Dome Motor Controller**:
 To interface the motor with your chosen system, you need a dome motor speed controller. the Syren10 is the most popular. 
