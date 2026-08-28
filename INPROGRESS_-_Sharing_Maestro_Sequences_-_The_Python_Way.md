@@ -12,9 +12,14 @@ When you update then run the Python script,  it will take your supplied Settings
 
 **This process is "destructive" it will overwrite any settings or sequences you have on your Maestro**, including servo end points, sequences, scripts, etc. Because we need the Min/Max/Neutral/Home settings of your servos,  we will perform a settings back up as one of the first steps.  You will be able to restore this backup later should you desire to return to the state your Maestro was in before starting this process. 
 
+## Overview: 
+
+In this process you will use the Maestro Control Program on your computer to configure the Min/Max/MID points of your servos and export your Settings to a text file. You will use the tool below to merge your Settings file with the Donor Settings file.  Then you will import the new Settings File created by the tool below into your Maestro using Maestro Control Center. 
+
+
 ## Requirements
 1. Windows PC, as the Maestro Control Center doesn't run on a Mac.
-2. Donor Maestro Settings file with the scrips you want to save on your Maestro
+2. Donor Maestro Settings file with the scrips you want to save on your Maestro.  NOTE: Their servo positioning/numbering must match yours.  
 3. Your Servo Settings (min/max) configured Maestro Control Center.
 4.  Python installed and configured on your computer:
   - To get Python ready for your automation script, follow these simple steps:
@@ -28,17 +33,18 @@ When you update then run the Python script,  it will take your supplied Settings
 5. The [MaestroUpdateV2.py](https://github.com/Mark-Venture/Documents/blob/main/Downloads/MaestroUpdateV2.py) Python Script file
 
 ## Short Overview: 
-1.  Rename the Donor Settings file (exported via  Maestro Control Center file -> Save Settings..)  to *My_Original_Settings.txt*
-2.  Update the PY with the servos that are mirrored (see line 8),
-3.  Update the PY to set the new limits for your servos on lines 13-24.  (take them from  your *My_Original_Settings.txt* )
-4.  Run the PY
-5.  Import the Settings_NEW.txt it created into the maestro using Maestro Control Center  (File -> Open Settings ->   select your Settings_New.txt)
+1.  Rename the Donor Settings file (which they exported via  Maestro Control Center file -> Save Settings..)  to *Settings_OLD.txt*
+2.  Export your settings, saving it as *My_Original_Settings.txt*
+3.  Update the PY with any servos that are mirrored (see line 8), example: if you have a servo reversed to fit in your dome compared to theirs.
+4.  Update the PY to set the new limits for your servos on lines 13-24.  (take them from  your *My_Original_Settings.txt* )
+5.  Run the PY
+6.  Import the Settings_NEW.txt it created into the maestro using Maestro Control Center  (File -> Open Settings ->   select your Settings_New.txt)
 
 ## Here are the detailed steps:
 
 1.  On the Channel Settings tab in Maestro Control Center,  ensure each of your servos are configured for Min and Max. This is crucial for future steps. 
-2.  Backup your current settings: In Maestro Control Center, select File -> Save Settings File... When prompted, select the folder you want to save to,  and set the name to something like *My_Original_Settings.txt* or the like.   You will need this file in future steps!!
-3.  Take the Donor Settings file with the sequences you want to use, and rename it to  Settings_OLD.txt
+2.  Backup your current settings: In Maestro Control Center, select File -> Save Settings File... When prompted, select the folder you want to save to,  and set the name to something like *My_Original_Settings.txt*.   You will need this file in future steps!!
+3.  Take the Donor Settings file with the sequences you want to use, and rename it to  *Settings_OLD.txt*
 4.  Open the PY file in an editor like Notepad or [NotePad++](https://notepad-plus-plus.org/)
 5.  Open your *My_Original_Settings.txt*  , near the top will be the Channels section.  It will contain the Min, Max, Home and Neutral settings for each of your servos.
 6.  Update the Servo Limits in the PY file (lines 13-24) with the values you'll see in the Channels section of your *My_Original_Settings.txt*  and save the PY file
