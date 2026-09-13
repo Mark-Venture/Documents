@@ -234,7 +234,8 @@ Typically, your wire gauge (or AWG) should be sized for the current (amp) or pow
 * 18, 20 or 22 AWG for PWM signals, USB signals, etc. 
 
 
-## **West Works 3D Prjects:** ##
+
+## **[West Works 3D Prjects:](https://github.com/bjwest9738)** ##
 
 Radar Eye Display
 
