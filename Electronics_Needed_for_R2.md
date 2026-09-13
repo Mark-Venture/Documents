@@ -13,13 +13,17 @@ Note: due to some supply issues, alternatives are listed here, of the preferred 
 It is an ESP32-S3 N16R8 Development board and Expansion/Breakout Board.  The parts are as follows:   
 
 * [Meshnology ESP32-S3](https://a.co/d/0iwS0lk4)    
-  * If out of stock an alternative is:  [https://a.co/d/0f3qa6Uq](https://a.co/d/0f3qa6Uq)  
-* [Meshnology N40 \- ESP32 Expansion Board](https://a.co/d/0heCsPTG)  
+  * If out of stock an alternative is:  [https://a.co/d/0f3qa6Uq](https://a.co/d/0f3qa6Uq)
+
+**Expansion Board Options:** 
+* [Meshnology N40 \- ESP32 Expansion Board](https://a.co/d/0heCsPTG)  <-- Most compatible if you have a Meshnology ESP32-S3 N16R8, or an ESP32-S3 N16R8 that **does NOT have** a port for an external Antenna  **Some have had issues with the Meshnology Expansion boards** especially if their ESP32-S3 N16R8 has an external antenna port.  
   * If it is out of stock an alternate source is: [Direct form manufacturer](https://meshnology.com/products/n40-esp32-expansion-board-for-esp32-esp32-s3-core-modules)   
-  
-NOTE: _**Some have had issues with the Meshnology Expansion boards** a recomended alternate Option is_ [Freenove Breakout Board for ESP32 / ESP32-S3 WROVER WROOM](https://a.co/d/0g1QBTRy)  Please note, The ESP-S3 N16R8 will “hang over” the socket on this breakout board.  Center the ESP32 on the socket so that you have one set of exposed pins at the top, and one set at the bottom.  
+
+OR
+* [Freenove Breakout Board for ESP32 / ESP32-S3 WROVER WROOM](https://a.co/d/0g1QBTRy) Compatible with most every ESP32-S3 N16R8, including those that DO have a port for an external Antenna.  Please note, the ESP-S3 N16R8 will “hang over” the socket on this breakout board.  Center the ESP32 on the socket so that you have one set of exposed pins at the top, and one set at the bottom.  This will align the ESP32 properly.  
 
 NOTE: its always a good idea to order more than 1 ESP32 and 1 Expansion board, to have spares just in case... 
+
 
 ## **DroidLink Display**:  
 It is a [Waveshare ESP32-S3 2.06inch AMOLED w/400mAh Battery](https://a.co/d/01TigaiF)   Please check the listing you order from, as this is also available without battery from some sellers\!  You must have a battery.  
