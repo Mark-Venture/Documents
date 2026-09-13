@@ -234,5 +234,18 @@ Typically, your wire gauge (or AWG) should be sized for the current (amp) or pow
 * 18, 20 or 22 AWG for PWM signals, USB signals, etc. 
 
 
+## **West Works 3D Prjects:** ##
+
+Radar Eye Display
+
+[2.8-inch 480 x 480 Round RGB-666 TFT Display 5852](https://www.adafruit.com/product/5852)
+[Qualia ESP32-S3 for TTL RGB-666 Displays 5800](https://www.adafruit.com/product/5800)
+[Micro SD SPI or SDIO Card Breakout - 3V Only 4682](https://www.adafruit.com/product/4682)
+ * ALTERNATE [MicroSD card breakout board+ 254](https://www.adafruit.com/product/254)   Only if you can not get the 4682 board. 
+[40-pin FPC Extension Board with 200mm Ribbon Cable 2098](https://www.adafruit.com/product/2098)
+[Compact 40-pin 0.5mm FFC/FPC Extender 4523](https://www.adafruit.com/product/4523)
+[3.93 inch 3 Pin Cord Male to Male JR Plug](https://a.co/d/0eDVaXV7)  these are only needed if you're using either of the MicroSD board. You'll want to use as short of wires as you can. 
+
+
 
 
