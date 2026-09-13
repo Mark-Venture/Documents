@@ -10,7 +10,7 @@ Note: due to some supply issues, alternatives are listed here, of the preferred 
 ***Important: Because not all ESP32’s are the same, these exact models/parts are required for DroidLink to work.***  
 
 ## DroidLink Master:
-It is an ESP32-S3 N16R8 Development board and Breakout Board.  The parts are as follows:   
+It is an ESP32-S3 N16R8 Development board and Expansion/Breakout Board.  The parts are as follows:   
 
 * [Meshnology ESP32-S3](https://a.co/d/0iwS0lk4)    
   * If out of stock an alternative is:  [https://a.co/d/0f3qa6Uq](https://a.co/d/0f3qa6Uq)  
