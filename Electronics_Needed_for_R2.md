@@ -233,6 +233,13 @@ Typically, your wire gauge (or AWG) should be sized for the current (amp) or pow
 * 20 or 22 AWG to carry up to 5 volts  
 * 18, 20 or 22 AWG for PWM signals, USB signals, etc. 
 
+**Various PWM wires and splitters**  _(in no particular order)_
+
+* [Servo Extension Cable Lead Wire 100mm 3.93 inch 3 Pin Cord Male to Male](https://a.co/d/08lj3EBl)
+* [20pcs 26awg 7.87in 20cm 200mm Quadcopter Servo Extension Lead Futaba JR Male to Male](https://a.co/d/0jiRYk0r)
+* [30 Pcs 3-Pin Extension Cable Cord Male to Female Lead Wire Connectors for Servo Extension](https://a.co/d/08w3JjyZ)
+* [6 Pcs JR Futaba Style Servo 1 to 2 Y Harness Leads Wire Splitter Cable](https://a.co/d/0cHdMSqC)
+* [20Pcs Servo Extension Cable and Y Harness Splitter](https://a.co/d/0ejWHS4A)
 
 
 ## **[West Works 3D Prjects:](https://github.com/bjwest9738)** ##
