@@ -13,12 +13,18 @@ The files and folders under this section contain the profile settings I use in O
 
 Please note these Orca settings were only part of the picture getting my Sovol SV08 Max dialed in.  
 
-If you are using PETG or advanced filaments, make sure you try them before printing.  I use the Polydryer and boxes.  I have an XL Box for my 3KG rolls.   For PETG 3KG spools, I dried them for 15 hours before printing.  1KG spools I dried for 10 hours. this really helped the print quality.   
+If you are using PETG or advanced filaments, make sure you try them before printing.  I use the Polydryer and boxes.  I have an XL Box for my 3KG rolls.   For PETG 3KG spools, I dried them for 15 hours before printing.  1KG spools I dried for 10 hours. this really helped the print quality.
 
-The main improvements for the printer were achieved by following this post -> [https://www.facebook.com/share/p/1DREUM6zfc/]   There are tweaks for the Printer.CFG.  I've uploaded mine here, I've added comments on what I changed inline in the file. 
+I also included my Printer.cfg which has various changes.  Each change is commented, so you can open in your favorite editor and search for the comments to see what has changed.  
 
-To calibrate the filaments, and save as updated profiles, I used this tool -> [https://github.com/tayloraaro.../Filament_Calibration_Wizard](https://github.com/tayloraaron078-tech/Filament_Calibration_Wizard?fbclid=IwY2xjawUOgGVwZG9mBWV4dG4DYWVtAjEwAGJyaWQRMTlFc2FMOG9pZE9ZSXQ3V3FzcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEeyIA4kRBEyxxZmNqTAXwOfxhHU3AV-ErHRewNPmW4zjsoThynI7bS-0_ybPw_aem_VRB_H0xyQ9vzxn7O419eng)  I would recommend you do this too. While mine can be used as a base, there may be variations between the printers, so you'll really want to run through this with yours. Remember, you'll need to calibrate for each size nozzle.  So if you plan to print with .4mm and .6mm  you'll need to make sure you calibrate your filament with each.  
+## Recreating, rather than just loading...#
 
-After that, I made the adjustments to the process settings in Orca. 
+If you'd rather not load someone else's settings,  Here are the steps I took:
 
-I have not yet attempted to check the belt tension in my printer. That is something I will try in the future. 
+1. Follow this post -> [https://www.facebook.com/share/p/1DREUM6zfc/]   There are tweaks for the Printer.CFG among others.  I've uploaded mine here, with comments added inline for on what I changed. 
+
+2.  Calibrate the filaments, and save as updated Filament Profiles.   I used this tool -> [https://github.com/tayloraaro.../Filament_Calibration_Wizard](https://github.com/tayloraaron078-tech/Filament_Calibration_Wizard?fbclid=IwY2xjawUOgGVwZG9mBWV4dG4DYWVtAjEwAGJyaWQRMTlFc2FMOG9pZE9ZSXQ3V3FzcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEeyIA4kRBEyxxZmNqTAXwOfxhHU3AV-ErHRewNPmW4zjsoThynI7bS-0_ybPw_aem_VRB_H0xyQ9vzxn7O419eng)  While my settings could be used as a base, there may be variations between the printers, so you'll really want to run through this with yours. Remember, you'll need to calibrate for each size nozzle. So if you plan to print with .4mm and .6mm  you'll need to make sure you calibrate your filament with each.  
+
+3. After that, I made the adjustments to the process settings in Orca.  I can't remember all the tweaks. If you don't import my files/settings, you can open the Orca files with WinRar or the like to see the .JSON files inside. 
+
+4.  (STILL TO COME)  I have not yet attempted to check the belt tension in my printer. That is something I will try in the future. 
