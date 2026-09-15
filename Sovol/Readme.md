@@ -11,7 +11,7 @@ I picked up a Sovol SV08 Max which is 500mm cubed print volume.  Unfortunately i
 
 The files and folders under this section contain the profile settings I use in Orca 2.4.2 Slicer to 3d Print my R2 D2.   You can do a File -> Import -> Import Configs, and load them up.   You'll see process for the body and dome, as well as my modified Sunlu PETG filament profile.  
 
-Please note these Orca settings were only part of the picture getting my Sovol SV08 Max dialed in.  
+Please note these Orca settings were only part of the process getting my Sovol SV08 Max dialed in.  
 
 If you are using PETG or advanced filaments, make sure you try them before printing.  I use the Polydryer and boxes.  I have an XL Box for my 3KG rolls.   For PETG 3KG spools, I dried them for 15 hours before printing.  1KG spools I dried for 10 hours. this really helped the print quality.
 
