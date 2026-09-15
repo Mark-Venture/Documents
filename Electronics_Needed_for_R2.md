@@ -35,13 +35,13 @@ It is a [Waveshare ESP32-S3 2.06inch AMOLED w/400mAh Battery](https://a.co/d/01T
 It is an ESP32-DevKitC-32 w/Expansion board Or ESP32 C3 Super Mini
 
 *  ESP32-DevKitC ->  [AITRIP 2 Sets ESP-WROOM-32 \*WITH\* Expansion Board](https://a.co/d/0aBikVDW)  
-  * Alternate board: [AITRIP ESP-WROOM-32 \*WITHOUT\*  Expansion Board](https://a.co/d/03f9A5iy)  
-  * Alternate expansion board:  [AITRIP  ESP-WROOM-32 Expansion Board only](https://a.co/d/0dhr2P1q)
+   * Alternate board: [AITRIP ESP-WROOM-32 \*WITHOUT\*  Expansion Board](https://a.co/d/03f9A5iy)  
+   * Alternate expansion board:  [AITRIP  ESP-WROOM-32 Expansion Board only](https://a.co/d/0dhr2P1q)
 
 * ESP32-C3 Mini -> [AITRIP 2 Sets ESP32-C3 MINI Development Board with Expansion Board](https://a.co/d/0j6ziKZg)
   * Alternate ESP32-C3 Mini w/Breakout [3pcs ESP32-C3 MINI Development Board ESP32 C3 Super Mini Development Board](https://a.co/d/0275RgFB)
 
-  NOTE: These are available as multi packs which is the preferred way to order so that you have enough for your setup, and an extra or two. 
+ NOTE: These are available as multi packs which is the preferred way to order so that you have enough for your setup, and an extra or two. 
 
 ## **RC Remote**:  
 HotRC DS-650 is currently the only one supported.   These are needed if you want to drive or pilot your droid around.  **You’ll need two**, one to control the Drive motors and the other to control the Dome as well as give you more buttons to trigger actions. 
