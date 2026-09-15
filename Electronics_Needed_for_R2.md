@@ -149,7 +149,7 @@ NOTE: To trim off the excess length of the Pushrod, you'll need a Cable Cutter l
 * [8 Inch Cable Cutters](https://a.co/d/03tiTCQi)
 * [PITTSBURGH 10 in. Cable Cutters](https://www.harborfreight.com/10-inch-cable-cutter-40507.html)
 * [Klein Tools High-Leverage Compact Cable Cutter](https://www.homedepot.com/p/Klein-Tools-High-Leverage-Compact-Cable-Cutter-63215/312213228)
-* [WORKPRO Mini Bolt Cutter 8-inch](https://a.co/d/04WLX16o]
+* [WORKPRO Mini Bolt Cutter 8-inch](https://a.co/d/04WLX16o)
 
 ## **Servo Wire Extensions**:  
 (aka 3 wire extenders)
