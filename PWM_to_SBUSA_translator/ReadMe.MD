@@ -2,6 +2,11 @@
 
 DroidLink requires two SBUS-A receivers, one for Drive and one for Dome. 
 
+[HotRC S-BUS-A Receivers](https://tinyurl.com/5n8zxvvd) (order 2): this is the required receiver for DroidLink.  Note, this is not available from Amazon.  AliExpress is the only source we found so far, and you might try on Ebay.   NOTE: there are various listings on AliExpress at different prices, please make sure you order HotRC **SBUS-A** receivers.
+
+  **NOTE: If you can't order the SBUS-A Receivers from AliExpress, or need them faster than they can come to China,  reach out to Fred via email to  Droidlink77@gmail.com   as he has been keeping some on hand.**  
+
+
 The HotRC DS-650 comes with the F-06A PWM receiver which only works in PWM mode.   The instructions in this folder give you two options to get up and running temporarily.
 
 **Warning:** Because this is a translator, and it converts signals from one format to another, you may experience intermittent "ghost button presses" or movements.  For example, you might hear a sound play, or your utility arms may open, etc. as if you hit those buttons, therefore **it is not recomended for regular use.**  You really need to buy real SBUS-A receivers.
