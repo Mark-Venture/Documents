@@ -1,6 +1,6 @@
-# Magic Panel Unified Command Cheat Sheet (v2.6)
+# Magic Panel Unified Command Cheat Sheet 
 
-This document provides a comprehensive control reference for **8x8**, **8x15**, and **4x8** LED matrix configurations. 
+This document provides a comprehensive control reference for **8x8**, **8x15**, and **4x8** LED matrix configurations which are supported in the [DroidLink Magic Panel V1 firmware](https://droidlink.github.io/DroidLink_Installer/). 
 
 ---
 
@@ -8,22 +8,22 @@ This document provides a comprehensive control reference for **8x8**, **8x15**, 
 
 | Command | Action | Example | Notes |
 | :--- | :--- | :--- | :--- |
-| **`B<0-255>`** | Set brightness | `B120` | Default is `60` |
-| **`V<1-100>`** / **`SP`** | Set animation speed | `V50` | Default is `50` |
+| **`B<0-255>`** | Set brightness | `B120` | Default is `60` - Must be run separately|
+| **`V<1-100>`** / **`SP`** | Set animation speed | `V50` | Default is `50` - Must be run separately|
 | **`C<0-8>`** | Preset Color | `C1` | Colors: `0`=Red, `1`=Green, `2`=Blue, `3`=Yellow, `4`=Cyan, `5`=Magenta, `6`=White, `7`=Orange, `8`=Pink |
 | **`C9`** | Rainbow Color Mode | `C9` | Dynamically cycles color hue |
 | **`C<r>,<g>,<b>`** | Custom RGB Color | `C0,255,255` | Aqua/Light Blue |
 | **`P<0/1>`** | Run Mode | `P1` | `0` = Timed (8 seconds), `1` = Always On |
 | **`ON`** / **`A`** | Turn all LEDs on | `ON` | Fills display with active color |
 | **`OFF`** / **`D`** | Standby mode | `OFF` | Clears display and halts active pattern |
-| **`FONT<0/1>`** | Set font family | `FONT1` | `0` = Standard Font, `1` = Aurebesh Font |
+| **`FONT<0/1>`** | Set font family | `FONT1` | `0` = Standard Font, `1` = Aurebesh Font - Must be run separately|
 | **`SAVE`** | Save configuration | `SAVE` | Commits current parameters to EEPROM |
 | **`LOAD`** | Load configuration | `LOAD` | Loads parameters from EEPROM |
 | **`STATUS`** | Display status | `STATUS` | Prints active speed, color, brightness, etc. to Serial |
 | **`LIST`** | List patterns | `LIST` | Prints all pattern names and IDs to Serial |
-| **`HELP`** / **`HELP FULL`**| Show Help info | `HELP` | Prints quick-start or detailed documentation |
+| **`HELP`** / **`HELP FULL`**| Show Help info | `HELP` | Prints quick-start or detailed documentation to Serial |
 | **`START<id>`** | Set startup pattern | `START62` | Configures pattern to load on bootup |
-| **`TRANSITION<0/1>`** | Toggle fade effect | `TRANSITION1` | `0` = Instant change, `1` = Fade-out previous pattern |
+| **`TRANSITION<0/1>`** | Toggle fade effect | `TRANSITION1` | `0` = Instant change, `1` = Fade-out previous pattern - Must be run separately |
 | **`PLAYLIST_RUN:<list>`**| Run playlist | `PLAYLIST_RUN:57,62` | Plays comma-separated list of pattern IDs |
 
 ---
@@ -32,9 +32,9 @@ This document provides a comprehensive control reference for **8x8**, **8x15**, 
 
 | Command | Action | Example | Notes |
 | :--- | :--- | :--- | :--- |
-| **`TEXT:<string>`** / **`TEXT=<str>`** | Scroll custom text | `TEXT:Hello!` | Dynamically centered vertically |
-| **`TEXT_BOUNCE:<string>`** | Bouncing text letters | `TEXT_BOUNCE:C3` | Dynamically centered horizontally & vertically |
-| **`TEXTSAVE<0-9>:<string>`** | Save text to slot | `TEXTSAVE0:HELLO` | Saves to slot `0` through `9` in EEPROM |
+| **`TEXT=<string>`** / **`TEXT=<str>`** | Scroll custom text | `TEXT:Hello!` | Dynamically centered vertically |
+| **`TEXT_BOUNCE=<string>`** | Bouncing text letters | `TEXT_BOUNCE:C3` | Dynamically centered horizontally & vertically |
+| **`TEXTSAVE<0-9>=<string>`** | Save text to slot | `TEXTSAVE0:HELLO` | Saves to slot `0` through `9` in EEPROM |
 | **`TEXTLOAD<0-9>`** | Load & scroll text slot | `TEXTLOAD0` | Scrolls the text stored in the slot |
 
 ---
