@@ -1,7 +1,7 @@
 # Magic Panel Unified Command Cheat Sheet 
 
 This document provides a comprehensive control reference for **8x8**, **8x15**, and **4x8** LED matrix configurations which are supported in the [DroidLink Magic Panel V1 firmware](https://droidlink.github.io/DroidLink_Installer/). 
-
+ 
 ---
 
 ## 1. Parameters & System Commands
