@@ -8,23 +8,23 @@ This document provides a comprehensive control reference for **8x8**, **8x15**, 
 
 | Command | Action | Example | Notes |
 | :--- | :--- | :--- | :--- |
-| **`B<0-255>`** | Set brightness | `B120` | Default is `60` - Must be run separately|
-| **`V<1-100>`** / **`SP`** | Set animation speed | `V50` | Default is `50` - Must be run separately|
-| **`C<0-8>`** | Preset Color | `C1` | Colors: `0`=Red, `1`=Green, `2`=Blue, `3`=Yellow, `4`=Cyan, `5`=Magenta, `6`=White, `7`=Orange, `8`=Pink |
-| **`C9`** | Rainbow Color Mode | `C9` | Dynamically cycles color hue |
-| **`C<r>,<g>,<b>`** | Custom RGB Color | `C0,255,255` | Aqua/Light Blue |
-| **`P<0/1>`** | Run Mode | `P1` | `0` = Timed (8 seconds), `1` = Always On |
-| **`ON`** / **`A`** | Turn all LEDs on | `ON` | Fills display with active color |
-| **`OFF`** / **`D`** | Standby mode | `OFF` | Clears display and halts active pattern |
-| **`FONT<0/1>`** | Set font family | `FONT1` | `0` = Standard Font, `1` = Aurebesh Font - Must be run separately|
-| **`SAVE`** | Save configuration | `SAVE` | Commits current parameters to EEPROM |
-| **`LOAD`** | Load configuration | `LOAD` | Loads parameters from EEPROM |
-| **`STATUS`** | Display status | `STATUS` | Prints active speed, color, brightness, etc. to Serial |
-| **`LIST`** | List patterns | `LIST` | Prints all pattern names and IDs to Serial |
-| **`HELP`** / **`HELP FULL`**| Show Help info | `HELP` | Prints quick-start or detailed documentation to Serial |
-| **`START<id>`** | Set startup pattern | `START62` | Configures pattern to load on bootup |
-| **`TRANSITION<0/1>`** | Toggle fade effect | `TRANSITION1` | `0` = Instant change, `1` = Fade-out previous pattern - Must be run separately |
-| **`PLAYLIST_RUN:<list>`**| Run playlist | `PLAYLIST_RUN:57,62` | Plays comma-separated list of pattern IDs |
+| **`:MPB<0-255>`** | Set brightness | `:MPB120` | Default is `60` - Must be run separately|
+| **`:MPV<1-100>`** / **`SP`** | Set animation speed | `:MPV50` | Default is `50` - Must be run separately|
+| **`:MPC<0-8>`** | Preset Color | `:MPC1` | Colors: `0`=Red, `1`=Green, `2`=Blue, `3`=Yellow, `4`=Cyan, `5`=Magenta, `6`=White, `7`=Orange, `8`=Pink |
+| **`:MPC9`** | Rainbow Color Mode | `:MPC9` | Dynamically cycles color hue |
+| **`:MPC<r>,<g>,<b>`** | Custom RGB Color | `C0,255,255` | Aqua/Light Blue |
+| **`:MPP<0/1>`** | Run Mode | `:MPP1` | `0` = Timed (8 seconds), `1` = Always On |
+| **`:MPON`** / **`:MPA`** | Turn all LEDs on | `ON` | Fills display with active color |
+| **`:MPOFF`** / **`:MPD`** | Standby mode | `OFF` | Clears display and halts active pattern |
+| **`:MPFONT<0/1>`** | Set font family | `:MPFONT1` | `0` = Standard Font, `1` = Aurebesh Font - Must be run separately|
+| **`:MPSAVE`** | Save configuration | `:MPSAVE` | Commits current parameters to EEPROM |
+| **`:MPLOAD`** | Load configuration | `:MPLOAD` | Loads parameters from EEPROM |
+| **`:MPSTATUS`** | Display status | `:MPSTATUS` | Prints active speed, color, brightness, etc. to Serial |
+| **`:MPLIST`** | List patterns | `:MPLIST` | Prints all pattern names and IDs to Serial |
+| **`:MPHELP`** / **`HELP FULL`**| Show Help info | `:MPHELP` | Prints quick-start or detailed documentation to Serial |
+| **`:MPSTART<id>`** | Set startup pattern | `:MPSTART62` | Configures pattern to load on bootup |
+| **`TRANSITION<0/1>`** | Toggle fade effect | `:MPTRANSITION1` | `0` = Instant change, `1` = Fade-out previous pattern - Must be run separately |
+| **`PLAYLIST_RUN:<list>`**| Run playlist | `:MPPLAYLIST_RUN:57,62` | Plays comma-separated list of pattern IDs |
 
 ---
 
@@ -32,10 +32,10 @@ This document provides a comprehensive control reference for **8x8**, **8x15**, 
 
 | Command | Action | Example | Notes |
 | :--- | :--- | :--- | :--- |
-| **`TEXT=<string>`** / **`TEXT=<str>`** | Scroll custom text | `TEXT=Hello!` | Dynamically centered vertically |
-| **`TEXT_BOUNCE=<string>`** | Bouncing text letters | `TEXT_BOUNCE=C3` | Dynamically centered horizontally & vertically |
-| **`TEXTSAVE<0-9>=<string>`** | Save text to slot | `TEXTSAVE0=HELLO` | Saves to slot `0` through `9` in EEPROM |
-| **`TEXTLOAD<0-9>`** | Load & scroll text slot | `TEXTLOAD0` | Scrolls the text stored in the slot |
+| **`:MPTEXT=<string>`** / **`:MPTEXT=<str>`** | Scroll custom text | `:MPTEXT=Hello!` | Dynamically centered vertically |
+| **`:MPTEXT_BOUNCE=<string>`** | Bouncing text letters | `:MPTEXT_BOUNCE=C3` | Dynamically centered horizontally & vertically |
+| **`:MPTEXTSAVE<0-9>=<string>`** | Save text to slot | `:MPTEXTSAVE0=HELLO` | Saves to slot `0` through `9` in EEPROM |
+| **`:MPTEXTLOAD<0-9>`** | Load & scroll text slot | `:MPTEXTLOAD0` | Scrolls the text stored in the slot |
 
 ---
 
@@ -46,14 +46,14 @@ A leading colon (`:`) is automatically stripped from the command if sent by exte
 
 * **Format**: `T<id>` or `T<id>:<seconds>` or `T<id>:C<color>` or `T<id>:<seconds>:C<color>`
 * **Examples**:
-  - `T57` (Runs pattern 57 indefinitely or for default timed duration)
-  - `T57:10` or `T57=10` (Runs pattern 57 for exactly 10 seconds, then stops and turns off)
-  - `T62:C1` or `T62=C1` (Runs pattern 62 in Green)
-  - `T65:C0,255,255` (Runs pattern 65 in Aqua/Cyan)
-  - `T62:30:C1` or `T62=30=C1` (Runs pattern 62 in Green for 30 seconds)
+  - `:MPT57` (Runs pattern 57 indefinitely or for default timed duration)
+  - `:MPT57:10` or `:MPT57=10` (Runs pattern 57 for exactly 10 seconds, then stops and turns off)
+  - `:MPT62:C1` or `:MPT62=C1` (Runs pattern 62 in Green)
+  - `:MPT65:C0,255,255` (Runs pattern 65 in Aqua/Cyan)
+  - `:MPT62:30:C1` or `:MPT62=30=C1` (Runs pattern 62 in Green for 30 seconds)
 
 ### Custom Duration Timers
-When a command specifies a custom duration (e.g. `T57:10`):
+When a command specifies a custom duration (e.g. `:MPT57:10`):
 * **Always-On Override**: The timer will override `Always-On (P1)` mode. Once the time expires, the panel will fade/turn off and return to standby instead of looping indefinitely.
 * **Smart Loop Scaling**: Sweeping patterns (like Trace Up/Down/Left/Right, Cylons, Eye Scan, and Loops) will automatically repeat or scale their loop/flash counts to exactly fill the requested duration.
 
