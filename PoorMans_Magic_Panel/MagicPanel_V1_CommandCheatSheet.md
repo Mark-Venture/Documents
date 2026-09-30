@@ -86,7 +86,7 @@ When a command specifies a custom duration (e.g. `T57:10`):
 | **17** | Expand Ring | ✅ Supported | ✅ Supported | |
 | **18** | Compress Fill | ✅ Supported | ✅ Supported | Center compresses dynamically on 4x8 |
 | **19** | Compress Ring | ✅ Supported | ✅ Supported | |
-| **20** | Cross | ✅ Supported | ❌ **Disabled** | Graphics require a minimum of 8 columns to draw |
+| **20** | Cross | ❌ **Disabled** | ❌ **Disabled** | Does not seem to run even in 8x15 - Graphics require a minimum of 8 columns to draw |
 | **21** | Cylon Column | ✅ Supported | ✅ Supported | Loops scaled to custom duration |
 | **22** | Cylon Row | ✅ Supported | ✅ Supported | Loops scaled to custom duration |
 | **23** | Eye Scan | ✅ Supported | ✅ Supported | Simultaneous bidirectional sweep |
