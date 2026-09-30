@@ -32,9 +32,9 @@ This document provides a comprehensive control reference for **8x8**, **8x15**, 
 
 | Command | Action | Example | Notes |
 | :--- | :--- | :--- | :--- |
-| **`TEXT=<string>`** / **`TEXT=<str>`** | Scroll custom text | `TEXT:Hello!` | Dynamically centered vertically |
-| **`TEXT_BOUNCE=<string>`** | Bouncing text letters | `TEXT_BOUNCE:C3` | Dynamically centered horizontally & vertically |
-| **`TEXTSAVE<0-9>=<string>`** | Save text to slot | `TEXTSAVE0:HELLO` | Saves to slot `0` through `9` in EEPROM |
+| **`TEXT=<string>`** / **`TEXT=<str>`** | Scroll custom text | `TEXT=Hello!` | Dynamically centered vertically |
+| **`TEXT_BOUNCE=<string>`** | Bouncing text letters | `TEXT_BOUNCE=C3` | Dynamically centered horizontally & vertically |
+| **`TEXTSAVE<0-9>=<string>`** | Save text to slot | `TEXTSAVE0=HELLO` | Saves to slot `0` through `9` in EEPROM |
 | **`TEXTLOAD<0-9>`** | Load & scroll text slot | `TEXTLOAD0` | Scrolls the text stored in the slot |
 
 ---
