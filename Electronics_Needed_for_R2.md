@@ -80,8 +80,11 @@ Optional but highly recomended as it makes connecting the DFPlayer easier and ne
 ## **Speakers**:
 (depending on the size of your speaker, you may require custom mounts)
 
-* If not using an amplifier:  [Visaton FRS8-4 3.3" Full-Range Speaker](https://a.co/d/02sfUU9x)  A single speaker can be directly connected to the DFPlayer board.  While sold as a pair, a single speaker from  [Pyle PL32BL (Pair)](https://a.co/d/0fPfsmun)  can be used, just connect/mount 1 speaker to DFPlayer.   
-* If using the ZK-1002T amplifier:  [Pyle PL32BL (Pair)](https://a.co/d/0fPfsmun)  These connect to the Amp and handle the power nicely. 
+* [Pyle PL32BL (Pair)](https://a.co/d/0fPfsmun) While sold as a pair, a single speaker can be used, just connect/mount 1 speaker to DFPlayer.
+  * PL32BL speaker mount -> https://makerworld.com/en/models/2692245-r2d2-mk4c-3-5-speaker#profileId-2983258    or https://makerworld.com/en/models/2813776-r2-d2-mk4-side-speaker-mount#profileId-3132383
+
+* Alternate option if you are not using an amplifier:  [Visaton FRS8-4 3.3" Full-Range Speaker](https://a.co/d/02sfUU9x)  A single speaker can be directly connected to the DFPlayer board. No mounts exist, you must make your own.
+
 
 ## **Dome Motor**:
 If you want your Dome to spin, you'll need a motor to move it
