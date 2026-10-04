@@ -31,7 +31,7 @@ It is a [Waveshare ESP32-S3 2.06inch AMOLED w/400mAh Battery](https://a.co/d/01T
 * Alternate higher capacity Battery [DC 3.7V 900mAh 803035 Battery with JST 1.25mm connector](https://a.co/d/0bbDGhk2)  
 * [Waveshare ESP32-S3 Amoled 2.06inch 900mAh case back](https://makerworld.com/en/models/2763002-waveshare-esp32-s3-amoled-2-06-900mah-case#profileId-3067793) REQUIRED only if you wish to use the 900mAh battery. 
 
-## **DroidLink Slave**:  
+## **DroidLink Slave/Node**:  
 It is an ESP32-DevKitC-32 w/Expansion board Or ESP32 C3 Super Mini
 
 *  ESP32-DevKitC ->  [AITRIP 2 Sets ESP-WROOM-32 \*WITH\* Expansion Board](https://a.co/d/0aBikVDW)  
@@ -41,6 +41,8 @@ It is an ESP32-DevKitC-32 w/Expansion board Or ESP32 C3 Super Mini
 * ESP32-C3 Mini -> [AITRIP 2 Sets ESP32-C3 MINI Development Board with Expansion Board](https://a.co/d/0j6ziKZg)
   * Alternate ESP32-C3 Mini w/Breakout [3pcs ESP32-C3 MINI Development Board ESP32 C3 Super Mini Development Board](https://a.co/d/0275RgFB)
 
+ NOTE: The ESP32-C3 Mini has a smaller antenna, some have described communication issues when using the C3 Mini. Therefore the ESP32-DevKitC-32 is the preferred option. 
+ 
  NOTE: These are available as multi packs which is the preferred way to order so that you have enough for your setup, and an extra or two. 
 
 ## **RC Remote**:  
@@ -101,7 +103,7 @@ To interface the motor with your chosen system, you need a dome motor speed cont
 To make R2 drive, you'll need motors in the left and right feet. There are two ways to handle this.   A Brushless Hub Motor with Electronic Speed Controller or Brushed Motor with Sabertooth.  The main Early Bird R2 files have information and the files you need for using Brushless/FlipSky ESCs.   There is a community folder with information and files you need if you select Brushed/Sabertooth  Because I had a donor hoverboard I could take the brushless motors from it (in stead of having to buy any) and use the FlipSky ESCs. If you have a donor hoverboard, there are special foot shells available in the Michael Baddely FB Group File Section, they were created and [uploaded by Steve Wagg.](https://www.facebook.com/groups/MrBaddeley/permalink/4210473849281171)  
 
 * [FLIPSKY Mini V6 MK5 with Power Button Base on VESC6.6](https://a.co/d/060emWTk)  This is the speed controller. You need 2.
-* [4" Hub Motor](https://a.co/d/00zv9lx9)  This is the brushless motor. You need 2.  L-Faster is the preferred brand. This fits the standard MK4 feet files.  
+* [4" Hub Motor](https://a.co/d/00zv9lx9)  This is the brushless motor. You need 2.  L-Faster is the preferred brand. This fits the standard MK4 feet files. If you receive one with shorter shafts, please see ->  leftfoot/leftsuspensiondriveoption/optionshortbolt simillaryly RightFoot...    on Mr Baddeley's OneDrive/GoogleDrive.   
 
 ## **Servos**:  
 If you want the blue panels in your dome to open/close, or you printed the Complex body and want the doors to open/close, or the holo projectors and utility arms to move, you’ll need servos.    The PDFs in the EarlyBird \-\> MK4 AstroMech folders will call out what servo models to use in the different positions.
@@ -175,11 +177,11 @@ When shopping for a converter Pay attention to the Voltage(V) and Current (Amp o
 
 * Some Examples:   
   [DROK DC Buck Converter, 5.3V-32V to 1.2V-32V 12A Adjustable Power Supply](https://a.co/d/02iev547)  this takes up to 32V in, and steps it down as low as 1V.  Without added cooling it’s rated to support up to 8Amps (12v if you add a fan to cool it), so it’s good all-around one. It can be used in both the Body and Dome.  
-* [DROK DC Buck Converter Adjustable Voltage Regulator 12V 6V-32V to 1.5-32V 5A](https://a.co/d/0dVWCDhi)  this is very similar to the other, except it only does a maximum of 5Amps so it can’t power as much simultaneously.   
+* [DROK DC Buck Converter Adjustable Voltage Regulator 12V 6V-32V to 1.5-32V 5A](https://a.co/d/0dVWCDhi)  this is very similar to the other, except it only does a maximum of 5Amps so it can’t power as much simultaneously. Not recommended if you're trying to power a large number of servos from it.  
 * [DC HOUSE 20A 240W 12V Golf Cart 48V 36V to 12V](https://a.co/d/0gNxa7J9)  It takes voltage in, and outputs a non-adjustable 12V up to 20A output. Ideal if you have many options installed in your Droid.     
   [DC-DC 36V 48V to 12V 20A 240W Golf cart, Buck Converter](https://a.co/d/0jbcqF9p)  another that outputs a non-adjustable 12V up to 20A output.    
 * [HOMELYLIFE Voltage Converter DC 12V 24V Step Down to 5V 20A 100W](https://a.co/d/0gjXog5l)  It take the 24V or less input voltage and steps it down to a constant 5V up to 20A.
-* [TOBSUN Step Down Regulator 12V/24V to 5V 15A 75W](https://a.co/d/0awfgCMC)
+* [TOBSUN Step Down Regulator 12V/24V to 5V 15A 75W](https://a.co/d/0awfgCMC) small but capable regulator which takes up to 24v in, and steps it down to 5v 15A.  This is a great option for your dome, as well as servos in the body.
 
 
 ## **Barrel Conenctor**:
@@ -222,16 +224,16 @@ Fuses add protection for your circuits and subsystems.  The intent is, if there 
 ## **Lever Wire Connectors or Wago Connectors**: 
 for those who can’t or don’t like to solder, these connectors allow relatively secure connections to various wire sizes.  I make use of these extensively in my R2. 
 
-* [Wago Lever Nuts 90pc assortment with case](https://a.co/d/09LqwN3n)  
 * [65 Pcs Lever Wire Connector assortment with storage box](https://a.co/d/0fl65G21)   nice assortment to connect and split wires  
-*  [60 pcs XHF Colourful Conductor Compact Connectors](https://a.co/d/08A3VhUc)  great to color code your wires as you connect/extend them.   
+* [60 pcs XHF Colourful Conductor Compact Connectors](https://a.co/d/08A3VhUc)  great to color code your wires as you connect/extend them.   
 * [DIN Rail Terminal Blocks](https://a.co/d/01A853dZ)  these are a great alternative to bus bars for power distribution.  Multiple options like 2 in 10 out (make 1 \+/- combo into 5), 2 in 8 out, etc.
-* [Plugable Lever Wire Connectors](https://a.co/d/08TIA8Ty)  Lever connectors for the wires, but a plug in the middle.  Allows you to plug/unplug your connections while using solderless Lever Wire Connectors for the wires. 2, 3 and 4 wire versions are available. 
+* [Plugable Lever Wire Connectors](https://a.co/d/08TIA8Ty)  Lever connectors for the wires, but a plug in the middle.  Allows you to plug/unplug your connections while using solderless Lever Wire Connectors for the wires. 2, 3 and 4 wire versions are available.
+* [Wago Lever Nuts 90pc assortment with case](https://a.co/d/09LqwN3n)  
   
   NOTE: some 12gauge wires may not properly fit into these connectors. 
 
 ## **Wires**:   
-Typically, your wire gauge (or AWG) should be sized for the current (amp) or power (watts) you expect to run across it \+ 25% as a margin for error.  That being said, many use the following as a general guide: 
+Typically, your wire gauge (or AWG) should be sized for the current (amp) or power (watts) you expect to run across it and add a 25% as a margin for error.  That being said, many use the following as a general guide: 
 
 * 12 AWG to carry up to 36 volts.    
 * 14 AWG to carry up to 24 volts.   
