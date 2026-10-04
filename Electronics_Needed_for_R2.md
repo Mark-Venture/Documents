@@ -1,4 +1,4 @@
-Note: I am still updating and adding to this list.  it has most of the main parts, but not all.  
+Note: I am still updating and adding to this list.  it has most of the main parts, but not all.  [My Wiring Diagram](https://github.com/Mark-Venture/Documents/blob/main/Downloads/Astromech%20Wiring%20Schematic.pdf) 
 
 
 The following is a list of the electronics you’ll need when making an R2 D2 from the Mr. Baddeley files. This list contains DroidLink and Non-DroidLink related parts.  Feel free to purchase from your preferred retailer as needed.  
