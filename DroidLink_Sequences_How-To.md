@@ -1,3 +1,5 @@
+# UPDATE:   Please note that this process changes significantly with DroidLink v2.x  firmwares.   The 2.x firmware has a GUI built into the Slaves/Nodes so you can define sequences there much easier. 
+
 # Creating a DroidLink sequence
 
 Creating a Sequence for Droidlink can seem intimidating for new uers.  This article walks you through the process I recently undertook when I created a "bad motivator" sequence for my R2. See ->  https://photos.app.goo.gl/ienNywkaaeWPuZmq8
