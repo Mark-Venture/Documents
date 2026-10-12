@@ -27,7 +27,14 @@ this is taken right from the DL_AP Commands tab:
 | `:SE07` | Cantina |
 | `:SE08` | Leia message |
 | `:SE09` | Disco |
-| `:SE50-57` | Panel-related sequences |
+| ':SE50'| Scream effects without panel movement|
+| ':SE51' |	Scream panel sequence|
+| ':SE52' |	Wave panel sequence|
+| ':SE53' |	Smirk-wave panel sequence|
+| ':SE54' |	Open-wave panel sequence| 
+| ':SE55' |	Marching-ants panel sequence|
+| ':SE56' |	Faint panel sequence|
+| ':SE57' |	Rhythmic panel sequence| 
 
 ## Saved Lighting Sequences
 
