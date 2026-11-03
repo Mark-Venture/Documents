@@ -14,10 +14,11 @@ It is an ESP32-S3 N16R8 Development board and Expansion/Breakout Board.  The par
 
 _Important Note: Recently Amazon has been shipping models that use an external antenna when ordering the preferred Meshnology ESP32S3 N16R8, therefore you should order using the Alternative option link.  ESP32S3's that have an external antenna port have been problematic. Be sure to get one that does NOT have a port for external antenna!!  and the Freenove Breakout is most compatible, especially if you get an ESP32S3 N16R8 with an external antenna port._
 
-
-* original suggestion: [Meshnology ESP32-S3](https://a.co/d/0iwS0lk4)    
 * alternative (CURRENTLY RECOMENDED)  is:  [LUIRAY ESP32-S3-DevKitC-1 Board, 1-Pack WROOM-1-N16R8 ESP32-S3 Development Board with WiFi and Bluetooth 5.0](https://a.co/d/0f3qa6Uq)
 
+OR
+
+* original suggestion: [Meshnology ESP32-S3](https://a.co/d/0iwS0lk4)    
 
 **Expansion Board Options:** 
 
