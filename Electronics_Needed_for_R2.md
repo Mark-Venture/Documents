@@ -127,7 +127,8 @@ Some examples, you can order any brand you want, you may find others are more re
 * Dome Panel Servo (HIGH Quality -> [Vorpal Brand MG90 Micro Servo](https://vorpal-robotics-store.myshopify.com/products/vorpal-brand-mg90-micro-servos)
 * Utility Arm Servos -  [Deegoo-FPV MG996R Full Copper Gear Digital Servos](https://a.co/d/07wSAzTW)
 
-## **Servo Controller**:  If you plan to have opening panels, or other accessories that are driven by servos, the Pololu Mini Maestro is more powerful and may be better suited for future enhancements to DroidLink. That being said, with recent DroidLink updates PCA9685 Servo Drivers are compatible and a less expensive option. 
+## **Servo Controller**:  
+If you plan to have opening panels, or other accessories that are driven by servos, the Pololu Mini Maestro is more powerful and may be better suited for future enhancements to DroidLink. That being said, with recent DroidLink updates PCA9685 Servo Drivers are also now compatible and a less expensive option. 
 
 * [Mini Maestro 24](https://www.pololu.com/product/1356)  Can control up to 24 servos.   
 * [Mini Maestro 18](https://www.pololu.com/product/1354)  Can control up to 18 servos  
