@@ -21,11 +21,12 @@ _Important Note: Recently Amazon has been shipping models that use an external a
 
 **Expansion Board Options:** 
 
-* [Meshnology N40 \- ESP32 Expansion Board](https://a.co/d/0heCsPTG)  <-- Most compatible if you have a Meshnology ESP32-S3 N16R8, or an ESP32-S3 N16R8 that **does NOT have** a port for an external Antenna  **Some have had issues with the Meshnology Expansion boards** especially if their ESP32-S3 N16R8 has an external antenna port.  
-  * If it is out of stock an alternate source is: [Direct form manufacturer](https://meshnology.com/products/n40-esp32-expansion-board-for-esp32-esp32-s3-core-modules)   
+* [Freenove Breakout Board for ESP32 / ESP32-S3 WROVER WROOM](https://a.co/d/0g1QBTRy) Compatible with most every ESP32-S3 N16R8, including those that DO have a port for an external Antenna.  Please note, the ESP-S3 N16R8 will “hang over” the socket on this breakout board.  Center the ESP32 on the socket so that you have one set of exposed pins at the top, and one set at the bottom.  This will align the ESP32 properly.
 
 OR
-* [Freenove Breakout Board for ESP32 / ESP32-S3 WROVER WROOM](https://a.co/d/0g1QBTRy) Compatible with most every ESP32-S3 N16R8, including those that DO have a port for an external Antenna.  Please note, the ESP-S3 N16R8 will “hang over” the socket on this breakout board.  Center the ESP32 on the socket so that you have one set of exposed pins at the top, and one set at the bottom.  This will align the ESP32 properly.  
+  
+* [Meshnology N40 \- ESP32 Expansion Board](https://a.co/d/0heCsPTG)  <-- Most compatible if you have a Meshnology ESP32-S3 N16R8, or an ESP32-S3 N16R8 that **does NOT have** a port for an external Antenna.   **Some have had issues when using the Meshnology Expansion boards** especially if their ESP32-S3 N16R8 has an external antenna port.  To be safe use the Freenove board. 
+  * If it is out of stock an alternate source is: [Direct form manufacturer](https://meshnology.com/products/n40-esp32-expansion-board-for-esp32-esp32-s3-core-modules)   
 
 NOTE: its always a good idea to order more than 1 ESP32 and 1 Expansion board, to have spares just in case... 
 
