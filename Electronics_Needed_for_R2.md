@@ -12,10 +12,15 @@ Note: due to some supply issues, alternatives are listed here, of the preferred 
 ## DroidLink Master:
 It is an ESP32-S3 N16R8 Development board and Expansion/Breakout Board.  The parts are as follows:   
 
-* [Meshnology ESP32-S3](https://a.co/d/0iwS0lk4)    
-  * If out of stock an alternative is:  [https://a.co/d/0f3qa6Uq](https://a.co/d/0f3qa6Uq)
+Note: Recently Amazon has been shipping models that use an external antenna when ordering the preferred Meshnology ESP32S3 N16R8, so use the Alternative option link.  ESP32S3's that have an external antenna port have been problematic. Be sure to get one that does NOT have a port for external antenna!!  and the Freenove Breakout is most compatible, especially if you get an ESP32S3 N16R8 with an external antenna port.  
+
+
+* original suggestion: [Meshnology ESP32-S3](https://a.co/d/0iwS0lk4)    
+* Current suggestion: alternative is:  [https://a.co/d/0f3qa6Uq](https://a.co/d/0f3qa6Uq)
+
 
 **Expansion Board Options:** 
+
 * [Meshnology N40 \- ESP32 Expansion Board](https://a.co/d/0heCsPTG)  <-- Most compatible if you have a Meshnology ESP32-S3 N16R8, or an ESP32-S3 N16R8 that **does NOT have** a port for an external Antenna  **Some have had issues with the Meshnology Expansion boards** especially if their ESP32-S3 N16R8 has an external antenna port.  
   * If it is out of stock an alternate source is: [Direct form manufacturer](https://meshnology.com/products/n40-esp32-expansion-board-for-esp32-esp32-s3-core-modules)   
 
