@@ -12,11 +12,11 @@ Note: due to some supply issues, alternatives are listed here, of the preferred 
 ## DroidLink Master:
 It is an ESP32-S3 N16R8 Development board and Expansion/Breakout Board.  The parts are as follows:   
 
-_Important Note: Recently Amazon has been shipping models that use an external antenna when ordering the preferred Meshnology ESP32S3 N16R8, so use the Alternative option link.  ESP32S3's that have an external antenna port have been problematic. Be sure to get one that does NOT have a port for external antenna!!  and the Freenove Breakout is most compatible, especially if you get an ESP32S3 N16R8 with an external antenna port._
+_Important Note: Recently Amazon has been shipping models that use an external antenna when ordering the preferred Meshnology ESP32S3 N16R8, therefore you should order using the Alternative option link.  ESP32S3's that have an external antenna port have been problematic. Be sure to get one that does NOT have a port for external antenna!!  and the Freenove Breakout is most compatible, especially if you get an ESP32S3 N16R8 with an external antenna port._
 
 
 * original suggestion: [Meshnology ESP32-S3](https://a.co/d/0iwS0lk4)    
-* Current suggestion: alternative is:  [https://a.co/d/0f3qa6Uq](https://a.co/d/0f3qa6Uq)
+* alternative (CURRENTLY RECOMENDED)  is:  [https://a.co/d/0f3qa6Uq](https://a.co/d/0f3qa6Uq)
 
 
 **Expansion Board Options:** 
@@ -67,7 +67,7 @@ The DFPlayer board is used to play back the droid sounds.
   * If out of stock, alternate source is [5PC Mini MP3 Module](https://a.co/d/0akwmUBJ)  This often is the same price as a single, but includes 5.  Having extras is not a bad thing.     
 * MicroSD card.   Up to 32gig card can be used, but must be formatted as FAT32, not ExFat or NTFS.  DFPlayer does not work with cards greater than 32Gig.
 
-  When Mounting your DFPlayer,  be mindful of placement.  Too close to certain components can increase interference, and extra clicking and other unwanted sounds. For example, Keep the DFPlayer away from SBUS-A receivers and Syren10 Dome Motor controller. 
+When Mounting your DFPlayer,  be mindful of placement.  Too close to certain components can increase interference, and extra clicking and other unwanted sounds. For example, Keep the DFPlayer away from SBUS-A receivers and Syren10 Dome Motor controller. 
     
 NOTE: For speakers, see “Optional Parts” section below for info.   If using the DFPlayer Carrier board and an amplifier, you will also likely need a 3.5mm male to 3.5mm male cable.  (aka 1/4" male to 1/4" male) 
 
