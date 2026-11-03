@@ -122,14 +122,17 @@ Some examples, you can order any brand you want, you may find others are more re
 * Dome Panel Servo (HIGH Quality -> [Vorpal Brand MG90 Micro Servo](https://vorpal-robotics-store.myshopify.com/products/vorpal-brand-mg90-micro-servos)
 * Utility Arm Servos -  [Deegoo-FPV MG996R Full Copper Gear Digital Servos](https://a.co/d/07wSAzTW)
 
-## **Servo Controller**:  If you plan to have opening panels, or other accessories that are driven by servos, the Pololu Mini Maestro is recommended due to its ease of programming and configuration. 
+## **Servo Controller**:  If you plan to have opening panels, or other accessories that are driven by servos, the Pololu Mini Maestro is more powerful and may be better suited for future enhancements to DroidLink. That being said, with recent DroidLink updates PCA9685 Servo Drivers are compatible and a less expensive option. 
 
 * [Mini Maestro 24](https://www.pololu.com/product/1356)  Can control up to 24 servos.   
 * [Mini Maestro 18](https://www.pololu.com/product/1354)  Can control up to 18 servos  
 * [Mini Maestro 12](https://www.pololu.com/product/1352)  Can control up to 12 servos
-* ALTERNATE OPTION ->   [PCA9685 16 Channel 12-Bit PWM Servo Motor Driver ](https://a.co/d/002JodWX)  These are not completely supported by DroidLink yet, work is being done to create a UI, and make it easier to set them up,   HOWEVER until then because support for these is built into the AstroPixel Plus, which DroidLink does support, you can use the AstroPixel commands to control servos connected to these boards.  You must manually perform the initial calibration of your servos via command line which does take some time.  
 
-NOTE: it is recommended to use at least two Mini Maestro 24 as your servo controllers. One for the Dome, and One for the Body.  This allows for the best future expansion, and pricing usually is reasonably close to the Mini Maestro 18\. 
+* PCA9685 OPTION ->   [PCA9685 16 Channel 12-Bit PWM Servo Motor Driver ](https://a.co/d/002JodWX)  These are now supported by DroidLink with a UI that allows for calibration and setup.  
+
+NOTE: in the Dome it is recommended to use either two Mini Maestro 18 or two PCA9685s as your servo controllers. One for panels and one for holo projector movements.  
+
+If using Maestro in dome, you could also use Maestro Mini 24 for panels, and Mini 12 for Holo Projectors.
 
 NOTE: it is NOT recommended to get a Micro Maestro (6) due to its limited internal memory/script size, and ability to control only 6 servos.   The low script size will prevent you from doing more servo sequences, as well as complex sequences. 
 
