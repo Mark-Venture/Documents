@@ -16,7 +16,7 @@ _Important Note: Recently Amazon has been shipping models that use an external a
 
 
 * original suggestion: [Meshnology ESP32-S3](https://a.co/d/0iwS0lk4)    
-* alternative (CURRENTLY RECOMENDED)  is:  [https://a.co/d/0f3qa6Uq](https://a.co/d/0f3qa6Uq)
+* alternative (CURRENTLY RECOMENDED)  is:  [LUIRAY ESP32-S3-DevKitC-1 Board, 1-Pack WROOM-1-N16R8 ESP32-S3 Development Board with WiFi and Bluetooth 5.0](https://a.co/d/0f3qa6Uq)
 
 
 **Expansion Board Options:** 
