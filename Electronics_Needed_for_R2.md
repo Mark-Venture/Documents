@@ -192,13 +192,14 @@ Here too there are many options. These are needed to step down voltage from 18, 
 
 When shopping for a converter Pay attention to the Voltage(V) and Current (Amp or A) output to ensure you have a BUCK that can handle the components it will be supplying power to.   For example, there are some smaller adjustable Buck’s that only can output 2Amps.  While this might be enough if you are running just Astropixels or such, it will not be enough if you want to run a large number of servos, your dome motor, or such. 
 
-* Some Examples:   
-  [DROK DC Buck Converter, 5.3V-32V to 1.2V-32V 12A Adjustable Power Supply](https://a.co/d/02iev547)  this takes up to 32V in, and steps it down as low as 1V.  Without added cooling it’s rated to support up to 8Amps (12v if you add a fan to cool it), so it’s good all-around one. It can be used in both the Body and Dome.  
+Some Examples:
+* [TOBSUN Step Down Regulator 12V/24V to 5V 15A 75W](https://a.co/d/0awfgCMC) small but capable regulator which takes up to 24v in, and steps it down to 5v 15A.  This is a great option for your dome, as well as servos in the body.
+*   [DROK DC Buck Converter, 5.3V-32V to 1.2V-32V 12A Adjustable Power Supply](https://a.co/d/02iev547)  this takes up to 32V in, and steps it down as low as 1V.  Without added cooling it’s rated to support up to 8Amps (12v if you add a fan to cool it), so it’s good all-around one. It has a display to show output current(A) and voltage(V). It can be used in both the Body and Dome.  
 * [DROK DC Buck Converter Adjustable Voltage Regulator 12V 6V-32V to 1.5-32V 5A](https://a.co/d/0dVWCDhi)  this is very similar to the other, except it only does a maximum of 5Amps so it can’t power as much simultaneously. Not recommended if you're trying to power a large number of servos from it.  
-* [DC HOUSE 20A 240W 12V Golf Cart 48V 36V to 12V](https://a.co/d/0gNxa7J9)  It takes voltage in, and outputs a non-adjustable 12V up to 20A output. Ideal if you have many options installed in your Droid.     
+* [DC HOUSE 20A 240W 12V Golf Cart 48V 36V to 12V](https://a.co/d/0gNxa7J9)  It takes voltage in, and outputs a non-adjustable 12V up to 20A output. Ideal if you have many options installed in your Droid that need 12V, if your batteries are greater than 12v.     
   [DC-DC 36V 48V to 12V 20A 240W Golf cart, Buck Converter](https://a.co/d/0jbcqF9p)  another that outputs a non-adjustable 12V up to 20A output.    
 * [HOMELYLIFE Voltage Converter DC 12V 24V Step Down to 5V 20A 100W](https://a.co/d/0gjXog5l)  It take the 24V or less input voltage and steps it down to a constant 5V up to 20A.
-* [TOBSUN Step Down Regulator 12V/24V to 5V 15A 75W](https://a.co/d/0awfgCMC) small but capable regulator which takes up to 24v in, and steps it down to 5v 15A.  This is a great option for your dome, as well as servos in the body.
+
 
 
 ## **Barrel Conenctor**:
