@@ -96,13 +96,14 @@ Optional but highly recomended as it makes connecting the DFPlayer easier and ne
 
 
 ## **Dome Motor**:
-If you want your Dome to spin, you'll need a motor to move it
-* [Greartisan DC 12V 300RPM Gear Motor High Torque motor wtih 37mm shaft](https://a.co/d/0aT2ZXKj)  NOTE: Also order the [goBILDA® Sonic Clamping Hub 1309-0016-1006](https://a.co/d/00x8EnGC) to attach the gear to the motor.
-  
-  * Alternative [Pololu 37d motor 30:1 330rpm WITH Encoder Item #4752](https://www.pololu.com/product/4752) Note: Encoder isn't currently used by DroidLink, but it wont hurt to have it as it might be used in the future.  
-  * Alternative [Pololu 37d motor 30:1 330rpm WITHOUT Encoder Item #2742](https://www.pololu.com/product/4742)
- 
-_NOTE: The Dome Motors are available as 12v or 24v.  Which you should pick depends on your power system, and how much voltage you can supply the Motor in your droid. _ 
+If you want your Dome to spin, you'll need a motor to move it, any ONE of the following is suitable: 
+
+* [Greartisan DC 12V 300RPM Gear Motor High Torque motor wtih 37mm shaft](https://a.co/d/0aT2ZXKj)  
+* [Pololu 37d motor 30:1 330rpm WITH Encoder Item #4752](https://www.pololu.com/product/4752) Note: Encoder isn't currently used by DroidLink, but it wont hurt to have it as it might be used in the future.  
+* [Pololu 37d motor 30:1 330rpm WITHOUT Encoder Item #2742](https://www.pololu.com/product/4742)
+ _NOTE: The Dome Motors are available as 12v or 24v.  Which you should pick depends on your power system, and how much voltage you can supply the Motor in your droid._
+
+No matter which of these motors you choose, also order the [goBILDA® Sonic Clamping Hub 1309-0016-1006](https://a.co/d/00x8EnGC) to attach the 3d printed gear to the motor's shaft.
  
 ## **Dome Motor Controller**:
 To interface the motor with your chosen system, you need a dome motor speed controller. the Syren10 is the most popular. 
