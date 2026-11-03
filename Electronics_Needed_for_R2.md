@@ -65,7 +65,9 @@ The DFPlayer board is used to play back the droid sounds.
 
 * [DFPlayer Mini MP3 Player for Arduino/ESP32](https://a.co/d/03fNwlU8)  (Single)  
   * If out of stock, alternate source is [5PC Mini MP3 Module](https://a.co/d/0akwmUBJ)  This often is the same price as a single, but includes 5.  Having extras is not a bad thing.     
-* MicroSD card.   Up to 32gig card can be used, but must be formatted as FAT32, not ExFat or NTFS.  DFPlayer does not work with cards greater than 32Gig. 
+* MicroSD card.   Up to 32gig card can be used, but must be formatted as FAT32, not ExFat or NTFS.  DFPlayer does not work with cards greater than 32Gig.
+
+  When Mounting your DFPlayer,  be mindful of placement.  Too close to certain components can increase interference, and extra clicking and other unwanted sounds. For example, Keep the DFPlayer away from SBUS-A receivers and Syren10 Dome Motor controller. 
     
 NOTE: For speakers, see “Optional Parts” section below for info.   If using the DFPlayer Carrier board and an amplifier, you will also likely need a 3.5mm male to 3.5mm male cable.  (aka 1/4" male to 1/4" male) 
 
